@@ -1,0 +1,170 @@
+"use client";
+// "use client" is required because of Framer Motion's useReducedMotion hook.
+// SERVICES is a static constant — no server data fetching is lost here.
+
+import Link from "next/link";
+import { m, useReducedMotion } from "framer-motion";
+import {
+  ArrowRight,
+  Code2,
+  Cloud,
+  ShieldCheck,
+  Palette,
+  Lightbulb,
+  Users,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { SERVICES } from "@/data/content/services";
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+
+// ─── Icon registry ────────────────────────────────────────────────────────────
+// Maps the string `icon` field on each Service to its Lucide component.
+// Update this map if new services introduce new icon names.
+
+const iconMap: Record<string, LucideIcon> = {
+  Code2,
+  Cloud,
+  ShieldCheck,
+  Palette,
+  Lightbulb,
+  Users,
+};
+
+// ─── Service Card ─────────────────────────────────────────────────────────────
+
+interface ServiceCardProps {
+  slug:        string;
+  name:        string;
+  tagline:     string;
+  description: string;
+  icon:        string;
+  index:       number;
+  reduced:     boolean;
+}
+
+function ServiceCard({
+  slug, name, tagline, description, icon, index, reduced,
+}: ServiceCardProps) {
+  const Icon = iconMap[icon] ?? Code2;
+
+  return (
+    <m.article
+      initial={reduced ? false : { opacity: 0, y: 32 }}
+      whileInView={reduced ? {} : { opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{
+        duration: 0.5,
+        delay:    index * 0.08,
+        ease:     [0, 0, 0.2, 1],
+      }}
+      className="group relative flex flex-col rounded-2xl p-6 transition-colors duration-300"
+      style={{
+        background:           "rgba(255,255,255,0.03)",
+        backdropFilter:       "blur(16px)",
+        WebkitBackdropFilter: "blur(16px)",
+        border:               "1px solid rgba(255,255,255,0.06)",
+        boxShadow:            "0 4px 32px rgba(0,0,0,0.36)",
+      }}
+    >
+      {/* Default top-edge shimmer */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-t-2xl
+                   bg-gradient-to-r from-transparent via-white/10 to-transparent
+                   transition-opacity duration-300 group-hover:opacity-0"
+      />
+      {/* Hover top-edge glow — swaps in on hover */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-t-2xl opacity-0
+                   bg-gradient-to-r from-transparent via-electric-500/50 to-transparent
+                   transition-opacity duration-300 group-hover:opacity-100"
+      />
+      {/* Hover border + shadow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0
+                   transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          boxShadow: "inset 0 0 0 1px rgba(10,132,255,0.22), 0 8px 48px rgba(10,132,255,0.08)",
+        }}
+      />
+
+      {/* Icon */}
+      <div className="relative mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-electric-500/10 ring-1 ring-electric-500/20 transition-colors duration-300 group-hover:bg-electric-500/15">
+        <Icon className="h-5 w-5 text-electric-400" aria-hidden="true" />
+      </div>
+
+      {/* Copy */}
+      <h3 className="relative font-display text-lg font-semibold text-charcoal-50">
+        {name}
+      </h3>
+      <p className="relative mt-1 text-xs font-semibold uppercase tracking-wide text-electric-400">
+        {tagline}
+      </p>
+      <p className="relative mt-3 flex-1 text-sm leading-relaxed text-charcoal-400 line-clamp-3">
+        {description}
+      </p>
+
+      {/* Learn more */}
+      <Link
+        href={`/services/${slug}`}
+        className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-medium
+                   text-electric-400 transition-colors duration-150 hover:text-electric-300
+                   focus-visible:outline-none focus-visible:text-electric-300"
+        aria-label={`Learn more about ${name}`}
+      >
+        Learn more
+        <ArrowRight
+          className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5"
+          aria-hidden="true"
+        />
+      </Link>
+    </m.article>
+  );
+}
+
+// ─── Section ──────────────────────────────────────────────────────────────────
+
+export default function Services() {
+  const prefersReduced = useReducedMotion() ?? false;
+
+  return (
+    <section aria-label="Our services" id="services" className="relative overflow-hidden py-24">
+
+      {/* Ambient glow — provides depth behind glass cards */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 40% at 50% 0%, rgba(10,132,255,0.07) 0%, transparent 70%)",
+        }}
+      />
+
+      <Container>
+        <SectionHeading
+          overline="What we do"
+          title="Services built to scale"
+          subtitle="From pixel-perfect interfaces to bulletproof infrastructure — we cover the full stack so your product ships faster and runs better."
+        />
+
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {SERVICES.map((service, i) => (
+            <ServiceCard
+              key={service.id}
+              slug={service.slug}
+              name={service.name}
+              tagline={service.tagline}
+              description={service.description}
+              icon={service.icon}
+              index={i}
+              reduced={prefersReduced}
+            />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}

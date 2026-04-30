@@ -1,0 +1,402 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   DESIGN TOKENS — Semantic CSS custom properties
+   All components must consume these variables, not raw Tailwind color classes.
+   ───────────────────────────────────────────────────────────────────────── */
+
+@layer base {
+  /* Dark mode (default — dark-first strategy) */
+  :root,
+  .dark {
+    --color-bg:            #0D0E16; /* charcoal-950 */
+    --color-surface:       #12141F; /* charcoal-900 */
+    --color-elevated:      #1B1E2D; /* charcoal-800 */
+    --color-border:        #252A3A; /* charcoal-700 */
+    --color-border-strong: #363D52; /* charcoal-600 */
+
+    --color-text-primary:   #F5F6FA; /* charcoal-50  — 17.8:1 on bg ✅ AAA */
+    --color-text-secondary: #A0A8B8; /* charcoal-300 — 8.0:1  on bg ✅ AAA */
+    --color-text-muted:     #717A8E; /* charcoal-400 — 4.6:1  on bg ✅ AA  */
+
+    --color-accent:        #0A84FF; /* electric-500 */
+    --color-accent-hover:  #006FE6; /* electric-600 */
+    --color-accent-subtle: #001F4D; /* electric-950 */
+    --color-accent-text:   #3091FF; /* electric-400 — 6.8:1 on bg ✅ AA */
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-error:   #EF4444;
+
+    --shadow-glass: 0 4px 32px rgba(0, 0, 0, 0.40);
+    --shadow-electric: 0 0 28px rgba(10, 132, 255, 0.40);
+  }
+
+  /* Light mode overrides */
+  .light {
+    --color-bg:            #FFFFFF;
+    --color-surface:       #F5F6FA; /* charcoal-50  */
+    --color-elevated:      #FFFFFF;
+    --color-border:        #CDD1DB; /* charcoal-200 */
+    --color-border-strong: #A0A8B8; /* charcoal-300 */
+
+    --color-text-primary:   #0D0E16; /* charcoal-950 */
+    --color-text-secondary: #4B5265; /* charcoal-500 */
+    --color-text-muted:     #717A8E; /* charcoal-400 */
+
+    --color-accent:        #006FE6; /* electric-600 — 4.5:1 on white ✅ AA */
+    --color-accent-hover:  #0059BF; /* electric-700 */
+    --color-accent-subtle: #EBF5FF; /* electric-50  */
+    --color-accent-text:   #006FE6; /* electric-600 */
+
+    --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.08);
+    --shadow-electric: 0 0 20px rgba(10, 132, 255, 0.20);
+  }
+
+  /* ── Global resets ──────────────────────────────────────────────────────── */
+  html {
+    @apply scroll-smooth;
+    font-feature-settings: "cv11", "ss01";
+    font-variation-settings: "opsz" 32;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    @apply font-sans;
+  }
+
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+  }
+
+  /* Focus visible — global default */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: rgba(10, 132, 255, 0.25);
+    color: #F5F6FA;
+  }
+
+  /* Scrollbar — webkit */
+  ::-webkit-scrollbar        { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track  { background: #0D0E16; }
+  ::-webkit-scrollbar-thumb  { background: #363D52; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4B5265; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   COMPONENT UTILITIES
+   Single-purpose composable classes. Combine with Tailwind layout utilities.
+   ───────────────────────────────────────────────────────────────────────── */
+
+@layer components {
+
+  /* ── Section container ──────────────────────────────────────────────────── */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-24;
+  }
+
+  /* ── Section header ─────────────────────────────────────────────────────── */
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-widest;
+    color: var(--color-accent-text);
+  }
+
+  .section-title {
+    @apply text-4xl font-bold tracking-tight;
+    color: var(--color-text-primary);
+  }
+
+  .section-subtitle {
+    @apply text-lg leading-8 max-w-2xl;
+    color: var(--color-text-secondary);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     BUTTONS
+     ───────────────────────────────────────────────────────────────────── */
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg font-semibold
+           select-none cursor-pointer transition-all duration-150
+           disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  /* Size modifiers */
+  .btn-sm { @apply px-3.5 py-2   text-xs; }
+  .btn-md { @apply px-5   py-2.5 text-sm; }   /* default */
+  .btn-lg { @apply px-6   py-3   text-base; }
+
+  /* Primary — Electric Blue solid */
+  .btn-primary {
+    @apply btn btn-md;
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.30);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-accent-hover);
+    box-shadow: var(--shadow-electric);
+  }
+  .btn-primary:active {
+    @apply scale-[0.98];
+    background-color: #0059BF;
+  }
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Primary glow — Hero and CTA Band use only */
+  .btn-primary-glow {
+    @apply btn-primary;
+    box-shadow: 0 0 24px rgba(10, 132, 255, 0.40);
+  }
+  .btn-primary-glow:hover {
+    box-shadow: 0 0 40px rgba(10, 132, 255, 0.60);
+  }
+
+  /* Secondary — Outline */
+  .btn-secondary {
+    @apply btn btn-md border;
+    border-color: var(--color-accent);
+    color: var(--color-accent-text);
+    background-color: transparent;
+  }
+  .btn-secondary:hover {
+    background-color: rgba(10, 132, 255, 0.10);
+    color: #65AEFF; /* electric-300 */
+  }
+  .btn-secondary:active {
+    background-color: rgba(10, 132, 255, 0.18);
+  }
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  /* Ghost — no border */
+  .btn-ghost {
+    @apply btn btn-md;
+    color: var(--color-text-secondary);
+    background-color: transparent;
+  }
+  .btn-ghost:hover {
+    background-color: rgba(37, 42, 58, 0.60); /* charcoal-700/60 */
+    color: var(--color-text-primary);
+  }
+  .btn-ghost:active {
+    background-color: #252A3A; /* charcoal-700 */
+  }
+  .btn-ghost:focus-visible {
+    outline: 2px solid var(--color-border-strong);
+    outline-offset: 2px;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     CARDS
+     ───────────────────────────────────────────────────────────────────── */
+
+  /* Solid card — default, use on solid backgrounds */
+  .card-solid {
+    @apply rounded-2xl p-6 transition-all duration-300;
+    background-color: var(--color-elevated);
+    border: 1px solid var(--color-border);
+  }
+  .card-solid:hover {
+    border-color: rgba(10, 132, 255, 0.40);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.30);
+  }
+
+  /* Glass card — use only over gradient/blob backgrounds */
+  .card-glass {
+    @apply rounded-2xl p-6 transition-all duration-300;
+    background-color: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: var(--shadow-glass);
+  }
+  .card-glass-hover {
+    @apply card-glass;
+  }
+  .card-glass-hover:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(10, 132, 255, 0.30);
+    box-shadow: 0 8px 48px rgba(10, 132, 255, 0.10);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     FORM INPUTS
+     ───────────────────────────────────────────────────────────────────── */
+
+  .label {
+    @apply block text-sm font-medium mb-1.5;
+    color: var(--color-text-secondary);
+  }
+
+  .input {
+    @apply w-full rounded-lg px-4 py-2.5 text-sm transition-all duration-150
+           outline-none disabled:opacity-50 disabled:cursor-not-allowed;
+    background-color: var(--color-elevated);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+  }
+  .input::placeholder {
+    color: var(--color-text-muted);
+  }
+  .input:hover:not(:disabled) {
+    border-color: var(--color-border-strong);
+  }
+  .input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.20);
+  }
+  .input-error {
+    border-color: #EF4444;
+  }
+  .input-error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.20);
+  }
+
+  .textarea {
+    @apply input resize-y;
+    min-height: 120px;
+  }
+
+  .field-error {
+    @apply flex items-center gap-1 mt-1.5 text-xs;
+    color: #EF4444;
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     BADGES
+     ───────────────────────────────────────────────────────────────────── */
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium;
+  }
+  .badge-brand {
+    @apply badge;
+    background-color: #001F4D; /* electric-950 */
+    color: #3091FF;            /* electric-400 */
+    border: 1px solid #004599; /* electric-800 */
+  }
+  .badge-success {
+    @apply badge;
+    background-color: #052e16;
+    color: #4ade80;
+    border: 1px solid #14532d;
+  }
+  .badge-warning {
+    @apply badge;
+    background-color: #1c1400;
+    color: #fbbf24;
+    border: 1px solid #451a03;
+  }
+  .badge-error {
+    @apply badge;
+    background-color: #1a0000;
+    color: #f87171;
+    border: 1px solid #450a0a;
+  }
+  .badge-neutral {
+    @apply badge;
+    background-color: var(--color-elevated);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────────────
+     DIVIDERS
+     ───────────────────────────────────────────────────────────────────── */
+
+  .divider-h {
+    @apply h-px w-full border-0;
+    background-color: var(--color-border);
+  }
+
+  .divider-v {
+    @apply w-px h-full border-0;
+    background-color: var(--color-border);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   GLOBAL UTILITIES
+   ───────────────────────────────────────────────────────────────────────── */
+
+@layer utilities {
+
+  /* Gradient text — hero accent only, do not reuse arbitrarily */
+  .text-gradient {
+    background: linear-gradient(135deg, #3091FF 0%, #0A84FF 50%, #006FE6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Hero headline gradient — white → electric blue, reads bright-to-brand on dark bg */
+  .text-gradient-hero {
+    background: linear-gradient(120deg, #FFFFFF 0%, #65AEFF 45%, #0A84FF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Background grid texture */
+  .bg-grid-texture {
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  /* Glow rings */
+  .glow-ring        { box-shadow: 0 0 0 3px rgba(10,132,255,0.20); }
+  .glow-ring-error  { box-shadow: 0 0 0 3px rgba(239,68,68,0.20);  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   REDUCED MOTION
+   Honour the OS preference — animation becomes instant, not removed.
+   The shimmer is the only continuous animation on static content; all others
+   are triggered by interaction or page entry and fade gracefully.
+   ───────────────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-shimmer          { animation: none; }
+  .animate-pulse            { animation: none; }
+  .animate-spin             { animation: none; }
+  .animate-marquee          { animation: none; }
+  .animate-marquee-reverse  { animation: none; }
+}
