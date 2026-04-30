@@ -1,7 +1,6 @@
 "use client";
 
-import { useActionState }  from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm }         from "react-hook-form";
 import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -50,10 +49,8 @@ const inputBorder = {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function QuickContactForm() {
-  const [state, action, pending] = useActionState<QuickFormState | null, FormData>(
-    submitQuickContact,
-    null,
-  );
+  const [state, setState] = useState<QuickFormState | null>(null);
+const [pending, setPending] = useState(false);
 
   const { register, formState: { errors }, reset } = useForm<Fields>({ mode: "onBlur" });
   const formRef = useRef<HTMLFormElement>(null);
@@ -62,7 +59,21 @@ export default function QuickContactForm() {
   useEffect(() => {
     if (state?.success) reset();
   }, [state?.success, reset]);
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  setPending(true);
 
+  try {
+    const formData = new FormData(e.currentTarget);
+    const result = await submitQuickContact(formData);
+    setState(result);
+  } catch (err) {
+    console.error(err);
+    setState({ success: false, error: "Something went wrong" });
+  } finally {
+    setPending(false);
+  }
+};
   // ── Success state ──
   if (state?.success) {
     return (
@@ -71,7 +82,7 @@ export default function QuickContactForm() {
         <div>
           <p className="font-display text-lg font-semibold text-charcoal-50">Message sent</p>
           <p className="mt-1 text-sm text-charcoal-400">
-            We'll reply within 1 business day. Check your inbox for a confirmation.
+            We’ll review your message and get back to you.
           </p>
         </div>
       </div>
@@ -79,7 +90,7 @@ export default function QuickContactForm() {
   }
 
   return (
-    <form ref={formRef} action={action} noValidate>
+    <form ref={formRef} onSubmit={handleSubmit} noValidate>
       {/* Honeypot — hidden from real users */}
       <input
         type="text"
@@ -130,7 +141,7 @@ export default function QuickContactForm() {
         </Field>
 
         {/* Server-level error */}
-        {state?.error && !state.fieldErrors && (
+        {state?.error && !state?.fieldErrors && (
           <p className="rounded-xl border border-red-500/20 bg-red-500/5 px-4 py-3 text-sm text-red-400" role="alert">
             {state.error}
           </p>
@@ -155,7 +166,7 @@ export default function QuickContactForm() {
         </button>
 
         <p className="text-center text-xs text-charcoal-600">
-          We typically respond within 1 business day. No spam, ever.
+          No spam. Just a clear response.
         </p>
       </div>
     </form>
