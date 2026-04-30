@@ -8,9 +8,9 @@ import Container from "@/components/ui/Container";
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const TRUST_POINTS = [
-  "No lock-in contracts",
-  "Transparent scope and pricing",
-  "Clear, direct communication",
+  "Clear scope",
+  "Practical delivery",
+  "Direct communication",
 ] as const;
 
 // ─── Background ───────────────────────────────────────────────────────────────
@@ -138,12 +138,12 @@ export default function FinalCTA() {
               <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold
                             tracking-tight text-white sm:text-5xl lg:text-6xl">
                 Ready to build something{" "}
-                <span className="text-gradient-hero">you&apos;re proud of?</span>
+                <span className="text-gradient-hero">useful?</span>
               </h2>
 
               {/* Sub-headline */}
               <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55">
-                Tell us what you&apos;re building. We&apos;ll come back with a clear assessment — not a proposal full of buzzwords.
+                Share what you&apos;re working on. We&apos;ll help shape it into a clear, buildable plan.
               </p>
 
               {/* ── CTAs ── */}

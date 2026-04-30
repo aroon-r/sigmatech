@@ -140,14 +140,13 @@ export default function Hero() {
 
         {/* Sub-headline */}
         <p className="mt-6 max-w-2xl text-lg leading-8 text-charcoal-300">
-          SigmaTech partners with product teams to design, build, and ship web applications, APIs, and digital products.
-          Clean code. Clear process. No unnecessary complexity.
+          We design and build web applications, APIs, and digital products with clear structure, clean code, and practical execution.
         </p>
 
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button href="/contact">Start a conversation</Button>
-          <Button variant="secondary">View case studies</Button>
+          <Button variant="secondary" href="/work">See our work</Button>
         </div>
       </div>
 </section>

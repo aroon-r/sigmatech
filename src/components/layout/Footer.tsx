@@ -153,9 +153,6 @@ export default function Footer() {
           <p className="text-xs text-charcoal-600">
             © {year} SigmaTech Ltd. All rights reserved.
           </p>
-          <p className="text-xs text-charcoal-600">
-            Registered in England &amp; Wales · Co. No. 12345678 · London, UK
-          </p>
         </div>
       </Container>
     </footer>

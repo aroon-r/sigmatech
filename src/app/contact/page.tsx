@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CalendarDays, Clock, Github, Linkedin, Mail, MapPin, Twitter } from "lucide-react";
+import { CalendarDays, Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import QuickContactForm from "@/components/contact/QuickContactForm";
@@ -14,9 +14,7 @@ const CAL_URL = "https://cal.com/sigmatech/discovery-call";
 // ─── Static content ───────────────────────────────────────────────────────────
 
 const CONTACT_DETAILS = [
-  { Icon: Mail,   label: "Email",    value: "hello@sigmatech.co.uk", href: "mailto:hello@sigmatech.co.uk" },
-  { Icon: MapPin, label: "Location", value: "London, United Kingdom", href: null },
-  { Icon: Clock,  label: "Response", value: "Within 1 business day",  href: null },
+  { Icon: Mail, label: "Email", value: "hello@sigmatech.co.uk", href: "mailto:hello@sigmatech.co.uk" },
 ] as const;
 
 const SOCIAL_LINKS = [
@@ -28,8 +26,8 @@ const SOCIAL_LINKS = [
 const COMMITMENTS = [
   "Free initial consultation",
   "No lock-in contracts",
-  "UK-based engineering team",
-  "Response within 1 business day",
+  "Clear scope and pricing",
+  "Direct communication",
 ] as const;
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -73,7 +71,7 @@ export default function ContactPage() {
                 Send a message
               </h2>
               <p className="mb-8 text-sm text-charcoal-400">
-                Prefer async? Fill in the form and we'll come back within 1 business day.
+                Prefer async? Fill in the form and we'll get back to you.
               </p>
 
               <QuickContactForm />

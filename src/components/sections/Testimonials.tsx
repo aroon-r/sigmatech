@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { m, useReducedMotion } from "framer-motion";
-import { Building2, ShoppingBag, Server, BarChart3, Cpu, Globe, Linkedin } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { TESTIMONIALS, type TestimonialEntry } from "@/data/content/testimonials";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -18,17 +17,6 @@ const AVATAR_COLORS = [
   { bg: "rgba(139,92,246,0.18)",  text: "#8B5CF6" }, // purple
   { bg: "rgba(6,182,212,0.18)",   text: "#06B6D4" }, // cyan
   { bg: "rgba(236,72,153,0.18)",  text: "#EC4899" }, // pink
-];
-
-// ─── Trust companies ──────────────────────────────────────────────────────────
-
-const TRUST_COMPANIES: { name: string; Icon: LucideIcon }[] = [
-  { name: "Meridian Capital",  Icon: Building2  },
-  { name: "Luminary Goods",   Icon: ShoppingBag },
-  { name: "NovaTech Labs",    Icon: Server      },
-  { name: "Vantage Group",    Icon: BarChart3   },
-  { name: "Helix AI",         Icon: Cpu         },
-  { name: "Aether Digital",   Icon: Globe       },
 ];
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
@@ -157,33 +145,6 @@ function MarqueeRow({
   );
 }
 
-// ─── Trust strip ─────────────────────────────────────────────────────────────
-
-function TrustStrip({ reduced }: { reduced: boolean }) {
-  return (
-    <m.div
-      initial={reduced ? false : { opacity: 0, y: 16 }}
-      whileInView={reduced ? {} : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, ease: [0, 0, 0.2, 1] }}
-      className="mt-16 border-t border-charcoal-800 pt-12"
-    >
-      <p className="section-label mb-8 text-center">Trusted by teams at</p>
-      <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
-        {TRUST_COMPANIES.map(({ name, Icon }) => (
-          <div
-            key={name}
-            className="flex items-center gap-2 text-charcoal-600 transition-colors duration-150 hover:text-charcoal-400"
-          >
-            <Icon className="h-4 w-4 shrink-0" aria-hidden="true" />
-            <span className="text-sm font-semibold">{name}</span>
-          </div>
-        ))}
-      </div>
-    </m.div>
-  );
-}
-
 // ─── Static grid fallback (reduced motion) ────────────────────────────────────
 
 function StaticGrid({ reduced }: { reduced: boolean }) {
@@ -249,10 +210,6 @@ export default function Testimonials() {
         </div>
       )}
 
-      {/* Trust strip — constrained */}
-      <Container>
-        <TrustStrip reduced={prefersReduced} />
-      </Container>
     </section>
   );
 }

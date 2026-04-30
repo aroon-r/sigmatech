@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, CheckCircle2, TrendingUp, Zap, ShieldCheck, Users } from "lucide-react";
+import { ArrowRight, CheckCircle2, TrendingUp, Zap, ShieldCheck, Layers } from "lucide-react";
 import { PAGE_METADATA } from "@/lib/metadata";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -55,10 +55,10 @@ const PROCESS = [
 ] as const;
 
 const STATS = [
-  { Icon: TrendingUp, metric: "50+",   label: "Projects delivered" },
-  { Icon: Zap,        metric: "↓ 79%", label: "Average LCP improvement" },
-  { Icon: ShieldCheck, metric: "99.9%", label: "Uptime SLA maintained" },
-  { Icon: Users,      metric: "2020",  label: "Year founded" },
+  { Icon: TrendingUp,  metric: "Fast",     label: "Performance-first delivery" },
+  { Icon: Zap,         metric: "Clean",    label: "Maintainable, typed codebases" },
+  { Icon: ShieldCheck, metric: "Reliable", label: "Production-grade reliability" },
+  { Icon: Layers,      metric: "Direct",   label: "No account managers in the way" },
 ] as const;
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
@@ -88,9 +88,9 @@ export default function AboutPage() {
               <span className="text-gradient-hero">earns trust</span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-charcoal-300">
-              SigmaTech is a UK-based software agency founded in 2020. We partner with ambitious
-              companies to ship high-performance web applications, APIs, and digital products.
-              No fluff. No vanity metrics. Just engineers who care about the outcome.
+              SigmaTech is a software engineering studio. We partner with product teams to design,
+              build, and ship high-performance web applications, APIs, and digital products —
+              with clear scope and practical execution.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Button

@@ -88,7 +88,7 @@ If your current codebase is slowing down your product velocity, if your site fai
     seo: {
       title:       "Web & App Development Services | SigmaTech",
       description: "Custom web and app development using Next.js, React, and TypeScript. We build fast, scalable, production-ready products with Lighthouse ≥ 95 guaranteed.",
-      keywords:    ["web development agency UK", "Next.js development", "React app development", "custom web application", "TypeScript developers"],
+      keywords:    ["Next.js development", "React app development", "custom web application", "TypeScript developers"],
     },
 
     createdAt: "2025-01-10T09:00:00.000Z",
@@ -181,8 +181,8 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
 
     seo: {
       title:       "Cloud & DevOps Services | SigmaTech",
-      description: "AWS cloud architecture, Terraform IaC, Kubernetes orchestration, and CI/CD pipelines that cut costs and eliminate downtime. UK-based DevOps engineers.",
-      keywords:    ["cloud devops agency UK", "AWS solutions architect", "Terraform infrastructure", "Kubernetes consulting", "CI/CD pipeline setup"],
+      description: "AWS cloud architecture, Terraform IaC, Kubernetes orchestration, and CI/CD pipelines that cut costs and eliminate downtime.",
+      keywords:    ["AWS solutions architect", "Terraform infrastructure", "Kubernetes consulting", "CI/CD pipeline setup"],
     },
 
     createdAt: "2025-01-10T09:00:00.000Z",
@@ -212,7 +212,7 @@ A feature that works for ten concurrent users often breaks for ten thousand. We 
 
 ## Accessibility
 
-WCAG 2.1 AA compliance is not optional for modern products — it is both a legal requirement in the UK and a signal of engineering quality. We integrate axe-core into the test pipeline and conduct manual screen reader testing on every major user flow.`,
+WCAG 2.1 AA compliance is not optional for modern products — it is a widely adopted accessibility standard and a signal of engineering quality. We integrate axe-core into the test pipeline and conduct manual screen reader testing on every major user flow.`,
 
     deliverables: [
       { title: "Test strategy document",      detail: "A prioritised test plan aligned to your risk profile — not a generic template." },
@@ -273,7 +273,7 @@ WCAG 2.1 AA compliance is not optional for modern products — it is both a lega
     seo: {
       title:       "QA & Testing Services | SigmaTech",
       description: "Automated end-to-end testing with Playwright, load testing with k6, and WCAG 2.1 AA accessibility audits. Reduce production bugs by 60%.",
-      keywords:    ["QA testing agency UK", "Playwright automation", "automated testing services", "accessibility testing WCAG", "load testing k6"],
+      keywords:    ["Playwright automation", "automated testing services", "accessibility testing WCAG", "load testing k6"],
     },
 
     createdAt: "2025-01-10T09:00:00.000Z",
@@ -363,7 +363,7 @@ Design doesn't end at launch. We instrument key flows with heatmaps (Hotjar) and
     seo: {
       title:       "UI/UX Design Services | SigmaTech",
       description: "User research, Figma design systems, and accessible UI design for web and mobile. Average 40% conversion uplift across client projects.",
-      keywords:    ["UX design agency UK", "Figma design system", "UI/UX design services", "user research", "product design agency London"],
+      keywords:    ["Figma design system", "UI/UX design services", "user research", "product design agency"],
     },
 
     createdAt: "2025-01-10T09:00:00.000Z",
@@ -454,7 +454,7 @@ For seed and Series A companies that need technical leadership but aren't ready 
     seo: {
       title:       "Tech Consulting Services | SigmaTech",
       description: "Architecture reviews, technical due diligence, and fractional CTO services for scaling engineering teams. Senior advisors with startup and enterprise experience.",
-      keywords:    ["tech consulting UK", "technical due diligence", "fractional CTO", "architecture review", "engineering consulting London"],
+      keywords:    ["technical due diligence", "fractional CTO", "architecture review", "engineering consulting"],
     },
 
     createdAt: "2025-01-10T09:00:00.000Z",
@@ -518,7 +518,7 @@ Hiring a senior engineer permanently takes three to six months on average and ca
       {
         question: "Do placed engineers work on-site or remotely?",
         answer:
-          "Either. We have engineers based across the UK and in compatible time zones across Europe. For London-based clients who want on-site presence, we can typically accommodate 2–3 days per week in-office. Remote-first placements are the norm, and our engineers are set up for asynchronous collaboration from day one.",
+          "Either. We support remote-first and hybrid arrangements. Our engineers are set up for asynchronous collaboration from day one, and on-site presence can be arranged depending on the engagement.",
       },
     ],
 
@@ -546,8 +546,8 @@ Hiring a senior engineer permanently takes three to six months on average and ca
 
     seo: {
       title:       "Staff Augmentation Services | SigmaTech",
-      description: "Pre-vetted senior engineers placed within 72 hours. Flexible contracts, 96% retention rate, and a permanent conversion option. UK-based and remote-ready.",
-      keywords:    ["staff augmentation UK", "hire senior developers", "contract engineers UK", "tech talent", "software engineer placement"],
+      description: "Pre-vetted engineers placed quickly. Flexible contracts and a permanent conversion option. Remote-ready and available across time zones.",
+      keywords:    ["hire senior developers", "contract engineers", "tech talent", "software engineer placement"],
     },
 
     createdAt: "2025-01-10T09:00:00.000Z",

@@ -1,13 +1,13 @@
 const CHIPS = [
-  "Transparent process",
-  "Fixed-scope engagements",
-  "No lock-in contracts",
+  "Clear scope",
+  "Practical delivery",
   "Direct communication",
+  "No unnecessary lock-in",
 ] as const;
 
 const DEFAULT_STATEMENT =
-  "We keep engagements transparent and focused. What gets scoped is what gets built — " +
-  "no hidden handoffs, no undisclosed third parties.";
+  "We keep the work clear, focused, and easy to follow. What gets scoped is what gets built — " +
+  "with no unnecessary complexity.";
 
 interface TrustSectionProps {
   statement?: string;

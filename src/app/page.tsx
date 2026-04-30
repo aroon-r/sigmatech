@@ -24,7 +24,7 @@ export default function HomePage() {
   <Services />
   <FeaturedWork />
   <Testimonials />
-  <TrustSection statement="The team you work with in scoping is the team that builds your product — no handoffs, no hidden layers." />
+  <TrustSection statement="Built around clear scope, practical delivery, and software that is easy to maintain." />
   <FinalCTA />
 </Suspense>
 

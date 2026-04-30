@@ -15,7 +15,7 @@ export const TEAM: TeamMember[] = [
   {
     name:      "Alex Sato",
     role:      "Co-founder & CTO",
-    bio:       "Ex-Staff Engineer at GoCardless, where he led the payments infrastructure team serving 75,000+ merchants. Co-founded SigmaTech to apply that same rigour to ambitious product teams.",
+    bio:       "Senior engineer with a background in high-scale payments infrastructure. Co-founded SigmaTech to bring that same rigour to ambitious product teams.",
     linkedIn:  "https://linkedin.com/in/alex-sato",
     avatarUrl: null,
     tags:      ["Next.js", "AWS", "System Design"],
@@ -25,7 +25,7 @@ export const TEAM: TeamMember[] = [
   {
     name:      "Sarah Mitchell",
     role:      "Co-founder & CEO",
-    bio:       "Former engineering lead at Deliveroo, shipping features used by 100,000+ restaurants across 10 markets. Obsessed with delivery that actually moves the needle — not theatre.",
+    bio:       "Former engineering lead with experience shipping product across multiple markets. Focused on delivery that actually moves the needle — not theatre.",
     linkedIn:  "https://linkedin.com/in/sarah-mitchell",
     avatarUrl: null,
     tags:      ["Product Strategy", "Client Delivery", "OKRs"],
@@ -35,7 +35,7 @@ export const TEAM: TeamMember[] = [
   {
     name:      "Parvathy Menon",
     role:      "Head of Design",
-    bio:       "Spent six years at Monzo building design systems used by 8M users. Every interface she ships is measurably more intuitive than the one it replaced.",
+    bio:       "Six years building design systems at scale for high-growth consumer products. Every interface she ships is measurably more intuitive than the one it replaced.",
     linkedIn:  "https://linkedin.com/in/parvathy-menon",
     avatarUrl: null,
     tags:      ["Figma", "Design Systems", "User Research"],
@@ -55,7 +55,7 @@ export const TEAM: TeamMember[] = [
   {
     name:      "Marcus Chen",
     role:      "Senior Full-stack Engineer",
-    bio:       "TypeScript generalist who has shipped product at Wise and two Series B startups. Strongly typed, zero `any` — your codebase will be cleaner when he leaves than when he arrived.",
+    bio:       "TypeScript generalist with experience shipping product at scale across multiple high-growth teams. Strongly typed, zero `any` — your codebase will be cleaner when he leaves than when he arrived.",
     linkedIn:  "https://linkedin.com/in/marcus-chen",
     avatarUrl: null,
     tags:      ["TypeScript", "React", "PostgreSQL"],
@@ -65,7 +65,7 @@ export const TEAM: TeamMember[] = [
   {
     name:      "Emily Walsh",
     role:      "Head of QA",
-    bio:       "Built the test automation suite at Farfetch that compressed release cycles from weeks to days. Her pipelines have caught pre-release failures across 14 consecutive client launches.",
+    bio:       "Built test automation suites that compressed release cycles from weeks to days. Her pipelines have caught pre-release failures across multiple consecutive client launches.",
     linkedIn:  "https://linkedin.com/in/emily-walsh",
     avatarUrl: null,
     tags:      ["Playwright", "Cypress", "Test Strategy"],
