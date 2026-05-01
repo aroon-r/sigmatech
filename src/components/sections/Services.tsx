@@ -155,7 +155,7 @@ export default function Services() {
       <Container>
         <SectionHeading
           overline="What we do"
-          title="A focused set of things we do without cutting corners"
+          title="A focused set of things we've chosen to be good at"
           subtitle="We don't list services we can't deliver to the same standard we hold the rest of the work to."
         />
 

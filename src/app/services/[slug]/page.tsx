@@ -283,7 +283,7 @@ function ServiceProcess({ steps }: { steps: ProcessStep[] }) {
 
 function ServiceCTA({ service }: { service: Service }) {
   const headline    = service.ctaHeadline    ?? "Ready to get started?";
-  const subheadline = service.ctaSubheadline ?? "Tell us about your project and we'll respond within 1 business day.";
+  const subheadline = service.ctaSubheadline ?? "Send a brief. We'll come back with how we'd approach it — and whether we're the right fit.";
 
   return (
     <section className="py-24">

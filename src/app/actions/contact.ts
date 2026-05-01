@@ -72,7 +72,7 @@ async function sendConfirmationEmail(data: ContactFormInput): Promise<void> {
     text: [
       `Hi ${firstName},`,
       "",
-      "Thanks for reaching out to SigmaTech. We've received your message and will be in touch within 1 business day.",
+      "Thanks for reaching out to SigmaTech. We've received your message and will be in touch shortly.",
       "",
       "Here's a summary of what you submitted:",
       `  Services: ${data.services.join(", ")}`,

@@ -444,7 +444,7 @@ export default function ContactForm() {
         </Button>
 
         <p className="text-center text-xs text-charcoal-600">
-          We typically respond within 1 business day. No spam, ever.
+          We read every brief. No spam, ever.
         </p>
 
       </div>

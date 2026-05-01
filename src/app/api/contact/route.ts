@@ -55,7 +55,7 @@ async function processContactSubmission(
         text: [
           `Hi ${firstName},`,
           "",
-          "Thanks for reaching out to SigmaTech. We'll be in touch within 1 business day.",
+          "Thanks for reaching out to SigmaTech. We'll be in touch shortly.",
           "",
           `Services: ${data.services.join(", ")}`,
           `Budget:   ${data.budgetRange}`,

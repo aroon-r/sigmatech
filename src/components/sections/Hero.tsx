@@ -122,7 +122,7 @@ export default function Hero() {
 
         <p className="mt-6 max-w-2xl text-lg leading-8 text-charcoal-300">
           We stay small deliberately. Every project starts with a written scope, deploys to a staging
-          environment early — before decisions become expensive to undo — and ends with documented
+          environment early — before the architecture is too committed to change course — and ends with documented
           decisions, not just a handover call.
         </p>
 

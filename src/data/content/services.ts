@@ -8,15 +8,15 @@ export const SERVICES: Service[] = [
     id:        "svc-001",
     slug:      "web-development",
     name:      "Web & App Development",
-    tagline:   "Full-stack products that scale",
+    tagline:   "Scoped in writing, built to last",
     icon:      "Code2",
     description:
-      "We design and build high-performance web applications using modern JavaScript frameworks. From complex SaaS platforms to content-driven marketing sites, we deliver production-ready code your team can own.",
-    longDescription: `Web and app development is the practice of engineering full-stack digital products that perform reliably at scale — from responsive marketing sites to complex, data-intensive SaaS platforms. At SigmaTech, every architecture decision is evaluated against one question: will this hold up when traffic doubles?
+      "We design and build web applications using modern JavaScript frameworks. From complex SaaS platforms to content-driven marketing sites, we deliver production-ready code — documented well enough that your team can maintain and extend it without us.",
+    longDescription: `Web and app development is the practice of engineering full-stack digital products that perform reliably at scale — from responsive marketing sites to complex, data-intensive SaaS platforms. At SigmaTech, every architecture decision is evaluated against one question: how does this behave when the data model changes, and how hard is it for the next engineer to pick up?
 
 ## Our approach
 
-We build primarily on the Next.js App Router, harnessing React Server Components to reduce client JavaScript, server-side rendering for SEO-critical pages, and static generation for content that doesn't change per request. The result is pages that score 95+ on Lighthouse from day one — not after expensive post-launch optimisation.
+We build primarily on the Next.js App Router, harnessing React Server Components to reduce client JavaScript, server-side rendering for SEO-critical pages, and static generation for content that doesn't change per request. The result is pages that score 95+ on Lighthouse before the first real user touches them — not after expensive post-launch optimisation.
 
 ## What sets our delivery apart
 
@@ -24,20 +24,20 @@ We don't hand you a repository and disappear. Every engagement includes a docume
 
 ## When to choose us
 
-If your current codebase is slowing down your product velocity, if your site fails Core Web Vitals on mobile, or if you need a team that can go from brief to production in weeks rather than months — we're the right partner.`,
+If your current codebase is slowing down your product velocity, if your site fails Core Web Vitals on mobile, or if you need a team that will write the scope before starting the build, and stage it before calling it done — send a brief.`,
 
     deliverables: [
       { title: "Custom web applications",        detail: "Tailored to your business logic — no off-the-shelf compromises." },
       { title: "REST & GraphQL APIs",             detail: "Versioned, documented, and ready for web, mobile, and third-party integration." },
       { title: "Progressive Web Apps (PWAs)",     detail: "Offline-capable, installable apps with native-like performance on any device." },
       { title: "CMS integration",                 detail: "Headless CMS setup (Sanity, Contentful, or Payload) with typed content schemas." },
-      { title: "Performance & Core Web Vitals",   detail: "Lighthouse ≥ 95, LCP < 2s, CLS < 0.1 — measured and guaranteed in the SOW." },
+      { title: "Performance & Core Web Vitals",   detail: "Lighthouse ≥ 95, LCP < 2s, CLS < 0.1 — agreed in the SOW and re-verified before launch. Content and CDN choices affect this; we scope those assumptions upfront." },
     ],
 
     stats: [
-      { value: "50+",    label: "Projects delivered" },
-      { value: "< 2s",   label: "Average LCP across all sites" },
-      { value: "99.9%",  label: "Uptime SLA" },
+      { value: "Scoped",  label: "In writing before any code starts" },
+      { value: "CI/CD",   label: "Automated tests from the first sprint" },
+      { value: "Yours",   label: "Full IP transfer on final invoice" },
     ],
 
     faqs: [
@@ -54,7 +54,7 @@ If your current codebase is slowing down your product velocity, if your site fai
       {
         question: "Do you offer post-launch support?",
         answer:
-          "Yes. All projects include a 30-day hypercare period at no extra cost. After that, we offer monthly retainer packages covering bug fixes, dependency updates, performance monitoring, and feature additions. Our average retainer client has been with us for over two years.",
+          "Yes. All projects include a 30-day hypercare period at no extra cost. After that, we offer monthly retainer packages covering bug fixes, dependency updates, performance monitoring, and feature additions.",
       },
       {
         question: "Will we own the code and intellectual property?",
@@ -78,8 +78,8 @@ If your current codebase is slowing down your product velocity, if your site fai
     coverImageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=675&fit=crop&q=80",
     coverImageAlt: "Developer working on dual-monitor setup with code editor open",
 
-    ctaHeadline:    "Ready to build something exceptional?",
-    ctaSubheadline: "Tell us about your project and we'll respond within 1 business day.",
+    ctaHeadline:    "Have a project to scope?",
+    ctaSubheadline: "Send a brief. We'll come back with how we'd approach it — and whether we're the right fit.",
 
     status:    "published",
     isActive:  true,
@@ -102,10 +102,10 @@ If your current codebase is slowing down your product velocity, if your site fai
     id:        "svc-002",
     slug:      "cloud-solutions",
     name:      "Cloud & DevOps",
-    tagline:   "Zero-downtime infrastructure, always",
+    tagline:   "Infrastructure as code. Everything repeatable.",
     icon:      "Cloud",
     description:
-      "We architect, migrate, and manage cloud infrastructure that scales with your product. From CI/CD pipelines to Kubernetes clusters, our DevOps engineers reduce costs and release risk simultaneously.",
+      "We architect, migrate, and manage cloud infrastructure that scales with your product. From CI/CD pipelines to Kubernetes clusters, our DevOps engineers cut unnecessary cloud spend and reduce deployment failures.",
     longDescription: `Cloud and DevOps engineering is the discipline of designing infrastructure that is reliable, observable, and cheap to operate — so your engineering team can focus on shipping features, not fighting fires. At SigmaTech, we treat infrastructure as code: everything version-controlled, everything repeatable, nothing snowflaked.
 
 ## What we deliver
@@ -129,9 +129,9 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
     ],
 
     stats: [
-      { value: "40%",    label: "Average cloud cost reduction" },
-      { value: "10×",    label: "Increase in deployment frequency" },
-      { value: "99.99%", label: "Achieved uptime SLA" },
+      { value: "IaC",      label: "All environments version-controlled in Terraform" },
+      { value: "Parallel", label: "Migration approach — existing system stays live" },
+      { value: "Day one",  label: "Observability wired before first user hits prod" },
     ],
 
     faqs: [
@@ -143,7 +143,7 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
       {
         question: "Can you migrate our existing infrastructure without downtime?",
         answer:
-          "Yes. Our migration methodology uses a parallel-run approach: we build the new environment alongside your existing one, validate parity, then cut over with automatic rollback triggers active. We have migrated over 20 production workloads without a single minute of unplanned downtime.",
+          "Yes. Our migration methodology uses a parallel-run approach: we build the new environment alongside your existing one, validate parity, then cut over with automatic rollback triggers active. This de-risks the cutover — if anything doesn't match expectations, we revert rather than scramble.",
       },
       {
         question: "Do you provide ongoing infrastructure management after setup?",
@@ -172,8 +172,8 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
     coverImageUrl: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=675&fit=crop&q=80",
     coverImageAlt: "Illuminated server racks in a modern data centre",
 
-    ctaHeadline:    "Infrastructure that keeps up with your ambitions.",
-    ctaSubheadline: "Let's audit your current setup and build something bulletproof.",
+    ctaHeadline:    "Running on infrastructure you built quickly and haven't had time to fix?",
+    ctaSubheadline: "Send us a description of your current setup. We'll tell you what needs fixing and in what order.",
 
     status:    "published",
     isActive:  true,
@@ -199,12 +199,12 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
     tagline:   "Ship faster, break less",
     icon:      "ShieldCheck",
     description:
-      "Our QA engineers embed into your delivery cycle to build automated test suites that catch regressions before they reach production. We turn slow, manual QA into a measurable competitive advantage.",
-    longDescription: `QA and testing is the systematic process of verifying that software behaves correctly, performs at scale, and remains accessible to all users — before your customers discover it doesn't. At SigmaTech, we treat quality engineering as a first-class discipline, not a checkbox at the end of a sprint.
+      "Our QA engineers embed into your delivery cycle to build automated test suites that catch regressions before they reach production. We wire those tests into CI so they block broken code from merging — not just document what went wrong after the fact.",
+    longDescription: `QA and testing is the systematic process of verifying that software behaves correctly, performs at scale, and remains accessible to all users — before your customers discover it doesn't. At SigmaTech, we treat quality engineering as a first-class discipline, not something you retrofit once the architecture is already set.
 
 ## Automation-first, not automation-only
 
-We build end-to-end test suites with Playwright and component tests with React Testing Library that run in your CI pipeline on every pull request. Regressions are caught in minutes, not discovered by users at 2 AM. That said, we know when exploratory testing and domain expertise outperform scripts — our QA engineers are experienced testers, not just automation toolsmiths.
+We build end-to-end test suites with Playwright and component tests with React Testing Library that run in your CI pipeline on every pull request. Regressions are caught before the PR merges — not by the first user to hit the broken path. That said, we know when exploratory testing and domain expertise outperform scripts — our QA engineers are experienced testers, not just automation toolsmiths.
 
 ## Performance and load testing
 
@@ -223,9 +223,9 @@ WCAG 2.1 AA compliance is not optional for modern products — it is a widely ad
     ],
 
     stats: [
-      { value: "90%+",  label: "Test coverage on delivery" },
-      { value: "60%",   label: "Reduction in production bugs" },
-      { value: "3×",    label: "Faster release cadence" },
+      { value: "Every PR", label: "Full test suite runs on each pull request" },
+      { value: "Day one",  label: "Tests committed to CI from the first sprint" },
+      { value: "WCAG 2.1", label: "AA accessibility on every major user flow" },
     ],
 
     faqs: [
@@ -247,7 +247,7 @@ WCAG 2.1 AA compliance is not optional for modern products — it is a widely ad
       {
         question: "How do you measure the ROI of QA investment?",
         answer:
-          "We track three metrics before and after our engagement: defect escape rate (bugs reaching production), mean time to detect (how quickly issues are found), and deployment confidence (a developer survey). On average, clients see a 60% reduction in production incidents within three months of the full test suite going live.",
+          "We track three metrics before and after our engagement: defect escape rate (bugs reaching production), mean time to detect (how quickly issues are found), and deployment confidence (a developer survey). We use these baselines to demonstrate that the test investment is working — not to sell you on a number in advance.",
       },
     ],
 
@@ -290,8 +290,8 @@ WCAG 2.1 AA compliance is not optional for modern products — it is a widely ad
     tagline:   "Interfaces people actually want to use",
     icon:      "Palette",
     description:
-      "We conduct user research, design intuitive interfaces, and deliver production-ready design systems. Every decision is backed by data, tested with real users, and documented for seamless developer handoff.",
-    longDescription: `UI/UX design is the discipline of translating user needs and business goals into interfaces that are intuitive, accessible, and visually compelling. At SigmaTech, we reject the false choice between beautiful and functional — the best interfaces are both, and our track record proves it.
+      "We conduct user research, design intuitive interfaces, and deliver production-ready design systems. Every decision is grounded in research, validated with real users before development starts, and documented well enough that developers can implement without a follow-up call.",
+    longDescription: `UI/UX design is the discipline of translating user needs and business goals into interfaces that are intuitive, accessible, and visually compelling. At SigmaTech, we reject the false choice between beautiful and functional — the best interfaces are both, and that requires research before pixels, not opinions before pixels.
 
 ## Research before pixels
 
@@ -303,7 +303,7 @@ We deliver interactive prototypes in Figma before a single line of production co
 
 ## Continuous improvement
 
-Design doesn't end at launch. We instrument key flows with heatmaps (Hotjar) and session recordings, run A/B tests on high-impact pages, and iterate based on real behavioural data. Our clients' conversion rates typically improve 30–50% over the six months after launch.`,
+Launch is when you find out what the design actually gets wrong. We instrument key flows with heatmaps (Hotjar) and session recordings, run A/B tests on high-impact pages, and iterate based on real behavioural data — not on assumptions about what should convert better.`,
 
     deliverables: [
       { title: "User research & journey mapping",  detail: "User interviews, competitive benchmarking, and validated user flow diagrams." },
@@ -314,9 +314,9 @@ Design doesn't end at launch. We instrument key flows with heatmaps (Hotjar) and
     ],
 
     stats: [
-      { value: "+40%", label: "Average conversion uplift" },
-      { value: "4.8",  label: "Average user satisfaction score (/5)" },
-      { value: "200+", label: "Screens delivered across projects" },
+      { value: "Research",  label: "Conducted before any pixel is placed" },
+      { value: "Validated", label: "Interactive prototype before development starts" },
+      { value: "Tokens",    label: "Design system maps directly to your frontend stack" },
     ],
 
     faqs: [
@@ -377,10 +377,10 @@ Design doesn't end at launch. We instrument key flows with heatmaps (Hotjar) and
     id:        "svc-005",
     slug:      "consulting",
     name:      "Tech Consulting",
-    tagline:   "Strategy that turns vision into velocity",
+    tagline:   "Architecture and strategy from people who still write code",
     icon:      "Lightbulb",
     description:
-      "We provide senior-level technical leadership to help you make the right architecture decisions, select the right stack, and avoid the costly mistakes that slow scaling engineering teams down.",
+      "We provide senior-level technical leadership to help you make the right architecture decisions, select the right stack, and catch the kind of technical debt that compounds quietly until it starts blocking delivery.",
     longDescription: `Technology consulting is the practice of applying senior engineering experience to strategic decisions — architecture selection, team structure, technical due diligence, and vendor evaluation — so that organisations avoid the expensive mistakes that come from scaling without a plan. At SigmaTech, our consultants have built and led engineering teams at funded startups and FTSE 250 enterprises. We advise from experience, not from frameworks.
 
 ## When you need a consulting engagement
@@ -404,9 +404,9 @@ For seed and Series A companies that need technical leadership but aren't ready 
     ],
 
     stats: [
-      { value: "15+",  label: "CTOs and engineering leaders advised" },
-      { value: "£5M+", label: "In avoidable technical spend identified" },
-      { value: "94%",  label: "Client retention after first engagement" },
+      { value: "Written",   label: "Specific recommendations — not slide decks" },
+      { value: "No refs",   label: "Zero vendor referral or revenue-share agreements" },
+      { value: "2 days/wk", label: "Typical fractional CTO embedded commitment" },
     ],
 
     faqs: [
@@ -468,10 +468,10 @@ For seed and Series A companies that need technical leadership but aren't ready 
     id:        "svc-006",
     slug:      "staff-augmentation",
     name:      "Staff Augmentation",
-    tagline:   "Senior engineers, your team, your culture",
+    tagline:   "Pre-vetted senior engineers — interviews you control, placement in days",
     icon:      "Users",
     description:
-      "We provide pre-vetted, senior-level engineers who integrate directly into your team. No long ramp-ups — our engineers are productive within days, not months, and they work in your culture.",
+      "We provide pre-vetted, senior-level engineers who integrate directly into your team. No long ramp-ups — our engineers are productive within days, not months, and they don't need a week of context-setting before they can open a pull request.",
     longDescription: `Staff augmentation is the practice of embedding external engineers directly into an existing team to accelerate delivery, fill a skills gap, or maintain momentum during a critical hiring period. At SigmaTech, we treat every augmentation as a long-term partnership, not a body shop transaction — we only place engineers we'd be proud to work alongside ourselves.
 
 ## Who we place
@@ -494,9 +494,9 @@ Hiring a senior engineer permanently takes three to six months on average and ca
     ],
 
     stats: [
-      { value: "< 72h",  label: "Time to engineer shortlist" },
-      { value: "96%",    label: "3-month placement retention rate" },
-      { value: "8+ yrs", label: "Average engineer experience" },
+      { value: "< 72h",   label: "Target time to engineer shortlist" },
+      { value: "10 days", label: "Target placement within working days" },
+      { value: "8+ yrs",  label: "Typical engineer experience" },
     ],
 
     faqs: [
@@ -513,7 +513,7 @@ Hiring a senior engineer permanently takes three to six months on average and ca
       {
         question: "What happens if an engineer isn't working out?",
         answer:
-          "Contracts include a 10-day trial period. If the fit isn't right for any reason during the trial, we replace the engineer at no additional cost and no questions asked. After the trial, our standard 30-day notice applies. In two years of running the augmentation programme, we have had to invoke the replacement clause fewer than five times.",
+          "Contracts include a 10-day trial period. If the fit isn't right for any reason during the trial, we replace the engineer at no additional cost and no questions asked. After the trial, our standard 30-day notice applies.",
       },
       {
         question: "Do placed engineers work on-site or remotely?",

@@ -75,7 +75,7 @@ export function createMetadata({
 export const PAGE_METADATA = {
   home: createMetadata({
     title:       "Modern Software Solutions",
-    description: "SigmaTech builds high-performance web applications, APIs, and digital products. Custom software engineered for reliability and built to scale.",
+    description: "SigmaTech is a small engineering team that scopes in writing, deploys to staging early, and hands over code your team can own. Web apps, APIs, DevOps, and design.",
     path:        "/",
     keywords:    [
       "custom software development company",

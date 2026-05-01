@@ -129,7 +129,7 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <Button href="/contact" size="sm">
-              Book a free call
+              Send a brief
             </Button>
           </div>
 
@@ -206,7 +206,7 @@ export default function Navbar() {
                   className="w-full justify-center"
                   onClick={() => setIsOpen(false)}
                 >
-                  Book a free call
+                  Send a brief
                 </Button>
               </div>
             </div>

@@ -60,7 +60,7 @@ export async function submitQuickContact(
         text: [
           `Hi ${firstName},`,
           "",
-          "Thanks for reaching out to SigmaTech. We'll be in touch within 1 business day.",
+          "Thanks for reaching out to SigmaTech. We'll be in touch shortly.",
           "",
           "Best,",
           "The SigmaTech Team",

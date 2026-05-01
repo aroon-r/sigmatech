@@ -18,7 +18,7 @@ const STEPS = [
   {
     number: "03",
     title:  "Staging from sprint one",
-    body:   "We deploy to a staging environment early in the build — usually within the first two sprints, depending on infrastructure complexity. You see real work against real workflows, not a demo prepared for a checkpoint call.",
+    body:   "We deploy to a staging environment early in the build — usually within the first two sprints, depending on infrastructure complexity. You see the actual build, in the environment it will go to production in — not something tidied up for a review call.",
   },
   {
     number: "04",

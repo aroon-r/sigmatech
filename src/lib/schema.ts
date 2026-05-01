@@ -36,7 +36,7 @@ export function orgSchema() {
     logo:          logoRef,
     image:         `${BASE_URL}/og-image.jpg`,
     description:
-      "SigmaTech builds high-performance software products and digital experiences for forward-thinking companies.",
+      "SigmaTech is a small engineering team that scopes in writing before building, deploys to staging early, and hands over code your team can own.",
     foundingDate:  "2020",
     areaServed:    "Worldwide",
     priceRange:    "££",

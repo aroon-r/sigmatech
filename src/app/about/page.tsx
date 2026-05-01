@@ -89,8 +89,8 @@ export default function AboutPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-charcoal-300">
               SigmaTech is a software engineering studio. We partner with product teams to design,
-              build, and ship high-performance web applications, APIs, and digital products —
-              with clear scope and practical execution.
+              build, and ship web applications, APIs, and digital products —
+              with written scope, early staging, and documented handovers.
             </p>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <Button

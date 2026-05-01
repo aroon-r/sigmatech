@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "SigmaTech builds high-performance web applications, APIs, and digital products — engineered for reliability and built to scale.",
+    "SigmaTech is a small engineering team that scopes in writing, deploys to staging early, and hands over code your team can own.",
 
   robots: {
     index:               true,

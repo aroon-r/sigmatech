@@ -95,8 +95,8 @@ export default function Footer() {
               </span>
             </Link>
             <p className="max-w-[240px] text-sm leading-relaxed text-charcoal-400">
-              High-performance software and digital experiences for
-              forward-thinking companies.
+              A small engineering team that scopes in writing before building,
+              deploys to staging early, and hands over code your team can own.
             </p>
           </div>
 
