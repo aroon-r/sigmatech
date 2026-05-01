@@ -100,8 +100,7 @@
 
   "functions": {
     "src/app/api/contact/route.ts": {
-      "maxDuration": 15,
-      "memory": 256
+      "maxDuration": 15
     },
     "src/app/api/services/route.ts": {
       "maxDuration": 5
