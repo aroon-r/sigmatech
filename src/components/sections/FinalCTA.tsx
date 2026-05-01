@@ -81,7 +81,7 @@ export default function FinalCTA() {
   const prefersReduced = useReducedMotion() ?? false;
 
   return (
-    <section aria-label="Start a project with SigmaTech" id="cta" className="py-24">
+    <section aria-label="Start a project with Nexora" id="cta" className="py-24">
       <Container>
 
         {/* Card entrance — slides up once on scroll-into-view */}

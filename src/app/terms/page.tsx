@@ -7,7 +7,7 @@ import Container from "@/components/ui/Container";
 export const metadata: Metadata = createMetadata({
   title:   "Terms of Service",
   description:
-    "Terms and conditions governing the use of SigmaTech's website and software development services.",
+    "Terms and conditions governing the use of Nexora's website and software development services.",
   path:    "/terms",
   noIndex: false,
 });
@@ -57,7 +57,7 @@ export default function TermsPage() {
           >
             <Section title="Acceptance of terms">
               <p>
-                By accessing this website or engaging SigmaTech Ltd ("SigmaTech", "we", "us")
+                By accessing this website or engaging Nexora Ltd ("Nexora", "we", "us")
                 for services, you agree to be bound by these Terms of Service and all applicable
                 laws. If you do not agree, please do not use this website or our services.
               </p>
@@ -65,7 +65,7 @@ export default function TermsPage() {
 
             <Section title="Services">
               <p>
-                SigmaTech provides software development, cloud infrastructure, QA testing,
+                Nexora provides software development, cloud infrastructure, QA testing,
                 UI/UX design, technology consulting, and staff augmentation services. The
                 specific scope, deliverables, timeline, and fees for each engagement are set
                 out in a separate Statement of Work ("SOW") or project agreement signed by
@@ -80,11 +80,11 @@ export default function TermsPage() {
             <Section title="Intellectual property">
               <p>
                 All content on this website — including text, graphics, logos, and code — is
-                owned by or licensed to SigmaTech and is protected by UK copyright law.
+                owned by or licensed to Nexora and is protected by UK copyright law.
               </p>
               <p>
                 Unless otherwise agreed in writing, client-commissioned work products are owned
-                by the client upon receipt of full payment. SigmaTech retains ownership of
+                by the client upon receipt of full payment. Nexora retains ownership of
                 pre-existing tools, libraries, frameworks, and methodologies used during delivery.
               </p>
             </Section>
@@ -108,7 +108,7 @@ export default function TermsPage() {
 
             <Section title="Limitation of liability">
               <p>
-                To the fullest extent permitted by law, SigmaTech's total liability for any
+                To the fullest extent permitted by law, Nexora's total liability for any
                 claim arising from or relating to our services will not exceed the fees paid
                 by you in the three months preceding the event giving rise to the claim.
               </p>

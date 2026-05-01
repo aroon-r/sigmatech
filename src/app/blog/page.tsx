@@ -38,7 +38,7 @@ export default function BlogPage() {
         <Container>
           <SectionHeading
             overline="Engineering insights"
-            title="The SigmaTech Blog"
+            title="The Nexora Blog"
             subtitle="Real-world engineering, design thinking, and cloud operations — written by the people building it."
             align="center"
             as="h1"

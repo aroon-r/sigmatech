@@ -78,7 +78,7 @@ The learning curve is real — plan for a one-sprint adjustment period for exper
     noRss:      false,
 
     seo: {
-      title:       "Why We Migrated to Next.js 14 Server Components | SigmaTech",
+      title:       "Why We Migrated to Next.js 14 Server Components | Nexora",
       description: "After migrating five production projects to Next.js 14 App Router, we share real bundle reduction data, the RSC mental model shift, and what genuinely surprised us.",
       keywords:    ["Next.js 14", "React Server Components", "App Router", "performance optimisation", "web development"],
     },
@@ -167,7 +167,7 @@ What's your design system cost? Probably less.`,
     noRss:      false,
 
     seo: {
-      title:       "The Hidden ROI of a Shared Design System | SigmaTech",
+      title:       "The Hidden ROI of a Shared Design System | Nexora",
       description: "A design system isn't a designer's productivity tool — it's an engineering ROI play. Here's the business case that convinces every sceptical stakeholder.",
       keywords:    ["design system ROI", "component library business case", "Figma design system", "design engineering productivity"],
     },
@@ -287,7 +287,7 @@ If you'd like us to run this audit on your AWS account, [get in touch](/contact)
     noRss:      false,
 
     seo: {
-      title:       "Cloud Cost Optimisation Checklist | SigmaTech",
+      title:       "Cloud Cost Optimisation Checklist | Nexora",
       description: "The 10-point AWS cost audit checklist that consistently finds 20–40% savings. Right-sizing, Savings Plans, S3 tiers, and the checks most teams miss.",
       keywords:    ["AWS cost optimisation", "cloud cost reduction", "EC2 right-sizing", "AWS Savings Plans", "cloud infrastructure audit"],
     },

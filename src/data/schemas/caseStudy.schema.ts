@@ -51,7 +51,7 @@ export interface CaseStudy extends Timestamps {
   duration: string;
 
   // ── Services & tech ───────────────────────────────────────────────────────
-  /** Which SigmaTech services were delivered in this engagement */
+  /** Which Nexora services were delivered in this engagement */
   servicesSlugs: ServiceSlug[];
   /** Full tech stack used — powers the tag cloud on the detail page */
   techStack: TechItem[];

@@ -108,9 +108,9 @@ export interface TechItem {
 export interface Metric {
   /** Short label describing what was measured — e.g. "Page load time" */
   label: string;
-  /** Value before SigmaTech's work — e.g. "3.8s" */
+  /** Value before Nexora's work — e.g. "3.8s" */
   before: string;
-  /** Value after SigmaTech's work — e.g. "900ms" */
+  /** Value after Nexora's work — e.g. "900ms" */
   after: string;
   /**
    * Human-readable improvement summary shown as a callout.

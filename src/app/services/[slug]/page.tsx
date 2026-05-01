@@ -39,7 +39,7 @@ export async function generateMetadata(
       title:       service.seo.title,
       description: service.seo.description,
       url,
-      siteName:    "SigmaTech",
+      siteName:    "Nexora",
       type:        "website",
       images: service.coverImageUrl
         ? [{ url: service.coverImageUrl, alt: service.coverImageAlt ?? service.name, width: 1200, height: 675 }]

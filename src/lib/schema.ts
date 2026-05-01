@@ -36,7 +36,7 @@ export function orgSchema() {
     logo:          logoRef,
     image:         `${BASE_URL}/og-image.jpg`,
     description:
-      "SigmaTech is a small engineering team that scopes in writing before building, deploys to staging early, and hands over code your team can own.",
+      "Nexora is a small engineering team that scopes in writing before building, deploys to staging early, and hands over code your team can own.",
     foundingDate:  "2020",
     areaServed:    "Worldwide",
     priceRange:    "££",
@@ -302,7 +302,7 @@ export function contactPageSchema() {
     name:       `Contact ${SITE_NAME}`,
     url:        `${BASE_URL}/contact`,
     description:
-      "Start a project with SigmaTech. Fill in our 60-second form and we'll be in touch within one business day.",
+      "Start a project with Nexora. Fill in our 60-second form and we'll be in touch within one business day.",
     mainEntity: {
       "@type":           "ContactPoint",
       contactType:       "customer service",

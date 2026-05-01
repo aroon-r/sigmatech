@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-export const BASE_URL    = "https://sigmatech.co.uk";
-export const SITE_NAME   = "SigmaTech";
+export const BASE_URL    = "https://nexora.co.uk";
+export const SITE_NAME   = "Nexora";
 const DEFAULT_OG_IMAGE   = "/og/default.png";
 
 // ─── Factory ──────────────────────────────────────────────────────────────────
@@ -75,7 +75,7 @@ export function createMetadata({
 export const PAGE_METADATA = {
   home: createMetadata({
     title:       "Modern Software Solutions",
-    description: "SigmaTech is a small engineering team that scopes in writing, deploys to staging early, and hands over code your team can own. Web apps, APIs, DevOps, and design.",
+    description: "Nexora is a small engineering team that scopes in writing, deploys to staging early, and hands over code your team can own. Web apps, APIs, DevOps, and design.",
     path:        "/",
     keywords:    [
       "custom software development company",
@@ -99,7 +99,7 @@ export const PAGE_METADATA = {
 
   work: createMetadata({
     title:       "Our Work — Case Studies",
-    description: "Real projects, measurable outcomes. See how SigmaTech delivers software that moves the needle for ambitious companies.",
+    description: "Real projects, measurable outcomes. See how Nexora delivers software that moves the needle for ambitious companies.",
     path:        "/work",
     keywords:    [
       "software development portfolio",
@@ -109,11 +109,11 @@ export const PAGE_METADATA = {
   }),
 
   about: createMetadata({
-    title:       "About SigmaTech",
-    description: "Meet the SigmaTech team — senior engineers and delivery specialists committed to craft, transparency, and measurable results.",
+    title:       "About Nexora",
+    description: "Meet the Nexora team — senior engineers and delivery specialists committed to craft, transparency, and measurable results.",
     path:        "/about",
     keywords:    [
-      "about SigmaTech",
+      "about Nexora",
       "software development team",
       "tech company",
     ],
@@ -121,7 +121,7 @@ export const PAGE_METADATA = {
 
   blog: createMetadata({
     title:       "Blog — Engineering Insights",
-    description: "Engineering insights, product thinking, and software craft from the SigmaTech team.",
+    description: "Engineering insights, product thinking, and software craft from the Nexora team.",
     path:        "/blog",
     keywords:    [
       "software development blog",
@@ -132,7 +132,7 @@ export const PAGE_METADATA = {
 
   contact: createMetadata({
     title:       "Start a Project",
-    description: "Start a project with SigmaTech. Fill in our 60-second form and we'll be in touch within one business day.",
+    description: "Start a project with Nexora. Fill in our 60-second form and we'll be in touch within one business day.",
     path:        "/contact",
     keywords:    [
       "contact software development company",

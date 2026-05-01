@@ -26,7 +26,7 @@ export interface ContactFormInput {
   phone?:      string;
 
   // ── Project context ───────────────────────────────────────────────────────
-  /** Which SigmaTech service(s) the enquiry is about */
+  /** Which Nexora service(s) the enquiry is about */
   services:    ServiceSlug[];
   budgetRange: BudgetRange;
   /**

@@ -14,7 +14,7 @@ export interface Author {
   name:        string;
   /** Short bio for the author card — max 2 sentences */
   bio:         string;
-  /** Designation at SigmaTech — e.g. "Software Tester", "Front End Developer" */
+  /** Designation at Nexora — e.g. "Software Tester", "Front End Developer" */
   designation: string;
   /** Avatar — 200 × 200 px minimum, square crop */
   avatarUrl?:  string;

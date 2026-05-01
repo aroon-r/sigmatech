@@ -90,7 +90,7 @@ Page load time dropped from 4.2 seconds to 890 milliseconds — a 79% reduction.
 
     testimonial: {
       quote:
-        "SigmaTech delivered exactly what they promised, on time, with zero data downtime. The rebuild went from internal joke to internal pride in twelve weeks. Our analysts stopped complaining and started asking for new features — which tells you everything.",
+        "Nexora delivered exactly what they promised, on time, with zero data downtime. The rebuild went from internal joke to internal pride in twelve weeks. Our analysts stopped complaining and started asking for new features — which tells you everything.",
       authorName:    "Richard Holloway",
       authorTitle:   "CTO",
       authorCompany: "Meridian Capital",
@@ -140,8 +140,8 @@ Page load time dropped from 4.2 seconds to 890 milliseconds — a 79% reduction.
     isFeatured: true,
 
     seo: {
-      title:       "Fintech Dashboard Rebuild | SigmaTech Case Study",
-      description: "How SigmaTech rebuilt Meridian Capital's analyst dashboard in Next.js, cutting load time by 79% and doubling user activation in 12 weeks.",
+      title:       "Fintech Dashboard Rebuild | Nexora Case Study",
+      description: "How Nexora rebuilt Meridian Capital's analyst dashboard in Next.js, cutting load time by 79% and doubling user activation in 12 weeks.",
       keywords:    ["fintech dashboard", "Next.js rebuild", "React performance", "financial software development"],
       ogImageUrl:  "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=1200&h=630&fit=crop&q=80",
     },
@@ -290,8 +290,8 @@ LCP on mobile dropped from 5.1 seconds to 1.2 seconds — well inside Google's "
     isFeatured: true,
 
     seo: {
-      title:       "E-commerce Platform Migration | SigmaTech Case Study",
-      description: "How SigmaTech migrated Luminary Goods to a headless Next.js + Shopify Hydrogen stack, cutting LCP by 76% and boosting conversion by 89%.",
+      title:       "E-commerce Platform Migration | Nexora Case Study",
+      description: "How Nexora migrated Luminary Goods to a headless Next.js + Shopify Hydrogen stack, cutting LCP by 76% and boosting conversion by 89%.",
       keywords:    ["headless ecommerce", "Shopify Hydrogen", "Next.js ecommerce", "Core Web Vitals", "conversion rate optimisation"],
       ogImageUrl:  "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&fit=crop&q=80",
     },
@@ -389,7 +389,7 @@ NovaTech went from one deployment per month to daily deployments within three we
 
     testimonial: {
       quote:
-        "Before SigmaTech, a deployment was a two-hour ordeal that kept me up at night. Now it's a GitHub merge. I genuinely can't overstate how much that has changed the culture of the engineering team — people ship things they were previously too scared to touch.",
+        "Before Nexora, a deployment was a two-hour ordeal that kept me up at night. Now it's a GitHub merge. I genuinely can't overstate how much that has changed the culture of the engineering team — people ship things they were previously too scared to touch.",
       authorName:    "Marcus Webb",
       authorTitle:   "Co-founder & CTO",
       authorCompany: "NovaTech Labs",
@@ -434,8 +434,8 @@ NovaTech went from one deployment per month to daily deployments within three we
     isFeatured: true,
 
     seo: {
-      title:       "SaaS DevOps Overhaul | SigmaTech Case Study",
-      description: "How SigmaTech transformed NovaTech Labs' deployment process from monthly to daily using Terraform, GitHub Actions, and Datadog — cutting MTTR by 93%.",
+      title:       "SaaS DevOps Overhaul | Nexora Case Study",
+      description: "How Nexora transformed NovaTech Labs' deployment process from monthly to daily using Terraform, GitHub Actions, and Datadog — cutting MTTR by 93%.",
       keywords:    ["DevOps transformation", "Terraform AWS", "GitHub Actions CI/CD", "SaaS infrastructure", "cloud migration"],
       ogImageUrl:  "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=630&fit=crop&q=80",
     },

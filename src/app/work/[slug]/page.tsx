@@ -40,7 +40,7 @@ export async function generateMetadata(
       title:       study.seo.title,
       description: study.seo.description,
       url,
-      siteName:    "SigmaTech",
+      siteName:    "Nexora",
       type:        "article",
       images: study.seo.ogImageUrl
         ? [{ url: study.seo.ogImageUrl, alt: study.title, width: 1200, height: 630 }]

@@ -15,7 +15,7 @@ export const TEAM: TeamMember[] = [
   {
     name:      "Alex Sato",
     role:      "Co-founder & CTO",
-    bio:       "Senior engineer with a background in high-scale payments infrastructure. Co-founded SigmaTech to bring that same rigour to ambitious product teams.",
+    bio:       "Senior engineer with a background in high-scale payments infrastructure. Co-founded Nexora to bring that same rigour to ambitious product teams.",
     linkedIn:  "https://linkedin.com/in/alex-sato",
     avatarUrl: null,
     tags:      ["Next.js", "AWS", "System Design"],

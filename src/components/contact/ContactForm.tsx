@@ -403,7 +403,7 @@ export default function ContactForm() {
               {...register("privacyConsent")}
             />
             <span className="text-sm text-charcoal-400">
-              I agree to SigmaTech&apos;s{" "}
+              I agree to Nexora&apos;s{" "}
               <a
                 href="/privacy"
                 className="text-electric-400 underline underline-offset-2 hover:text-electric-300"
@@ -426,7 +426,7 @@ export default function ContactForm() {
               {...register("marketingOptIn")}
             />
             <span className="text-sm text-charcoal-500">
-              Keep me updated with SigmaTech case studies and engineering insights.
+              Keep me updated with Nexora case studies and engineering insights.
             </span>
           </label>
         </div>

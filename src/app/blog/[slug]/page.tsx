@@ -44,7 +44,7 @@ export async function generateMetadata(
       title:         post.seo.title,
       description:   post.seo.description,
       url,
-      siteName:      "SigmaTech",
+      siteName:      "Nexora",
       type:          "article",
       publishedTime: post.publishedAt,
       modifiedTime:  post.updatedAt,
@@ -432,7 +432,7 @@ export default function BlogArticlePage({ params }: { params: { slug: string } }
     },
     publisher: {
       "@type": "Organization",
-      name:    "SigmaTech",
+      name:    "Nexora",
       logo: {
         "@type": "ImageObject",
         url:     `${BASE_URL}/logo.svg`,

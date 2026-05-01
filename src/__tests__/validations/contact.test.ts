@@ -256,7 +256,7 @@ describe("contactFormSchema", () => {
     });
 
     it("accepts company and jobTitle within length limits", () => {
-      expect(parse({ company: "SigmaTech Ltd", jobTitle: "Head of Engineering" }).success).toBe(true);
+      expect(parse({ company: "Nexora Ltd", jobTitle: "Head of Engineering" }).success).toBe(true);
     });
 
     it("accepts both fields as undefined", () => {

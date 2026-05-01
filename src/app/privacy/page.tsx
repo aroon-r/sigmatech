@@ -7,7 +7,7 @@ import Container from "@/components/ui/Container";
 export const metadata: Metadata = createMetadata({
   title:   "Privacy Policy",
   description:
-    "How SigmaTech collects, uses, and protects your personal data. We are committed to your privacy and full compliance with UK GDPR.",
+    "How Nexora collects, uses, and protects your personal data. We are committed to your privacy and full compliance with UK GDPR.",
   path:    "/privacy",
   noIndex: false,
 });
@@ -57,7 +57,7 @@ export default function PrivacyPage() {
           >
             <Section title="Who we are">
               <p>
-                SigmaTech Ltd ("SigmaTech", "we", "us") is the data controller for personal
+                Nexora Ltd ("Nexora", "we", "us") is the data controller for personal
                 information collected through this website. We are registered in England and
                 Wales. You can contact us regarding data matters at{" "}
                 <a

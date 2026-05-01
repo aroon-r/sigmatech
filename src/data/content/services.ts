@@ -12,7 +12,7 @@ export const SERVICES: Service[] = [
     icon:      "Code2",
     description:
       "We design and build web applications using modern JavaScript frameworks. From complex SaaS platforms to content-driven marketing sites, we deliver production-ready code — documented well enough that your team can maintain and extend it without us.",
-    longDescription: `Web and app development is the practice of engineering full-stack digital products that perform reliably at scale — from responsive marketing sites to complex, data-intensive SaaS platforms. At SigmaTech, every architecture decision is evaluated against one question: how does this behave when the data model changes, and how hard is it for the next engineer to pick up?
+    longDescription: `Web and app development is the practice of engineering full-stack digital products that perform reliably at scale — from responsive marketing sites to complex, data-intensive SaaS platforms. At Nexora, every architecture decision is evaluated against one question: how does this behave when the data model changes, and how hard is it for the next engineer to pick up?
 
 ## Our approach
 
@@ -86,7 +86,7 @@ If your current codebase is slowing down your product velocity, if your site fai
     sortOrder: 1,
 
     seo: {
-      title:       "Web & App Development Services | SigmaTech",
+      title:       "Web & App Development Services | Nexora",
       description: "Custom web and app development using Next.js, React, and TypeScript. We build fast, scalable, production-ready products with Lighthouse ≥ 95 guaranteed.",
       keywords:    ["Next.js development", "React app development", "custom web application", "TypeScript developers"],
     },
@@ -106,7 +106,7 @@ If your current codebase is slowing down your product velocity, if your site fai
     icon:      "Cloud",
     description:
       "We architect, migrate, and manage cloud infrastructure that scales with your product. From CI/CD pipelines to Kubernetes clusters, our DevOps engineers cut unnecessary cloud spend and reduce deployment failures.",
-    longDescription: `Cloud and DevOps engineering is the discipline of designing infrastructure that is reliable, observable, and cheap to operate — so your engineering team can focus on shipping features, not fighting fires. At SigmaTech, we treat infrastructure as code: everything version-controlled, everything repeatable, nothing snowflaked.
+    longDescription: `Cloud and DevOps engineering is the discipline of designing infrastructure that is reliable, observable, and cheap to operate — so your engineering team can focus on shipping features, not fighting fires. At Nexora, we treat infrastructure as code: everything version-controlled, everything repeatable, nothing snowflaked.
 
 ## What we deliver
 
@@ -180,7 +180,7 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
     sortOrder: 2,
 
     seo: {
-      title:       "Cloud & DevOps Services | SigmaTech",
+      title:       "Cloud & DevOps Services | Nexora",
       description: "AWS cloud architecture, Terraform IaC, Kubernetes orchestration, and CI/CD pipelines that cut costs and eliminate downtime.",
       keywords:    ["AWS solutions architect", "Terraform infrastructure", "Kubernetes consulting", "CI/CD pipeline setup"],
     },
@@ -200,7 +200,7 @@ Most cloud bills have 20–40% of waste hiding in oversized instances, unused re
     icon:      "ShieldCheck",
     description:
       "Our QA engineers embed into your delivery cycle to build automated test suites that catch regressions before they reach production. We wire those tests into CI so they block broken code from merging — not just document what went wrong after the fact.",
-    longDescription: `QA and testing is the systematic process of verifying that software behaves correctly, performs at scale, and remains accessible to all users — before your customers discover it doesn't. At SigmaTech, we treat quality engineering as a first-class discipline, not something you retrofit once the architecture is already set.
+    longDescription: `QA and testing is the systematic process of verifying that software behaves correctly, performs at scale, and remains accessible to all users — before your customers discover it doesn't. At Nexora, we treat quality engineering as a first-class discipline, not something you retrofit once the architecture is already set.
 
 ## Automation-first, not automation-only
 
@@ -271,7 +271,7 @@ WCAG 2.1 AA compliance is not optional for modern products — it is a widely ad
     sortOrder: 3,
 
     seo: {
-      title:       "QA & Testing Services | SigmaTech",
+      title:       "QA & Testing Services | Nexora",
       description: "Automated end-to-end testing with Playwright, load testing with k6, and WCAG 2.1 AA accessibility audits. Reduce production bugs by 60%.",
       keywords:    ["Playwright automation", "automated testing services", "accessibility testing WCAG", "load testing k6"],
     },
@@ -291,7 +291,7 @@ WCAG 2.1 AA compliance is not optional for modern products — it is a widely ad
     icon:      "Palette",
     description:
       "We conduct user research, design intuitive interfaces, and deliver production-ready design systems. Every decision is grounded in research, validated with real users before development starts, and documented well enough that developers can implement without a follow-up call.",
-    longDescription: `UI/UX design is the discipline of translating user needs and business goals into interfaces that are intuitive, accessible, and visually compelling. At SigmaTech, we reject the false choice between beautiful and functional — the best interfaces are both, and that requires research before pixels, not opinions before pixels.
+    longDescription: `UI/UX design is the discipline of translating user needs and business goals into interfaces that are intuitive, accessible, and visually compelling. At Nexora, we reject the false choice between beautiful and functional — the best interfaces are both, and that requires research before pixels, not opinions before pixels.
 
 ## Research before pixels
 
@@ -361,7 +361,7 @@ Launch is when you find out what the design actually gets wrong. We instrument k
     sortOrder: 4,
 
     seo: {
-      title:       "UI/UX Design Services | SigmaTech",
+      title:       "UI/UX Design Services | Nexora",
       description: "User research, Figma design systems, and accessible UI design for web and mobile. Average 40% conversion uplift across client projects.",
       keywords:    ["Figma design system", "UI/UX design services", "user research", "product design agency"],
     },
@@ -381,7 +381,7 @@ Launch is when you find out what the design actually gets wrong. We instrument k
     icon:      "Lightbulb",
     description:
       "We provide senior-level technical leadership to help you make the right architecture decisions, select the right stack, and catch the kind of technical debt that compounds quietly until it starts blocking delivery.",
-    longDescription: `Technology consulting is the practice of applying senior engineering experience to strategic decisions — architecture selection, team structure, technical due diligence, and vendor evaluation — so that organisations avoid the expensive mistakes that come from scaling without a plan. At SigmaTech, our consultants have built and led engineering teams at funded startups and FTSE 250 enterprises. We advise from experience, not from frameworks.
+    longDescription: `Technology consulting is the practice of applying senior engineering experience to strategic decisions — architecture selection, team structure, technical due diligence, and vendor evaluation — so that organisations avoid the expensive mistakes that come from scaling without a plan. At Nexora, our consultants have built and led engineering teams at funded startups and FTSE 250 enterprises. We advise from experience, not from frameworks.
 
 ## When you need a consulting engagement
 
@@ -452,7 +452,7 @@ For seed and Series A companies that need technical leadership but aren't ready 
     sortOrder: 5,
 
     seo: {
-      title:       "Tech Consulting Services | SigmaTech",
+      title:       "Tech Consulting Services | Nexora",
       description: "Architecture reviews, technical due diligence, and fractional CTO services for scaling engineering teams. Senior advisors with startup and enterprise experience.",
       keywords:    ["technical due diligence", "fractional CTO", "architecture review", "engineering consulting"],
     },
@@ -472,11 +472,11 @@ For seed and Series A companies that need technical leadership but aren't ready 
     icon:      "Users",
     description:
       "We provide pre-vetted, senior-level engineers who integrate directly into your team. No long ramp-ups — our engineers are productive within days, not months, and they don't need a week of context-setting before they can open a pull request.",
-    longDescription: `Staff augmentation is the practice of embedding external engineers directly into an existing team to accelerate delivery, fill a skills gap, or maintain momentum during a critical hiring period. At SigmaTech, we treat every augmentation as a long-term partnership, not a body shop transaction — we only place engineers we'd be proud to work alongside ourselves.
+    longDescription: `Staff augmentation is the practice of embedding external engineers directly into an existing team to accelerate delivery, fill a skills gap, or maintain momentum during a critical hiring period. At Nexora, we treat every augmentation as a long-term partnership, not a body shop transaction — we only place engineers we'd be proud to work alongside ourselves.
 
 ## Who we place
 
-Every SigmaTech engineer placed through our augmentation programme is senior-level (8+ years on average), has passed a multi-stage technical assessment, and has been reference-checked by our team. We don't maintain a bench — we match engagements to engineers who have demonstrated deep expertise in your specific stack.
+Every Nexora engineer placed through our augmentation programme is senior-level (8+ years on average), has passed a multi-stage technical assessment, and has been reference-checked by our team. We don't maintain a bench — we match engagements to engineers who have demonstrated deep expertise in your specific stack.
 
 ## How it works
 
@@ -489,7 +489,7 @@ Hiring a senior engineer permanently takes three to six months on average and ca
     deliverables: [
       { title: "Skills-matched engineer placement",  detail: "Shortlist within 72 hours, placement within 10 working days." },
       { title: "Flexible contract terms",            detail: "Monthly rolling or fixed-term. Scale engineers up or down with 30-day notice." },
-      { title: "Dedicated account management",       detail: "A single SigmaTech point of contact managing performance, timesheets, and issues." },
+      { title: "Dedicated account management",       detail: "A single Nexora point of contact managing performance, timesheets, and issues." },
       { title: "Permanent conversion option",        detail: "Convert any placed engineer to a permanent hire — no hidden transfer fee after 6 months." },
     ],
 
@@ -503,7 +503,7 @@ Hiring a senior engineer permanently takes three to six months on average and ca
       {
         question: "How do you vet the engineers you place?",
         answer:
-          "Our assessment process has four stages: an initial CV and portfolio review, a 90-minute technical screen covering system design and code review, a take-home task reviewed by a senior SigmaTech engineer, and two professional references checked by our team. We reject roughly 80% of candidates who apply. The engineers we place are engineers we know and trust.",
+          "Our assessment process has four stages: an initial CV and portfolio review, a 90-minute technical screen covering system design and code review, a take-home task reviewed by a senior Nexora engineer, and two professional references checked by our team. We reject roughly 80% of candidates who apply. The engineers we place are engineers we know and trust.",
       },
       {
         question: "Can we interview the engineer before committing?",
@@ -545,7 +545,7 @@ Hiring a senior engineer permanently takes three to six months on average and ca
     sortOrder: 6,
 
     seo: {
-      title:       "Staff Augmentation Services | SigmaTech",
+      title:       "Staff Augmentation Services | Nexora",
       description: "Pre-vetted engineers placed quickly. Flexible contracts and a permanent conversion option. Remote-ready and available across time zones.",
       keywords:    ["hire senior developers", "contract engineers", "tech talent", "software engineer placement"],
     },

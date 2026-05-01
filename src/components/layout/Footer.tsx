@@ -1,7 +1,7 @@
 // Server Component — no interactivity, safe to render on the server.
 
 import Link from "next/link";
-import { Zap, Github, Linkedin, Twitter } from "lucide-react";
+import { Zap, ArrowRight } from "lucide-react";
 import { SERVICES } from "@/data/content/services";
 import Container from "@/components/ui/Container";
 
@@ -13,24 +13,6 @@ const companyLinks = [
   { label: "Contact", href: "/contact" },
   { label: "Privacy", href: "/privacy" },
   { label: "Terms",   href: "/terms"   },
-] as const;
-
-const socialLinks = [
-  {
-    label: "LinkedIn",
-    href:  "https://linkedin.com/company/sigmatech",
-    Icon:  Linkedin,
-  },
-  {
-    label: "GitHub",
-    href:  "https://github.com/sigmatech",
-    Icon:  Github,
-  },
-  {
-    label: "Twitter / X",
-    href:  "https://twitter.com/sigmatech",
-    Icon:  Twitter,
-  },
 ] as const;
 
 // ─── Sub-components ───────────────────────────────────────────────────────────
@@ -84,19 +66,20 @@ export default function Footer() {
             <Link
               href="/"
               className="group mb-4 inline-flex items-center gap-2 focus-visible:outline-none"
-              aria-label="SigmaTech — home"
+              aria-label="Nexora — home"
             >
               <Zap
                 className="h-5 w-5 text-electric-500 transition-transform duration-150 group-hover:scale-110"
                 aria-hidden="true"
               />
               <span className="font-display text-lg font-semibold tracking-tight text-charcoal-50">
-                SigmaTech
+                Nexora
               </span>
             </Link>
             <p className="max-w-[240px] text-sm leading-relaxed text-charcoal-400">
-              A small engineering team that scopes in writing before building,
-              deploys to staging early, and hands over code your team can own.
+              A small engineering team that writes the scope before building,
+              ships early to staging, and hands over code your team can run
+              without us.
             </p>
           </div>
 
@@ -126,32 +109,31 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 4 — Connect */}
+          {/* Column 4 — Start */}
           <div>
-            <ColumnHeading>Connect</ColumnHeading>
-            <ul className="flex flex-col gap-3" role="list">
-              {socialLinks.map(({ label, href, Icon }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm text-charcoal-400 transition-colors duration-150 hover:text-charcoal-50"
-                    aria-label={`${label} (opens in new tab)`}
-                  >
-                    <Icon className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <ColumnHeading>Start</ColumnHeading>
+            <p className="mb-4 text-sm leading-relaxed text-charcoal-400">
+              Have a project in mind? Send a brief — we&apos;ll tell you how
+              we&apos;d approach it, and if it&apos;s not ready to build,
+              we&apos;ll explain why.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-1.5 text-sm font-medium
+                         text-electric-400 transition-colors duration-150
+                         hover:text-electric-300 focus-visible:outline-none
+                         focus-visible:text-electric-300"
+            >
+              Send a brief
+              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
+            </Link>
           </div>
         </div>
 
         {/* ── Copyright bar ── */}
         <div className="flex flex-col gap-2 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-charcoal-600">
-            © {year} SigmaTech Ltd. All rights reserved.
+            © {year} Nexora Ltd. All rights reserved.
           </p>
         </div>
       </Container>

@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "SigmaTech is a small engineering team that scopes in writing, deploys to staging early, and hands over code your team can own.",
+    "Nexora is a small engineering team that scopes in writing, deploys to staging early, and hands over code your team can own.",
 
   robots: {
     index:               true,
@@ -89,8 +89,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card:        "summary_large_image",
-    site:        "@sigmatech",
-    creator:     "@sigmatech",
+    site:        "@nexora",
+    creator:     "@nexora",
     images:      ["/og-image.jpg"],
   },
 

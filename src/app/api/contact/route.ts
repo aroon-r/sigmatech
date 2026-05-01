@@ -43,26 +43,26 @@ async function processContactSubmission(
   try {
     await Promise.allSettled([
       resend.emails.send({
-        from:    process.env.RESEND_FROM_EMAIL   ?? "no-reply@sigmatech.co.uk",
-        to:      process.env.RESEND_NOTIFY_EMAIL ?? "hello@sigmatech.co.uk",
+        from:    process.env.RESEND_FROM_EMAIL   ?? "no-reply@nexora.co.uk",
+        to:      process.env.RESEND_NOTIFY_EMAIL ?? "hello@nexora.co.uk",
         subject,
         text:    body,
       }),
       resend.emails.send({
-        from:    `SigmaTech <${process.env.RESEND_FROM_EMAIL ?? "hello@sigmatech.co.uk"}>`,
+        from:    `Nexora <${process.env.RESEND_FROM_EMAIL ?? "hello@nexora.co.uk"}>`,
         to:      data.email,
         subject: `We've received your enquiry, ${firstName}`,
         text: [
           `Hi ${firstName},`,
           "",
-          "Thanks for reaching out to SigmaTech. We'll be in touch shortly.",
+          "Thanks for reaching out to Nexora. We'll be in touch shortly.",
           "",
           `Services: ${data.services.join(", ")}`,
           `Budget:   ${data.budgetRange}`,
           "",
-          "Explore our work at https://sigmatech.co.uk/work",
+          "Explore our work at https://nexora.co.uk/work",
           "",
-          "Best,\nThe SigmaTech Team",
+          "Best,\nThe Nexora Team",
         ].join("\n"),
       }),
     ]);

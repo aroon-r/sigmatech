@@ -81,14 +81,14 @@ export default function Navbar() {
         <Link
           href="/"
           className="group flex items-center gap-2 focus-visible:outline-none"
-          aria-label="SigmaTech — home"
+          aria-label="Nexora — home"
         >
           <Zap
             className="h-5 w-5 text-electric-500 transition-transform duration-150 group-hover:scale-110"
             aria-hidden="true"
           />
           <span className="font-display text-lg font-semibold tracking-tight text-charcoal-50 group-focus-visible:text-electric-400">
-            SigmaTech
+            Nexora
           </span>
         </Link>
 

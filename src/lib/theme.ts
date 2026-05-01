@@ -1,5 +1,5 @@
 /**
- * SigmaTech Design System — Theme Constants
+ * Nexora Design System — Theme Constants
  *
  * Single source of truth for all design tokens used in TypeScript/TSX.
  * Import from here rather than hardcoding values in components.

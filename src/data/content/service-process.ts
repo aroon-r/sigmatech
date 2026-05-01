@@ -170,7 +170,7 @@ export const SERVICE_PROCESS: Record<string, ProcessStep[]> = {
       step: 2,
       title: "Deep-Dive Analysis",
       description:
-        "Architecture review, code quality assessment, infrastructure audit, team capability evaluation, and a security posture check — all conducted by a senior SigmaTech principal.",
+        "Architecture review, code quality assessment, infrastructure audit, team capability evaluation, and a security posture check — all conducted by a senior Nexora principal.",
       duration: "Days 2–7",
     },
     {
@@ -229,7 +229,7 @@ export const SERVICE_PROCESS: Record<string, ProcessStep[]> = {
       step: 5,
       title: "Ongoing Management",
       description:
-        "Monthly performance check-ins, timesheet processing, and a dedicated SigmaTech account manager as your single point of contact for any issues or changes.",
+        "Monthly performance check-ins, timesheet processing, and a dedicated Nexora account manager as your single point of contact for any issues or changes.",
       duration: "Monthly",
     },
   ],

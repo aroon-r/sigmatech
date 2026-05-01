@@ -12,7 +12,7 @@ export interface TestimonialEntry extends Testimonial {
 export const TESTIMONIALS: TestimonialEntry[] = [
   {
     quote:
-      "SigmaTech delivered exactly what they promised, on time, with zero data downtime. The rebuild went from internal joke to internal pride in twelve weeks. Our analysts stopped complaining and started asking for new features — which tells you everything.",
+      "Nexora delivered exactly what they promised, on time, with zero data downtime. The rebuild went from internal joke to internal pride in twelve weeks. Our analysts stopped complaining and started asking for new features — which tells you everything.",
     authorName:    "Richard Holloway",
     authorTitle:   "CTO",
     authorCompany: "Meridian Capital",
@@ -30,7 +30,7 @@ export const TESTIMONIALS: TestimonialEntry[] = [
   },
   {
     quote:
-      "Before SigmaTech, a deployment was a two-hour ordeal that kept me up at night. Now it's a GitHub merge. I genuinely can't overstate how much that has changed the culture of the engineering team — people ship things they were previously too scared to touch.",
+      "Before Nexora, a deployment was a two-hour ordeal that kept me up at night. Now it's a GitHub merge. I genuinely can't overstate how much that has changed the culture of the engineering team — people ship things they were previously too scared to touch.",
     authorName:    "Marcus Webb",
     authorTitle:   "Co-founder & CTO",
     authorCompany: "NovaTech Labs",
@@ -39,7 +39,7 @@ export const TESTIMONIALS: TestimonialEntry[] = [
   },
   {
     quote:
-      "We needed an independent perspective before our Series B. SigmaTech's architecture review flagged four structural issues our internal team had normalised over years. Fixing them cost less than the review itself — that kind of intellectual honesty is genuinely rare.",
+      "We needed an independent perspective before our Series B. Nexora's architecture review flagged four structural issues our internal team had normalised over years. Fixing them cost less than the review itself — that kind of intellectual honesty is genuinely rare.",
     authorName:    "James Ardley",
     authorTitle:   "CTO",
     authorCompany: "Vantage Group",
@@ -48,7 +48,7 @@ export const TESTIMONIALS: TestimonialEntry[] = [
   },
   {
     quote:
-      "We placed two senior engineers from SigmaTech while scaling our own team. They were productive from day one, held the bar on code quality, and when our permanent hires were ready, the handover was seamless. I'd use the service again without a second thought.",
+      "We placed two senior engineers from Nexora while scaling our own team. They were productive from day one, held the bar on code quality, and when our permanent hires were ready, the handover was seamless. I'd use the service again without a second thought.",
     authorName:    "Priya Nair",
     authorTitle:   "VP Engineering",
     authorCompany: "Helix AI",
@@ -57,7 +57,7 @@ export const TESTIMONIALS: TestimonialEntry[] = [
   },
   {
     quote:
-      "Our old interface was functional but uninspiring. SigmaTech interviewed our users, challenged our assumptions, and handed us a design system our team can actually extend. Conversion is up 40% and we haven't needed to touch the foundations since launch.",
+      "Our old interface was functional but uninspiring. Nexora interviewed our users, challenged our assumptions, and handed us a design system our team can actually extend. Conversion is up 40% and we haven't needed to touch the foundations since launch.",
     authorName:    "Callum Reid",
     authorTitle:   "Head of Product",
     authorCompany: "Aether Digital",
