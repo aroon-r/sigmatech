@@ -1,14 +1,45 @@
 // @vitest-environment node
 
 import { describe, it, expect, vi } from "vitest";
-import { readFileSync } from "node:fs";
 
-// Mock node:fs so tests don't write to disk
-vi.mock("node:fs", () => ({
-  appendFileSync: vi.fn(),
-  mkdirSync:      vi.fn(),
-  readFileSync:   vi.fn().mockReturnValue("{}"),
-  writeFileSync:  vi.fn(),
+// ─── Hoisted env + mock factories ────────────────────────────────────────────
+// vi.hoisted runs before module evaluation, so the singletons in route.ts
+// (supabase, redis, ratelimit) see these env vars on first import and
+// initialise as non-null — matching production behaviour in tests.
+
+const mocks = vi.hoisted(() => {
+  process.env.SUPABASE_URL         = "https://test.supabase.co";
+  process.env.SUPABASE_SERVICE_KEY = "test-service-key";
+  process.env.UPSTASH_REDIS_REST_URL   = "https://test.upstash.io";
+  process.env.UPSTASH_REDIS_REST_TOKEN = "test-token";
+
+  return {
+    mockInsert: vi.fn().mockResolvedValue({ data: null, error: null }),
+    mockLimit:  vi.fn().mockResolvedValue({
+      success:   true,
+      limit:     3,
+      remaining: 2,
+      reset:     0,
+      pending:   Promise.resolve(),
+    }),
+  };
+});
+
+vi.mock("@supabase/supabase-js", () => ({
+  createClient: vi.fn(() => ({
+    from: vi.fn(() => ({ insert: mocks.mockInsert })),
+  })),
+}));
+
+vi.mock("@upstash/redis", () => ({
+  Redis: vi.fn(() => ({})),
+}));
+
+vi.mock("@upstash/ratelimit", () => ({
+  Ratelimit: Object.assign(
+    vi.fn(() => ({ limit: mocks.mockLimit })),
+    { fixedWindow: vi.fn(() => ({})) },
+  ),
 }));
 
 // Mock resend so tests don't attempt real email sends
@@ -88,14 +119,15 @@ describe("POST /api/contact", () => {
   });
 
   it("returns 429 with Retry-After when the rate limit is triggered", async () => {
-    // Build a rate-limit store pre-filled to the limit (count === RATE_LIMIT_MAX=3)
-    // for the exact email hash the route will compute.
-    const { createHash } = await import("node:crypto");
-    const emailHash = createHash("sha256").update(VALID_PAYLOAD.email).digest("hex");
-    const store = { [emailHash]: { count: 3, resetAt: Date.now() + 10 * 60 * 1000 } };
-
-    // Override readFileSync for this one call so isRateLimited sees a full store.
-    vi.mocked(readFileSync).mockReturnValueOnce(JSON.stringify(store));
+    // Override the Ratelimit mock for this one call to simulate a full window.
+    const futureReset = Date.now() + 10 * 60 * 1000;
+    mocks.mockLimit.mockResolvedValueOnce({
+      success:   false,
+      limit:     3,
+      remaining: 0,
+      reset:     futureReset,
+      pending:   Promise.resolve(),
+    });
 
     const res  = await POST(makeRequest(VALID_PAYLOAD));
     const data = await res.json();
@@ -106,6 +138,22 @@ describe("POST /api/contact", () => {
     // Retry-After header must be present and be a positive integer (seconds)
     const retryAfter = Number(res.headers.get("Retry-After"));
     expect(retryAfter).toBeGreaterThan(0);
+  });
+
+  it("returns 200 even when Supabase persistence fails", async () => {
+    // Simulate a Supabase insert error (e.g., unique constraint violation).
+    // The route must NOT surface this to the user — email still sends.
+    mocks.mockInsert.mockResolvedValueOnce({
+      data:  null,
+      error: { code: "23505", message: "duplicate key value violates unique constraint" },
+    });
+
+    const res  = await POST(makeRequest(VALID_PAYLOAD));
+    const data = await res.json();
+
+    expect(res.status).toBe(200);
+    expect(data.success).toBe(true);
+    expect(typeof data.submissionId).toBe("string");
   });
 
 });

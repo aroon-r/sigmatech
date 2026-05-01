@@ -48,6 +48,44 @@ const referralSource = z.enum([
   "other",
 ]);
 
+// ─── Disposable email domains ─────────────────────────────────────────────────
+// Hardcoded list of well-known disposable/throwaway providers.
+// Not exhaustive — the goal is to raise friction for casual abuse, not to block
+// every disposable domain in existence. A determined attacker can always use a
+// real inbox; this catches the majority of automated form spam.
+
+export const DISPOSABLE_EMAIL_DOMAINS = new Set([
+  "mailinator.com",
+  "guerrillamail.com",
+  "guerrillamail.net",
+  "guerrillamail.org",
+  "guerrillamail.de",
+  "guerrillamail.info",
+  "guerrillamail.biz",
+  "grr.la",
+  "sharklasers.com",
+  "spam4.me",
+  "yopmail.com",
+  "yopmail.fr",
+  "10minutemail.com",
+  "10minutemail.net",
+  "tempmail.com",
+  "temp-mail.org",
+  "throwaway.email",
+  "trashmail.com",
+  "trashmail.me",
+  "trashmail.net",
+  "maildrop.cc",
+  "dispostable.com",
+  "mailnull.com",
+  "fakeinbox.com",
+]);
+
+export function getEmailDomain(email: string): string {
+  const parts = email.toLowerCase().trim().split("@");
+  return parts.length === 2 ? parts[1]! : "";
+}
+
 // ─── Contact form schema ──────────────────────────────────────────────────────
 
 export const contactFormSchema = z.object({
@@ -62,7 +100,11 @@ export const contactFormSchema = z.object({
     .email("Please enter a valid email address")
     .max(254, "Email address is too long")
     .toLowerCase()
-    .trim(),
+    .trim()
+    .refine(
+      (val) => !DISPOSABLE_EMAIL_DOMAINS.has(val.split("@")[1] ?? ""),
+      "Please use a work or personal email address",
+    ),
   company: z
     .string()
     .max(150, "Company name must be under 150 characters")
