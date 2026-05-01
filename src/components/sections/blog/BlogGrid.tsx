@@ -74,16 +74,7 @@ function BlogCard({ post, priority = false }: { post: BlogPost; priority?: boole
             {/* Meta */}
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 pt-1">
               {/* Author */}
-              <div className="flex items-center gap-1.5 text-xs text-charcoal-400">
-                {post.author.avatarUrl && (
-                  <Image
-                    src={post.author.avatarUrl}
-                    alt={post.author.name}
-                    width={20}
-                    height={20}
-                    className="rounded-full object-cover"
-                  />
-                )}
+              <div className="flex items-center text-xs text-charcoal-400">
                 {post.author.name}
               </div>
 

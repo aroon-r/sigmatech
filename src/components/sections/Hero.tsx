@@ -20,14 +20,14 @@ const PROCESS_CARDS = [
     metric:   "Staging early",
     label:    "Real work, not a milestone demo",
     color:    "#0A84FF",
-    position: "right-[4%] top-[18%]",
+    position: "right-8 top-[20%]",
   },
   {
     Icon:     Users,
     metric:   "Same team",
     label:    "From brief to handover",
     color:    "#F59E0B",
-    position: "right-[5%] bottom-[26%]",
+    position: "right-8 bottom-[22%]",
   },
 ] as const;
 
@@ -99,19 +99,19 @@ export default function Hero() {
         <FloatingProcessCard key={card.metric} {...card} />
       ))}
 
-      <div className="relative z-10 flex flex-col items-start text-left">
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-start gap-8 text-left">
 
-        <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold tracking-tight text-charcoal-50">
+        <h1 className="max-w-4xl font-display text-5xl font-bold leading-tight tracking-tight text-charcoal-50">
           The engineers who scope it are the engineers who build it.
         </h1>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-charcoal-300">
+        <p className="max-w-2xl text-lg leading-8 text-charcoal-300">
           We stay small deliberately. Every project starts with a written scope, deploys to a staging
           environment early — before the architecture is too committed to change course — and ends with documented
           decisions, not just a handover call.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-start gap-4">
+        <div className="flex flex-wrap items-center justify-start gap-4">
           <Button href="/contact">Send a brief</Button>
           <Button variant="outline" href="#how-we-work">See how we work</Button>
         </div>

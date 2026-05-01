@@ -5,7 +5,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import TeamGrid from "@/components/sections/TeamGrid";
 import TrustSection from "@/components/sections/TrustSection";
 
 // ─── Metadata ─────────────────────────────────────────────────────────────────
@@ -208,16 +207,20 @@ export default function AboutPage() {
         </section>
       </Reveal>
 
-      {/* ── Team ── */}
+      {/* ── Studio ── */}
       <Reveal>
         <section className="border-t border-charcoal-800 py-24">
           <Container>
             <SectionHeading
-              overline="The team"
-              title="People you'll actually work with"
-              subtitle="No account managers in the middle. The engineers and designers you meet in scoping are the ones who build your product."
+              overline="The studio"
+              title="Small team, senior delivery"
             />
-            <TeamGrid />
+            <p className="mt-8 max-w-2xl text-base leading-8 text-charcoal-300">
+              Nexora is a small engineering studio. Every project is scoped, built, and
+              handed over by the same people — there is no handoff between a sales team
+              and a delivery team. The focus is on well-engineered software with clear
+              documentation, not on headcount.
+            </p>
             <TrustSection />
           </Container>
         </section>
