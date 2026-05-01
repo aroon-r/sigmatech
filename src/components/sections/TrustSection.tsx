@@ -1,13 +1,16 @@
+// These chips name actual practices — not aspirational adjectives.
+// Each one is a commitment a prospective client can ask us about.
 const CHIPS = [
-  "Clear scope",
-  "Practical delivery",
-  "Direct communication",
-  "No unnecessary lock-in",
+  "Written scope before code",
+  "Next.js + TypeScript default",
+  "Tests in CI from day one",
+  "Full IP transfer on delivery",
 ] as const;
 
 const DEFAULT_STATEMENT =
-  "We keep the work clear, focused, and easy to follow. What gets scoped is what gets built — " +
-  "with no unnecessary complexity.";
+  "The engineers you brief are the ones who build. We write down what we're committing to " +
+  "before development starts, set up automated tests from day one, and document every decision " +
+  "that matters — so the handover is something your team can actually use.";
 
 interface TrustSectionProps {
   statement?: string;

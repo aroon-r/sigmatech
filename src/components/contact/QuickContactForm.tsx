@@ -82,7 +82,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         <div>
           <p className="font-display text-lg font-semibold text-charcoal-50">Message sent</p>
           <p className="mt-1 text-sm text-charcoal-400">
-            We’ll review your message and get back to you.
+            Your message has been received. We'll get back to you shortly.
           </p>
         </div>
       </div>
@@ -166,7 +166,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         </button>
 
         <p className="text-center text-xs text-charcoal-600">
-          No spam. Just a clear response.
+          We review every message carefully. No spam, ever.
         </p>
       </div>
     </form>

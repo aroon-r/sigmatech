@@ -1,16 +1,17 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Container from "@/components/ui/Container";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
+// Specific delivery commitments — not generic reassurances.
 const TRUST_POINTS = [
-  "Clear scope",
-  "Practical delivery",
-  "Direct communication",
+  "Written scope before development",
+  "Staging environment early in the build",
+  "Full IP transfer on delivery",
 ] as const;
 
 // ─── Background ───────────────────────────────────────────────────────────────
@@ -115,35 +116,17 @@ export default function FinalCTA() {
               transition={{ duration: 0.60, delay: 0.22, ease: [0, 0, 0.2, 1] }}
             >
 
-              {/* Badge */}
-              <div className="mb-5 flex justify-center">
-                <span
-                  className="inline-flex items-center gap-1.5 rounded-full px-3 py-1
-                             text-xs font-semibold text-white/75"
-                  style={{
-                    background:     "rgba(255,255,255,0.08)",
-                    backdropFilter: "blur(8px)",
-                    border:         "1px solid rgba(255,255,255,0.14)",
-                  }}
-                >
-                  <Zap
-                    className="h-3 w-3 shrink-0 text-electric-300"
-                    aria-hidden="true"
-                  />
-                  Start your project
-                </span>
-              </div>
-
               {/* Headline */}
               <h2 className="mx-auto max-w-3xl font-display text-4xl font-bold
                             tracking-tight text-white sm:text-5xl lg:text-6xl">
-                Ready to build something{" "}
-                <span className="text-gradient-hero">useful?</span>
+                Have something that{" "}
+                <span className="text-gradient-hero">needs building?</span>
               </h2>
 
               {/* Sub-headline */}
               <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-white/55">
-                Share what you&apos;re working on. We&apos;ll help shape it into a clear, buildable plan.
+                Send a brief. We&apos;ll read it, ask what we need to understand, and come back
+                with how we&apos;d approach it — and whether we&apos;re the right fit.
               </p>
 
               {/* ── CTAs ── */}
@@ -164,19 +147,19 @@ export default function FinalCTA() {
                              hover:bg-charcoal-50 active:bg-charcoal-100
                              focus-visible:outline-white"
                 >
-                  Start a conversation
+                  Send a brief
                 </Button>
 
                 {/* White-outline ghost on electric background */}
                 <Button
-                  href="/work"
+                  href="#how-we-work"
                   variant="outline"
                   size="lg"
                   className="border-white/25 text-white hover:bg-white/10
                              hover:border-white/40 hover:text-white
                              focus-visible:outline-white/50"
                 >
-                  View our work
+                  See how we work
                 </Button>
               </div>
 

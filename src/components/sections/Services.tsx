@@ -1,6 +1,4 @@
 "use client";
-// "use client" is required because of Framer Motion's useReducedMotion hook.
-// SERVICES is a static constant — no server data fetching is lost here.
 
 import Link from "next/link";
 import { m, useReducedMotion } from "framer-motion";
@@ -19,8 +17,6 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 // ─── Icon registry ────────────────────────────────────────────────────────────
-// Maps the string `icon` field on each Service to its Lucide component.
-// Update this map if new services introduce new icon names.
 
 const iconMap: Record<string, LucideIcon> = {
   Code2,
@@ -29,6 +25,19 @@ const iconMap: Record<string, LucideIcon> = {
   Palette,
   Lightbulb,
   Users,
+};
+
+// ─── CTA labels ───────────────────────────────────────────────────────────────
+// Intent-based per service — the label describes the destination, not just
+// that there is one. Falls back to a neutral label for future services.
+
+const SERVICE_CTAS: Record<string, string> = {
+  "web-development":    "How we build",
+  "cloud-solutions":    "How we deploy",
+  "qa-testing":         "How we test",
+  "ux-design":          "How we design",
+  "consulting":         "Request a review",
+  "staff-augmentation": "How we place",
 };
 
 // ─── Service Card ─────────────────────────────────────────────────────────────
@@ -46,7 +55,8 @@ interface ServiceCardProps {
 function ServiceCard({
   slug, name, tagline, description, icon, index, reduced,
 }: ServiceCardProps) {
-  const Icon = iconMap[icon] ?? Code2;
+  const Icon   = iconMap[icon] ?? Code2;
+  const ctaLabel = SERVICE_CTAS[slug] ?? "View this service";
 
   return (
     <m.article
@@ -74,7 +84,7 @@ function ServiceCard({
                    bg-gradient-to-r from-transparent via-white/10 to-transparent
                    transition-opacity duration-300 group-hover:opacity-0"
       />
-      {/* Hover top-edge glow — swaps in on hover */}
+      {/* Hover top-edge glow */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-px rounded-t-2xl opacity-0
@@ -107,15 +117,14 @@ function ServiceCard({
         {description}
       </p>
 
-      {/* Learn more */}
       <Link
         href={`/services/${slug}`}
         className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-medium
                    text-electric-400 transition-colors duration-150 hover:text-electric-300
                    focus-visible:outline-none focus-visible:text-electric-300"
-        aria-label={`Learn more about ${name}`}
+        aria-label={`${ctaLabel} — ${name}`}
       >
-        Learn more
+        {ctaLabel}
         <ArrowRight
           className="h-3.5 w-3.5 transition-transform duration-150 group-hover:translate-x-0.5"
           aria-hidden="true"
@@ -133,7 +142,7 @@ export default function Services() {
   return (
     <section aria-label="Our services" id="services" className="relative overflow-hidden py-24">
 
-      {/* Ambient glow — provides depth behind glass cards */}
+      {/* Ambient glow behind glass cards */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 -z-10"
@@ -146,8 +155,8 @@ export default function Services() {
       <Container>
         <SectionHeading
           overline="What we do"
-          title="Services built to scale"
-          subtitle="From pixel-perfect interfaces to bulletproof infrastructure — we cover the full stack so your product ships faster and runs better."
+          title="A focused set of things we do without cutting corners"
+          subtitle="We don't list services we can't deliver to the same standard we hold the rest of the work to."
         />
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
