@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { contactFormSchema } from "@/lib/validations";
+import { contactFormSchema, contactFormEmailSchema } from "@/lib/validations";
 
 // ─── Shared valid baseline ────────────────────────────────────────────────────
 // Every test that needs a passing payload spreads this and overrides one field.
@@ -122,7 +122,7 @@ describe("contactFormSchema", () => {
     });
 
     it("rejects an email longer than 254 characters", () => {
-      expect(parse({ email: `${"a".repeat(245)}@b.com` }).success).toBe(false);
+      expect(parse({ email: `${"a".repeat(249)}@b.com` }).success).toBe(false);
     });
 
     it("accepts a valid email with subdomains", () => {
@@ -331,12 +331,10 @@ describe("contactFormSchema", () => {
 
   describe("contactFormEmailSchema (blur validation)", () => {
     it("validates a valid email in isolation", () => {
-      const { contactFormEmailSchema } = await import("@/lib/validations");
       expect(contactFormEmailSchema.safeParse({ email: "test@example.com" }).success).toBe(true);
     });
 
     it("rejects an invalid email in isolation", () => {
-      const { contactFormEmailSchema } = await import("@/lib/validations");
       expect(contactFormEmailSchema.safeParse({ email: "bad" }).success).toBe(false);
     });
   });

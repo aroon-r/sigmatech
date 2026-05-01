@@ -1,5 +1,5 @@
 # Step 08 — Wireframe Spec: Homepage
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Route:** `/`
 **Status:** Approved — Pending Client Sign-off
@@ -48,7 +48,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
 ┌──────────────────────────────────────────────────────────────────────┐
 │  NAVBAR  —  fixed, full-width, scroll-aware                         │
 │                                                                      │
-│  < Zap icon >  SigmaTech          Services  Work  About  Blog       │
+│  < Zap icon >  nexora          Services  Work  About  Blog       │
 │  ↑ Logo group (flex, gap-2)       ↑ Nav links (hidden below md)     │
 │                                                          ↓           │
 │                                              [ Get in touch → ]      │
@@ -67,7 +67,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
     │
     ├── LOGO GROUP  flex items-center gap-2
     │   ├── <Zap>  h-5 w-5  color: brand-500
-    │   └── <span>  "SigmaTech"  text-lg font-semibold text-gray-900 dark:text-white
+    │   └── <span>  "nexora"  text-lg font-semibold text-gray-900 dark:text-white
     │
     ├── NAV LINKS  hidden md:flex  items-center gap-8
     │   ├── <a> "Services"  → /services
@@ -128,7 +128,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
 │              scales with you                    ← gradient text      │
 │        ↑ H1 — max-w-4xl, centred                                    │
 │                                                                      │
-│    SigmaTech delivers high-performance web applications,             │
+│    nexora delivers high-performance web applications,             │
 │    APIs, and digital products — engineered for reliability.          │
 │    ↑ Sub-headline — max-w-2xl, centred                              │
 │                                                                      │
@@ -496,7 +496,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
 ## Section 06 — Testimonials
 **Component:** `src/components/sections/Testimonials.tsx`
 **Layout:** Centred heading + 3-column quote cards
-**Purpose:** Peer validation — humanise SigmaTech with real voices
+**Purpose:** Peer validation — humanise nexora with real voices
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
@@ -673,7 +673,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
 ┌──────────────────────────────────────────────────────────────────────┐
 │  FOOTER  —  pt-16 pb-8  bg-gray-950  text-gray-400                  │
 │                                                                      │
-│  < Logo >  SigmaTech     Services        Company       Connect      │
+│  < Logo >  nexora     Services        Company       Connect      │
 │  Tagline copy            Web Dev         About          LinkedIn    │
 │                          Cloud & DevOps  Blog           GitHub      │
 │                          QA & Testing    Contact        Twitter/X   │
@@ -682,7 +682,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
 │                          Staff Aug                                  │
 │                                                                      │
 │  ─────────────────────────────────────────────────────────────────  │
-│  © 2026 SigmaTech. All rights reserved.                             │
+│  © 2026 nexora. All rights reserved.                             │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -699,7 +699,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
     │   ├── COL 1 — Brand
     │   │   ├── LOGO  flex items-center gap-2  mb-4
     │   │   │   ├── <Zap h-5 w-5 text-brand-500>
-    │   │   │   └── <span>  "SigmaTech"  text-white font-semibold
+    │   │   │   └── <span>  "nexora"  text-white font-semibold
     │   │   └── <p>  text-sm text-gray-400  max-w-xs  leading-relaxed
     │   │       └── "{Short brand tagline}"
     │   │
@@ -730,7 +730,7 @@ Global container: `max-w-7xl mx-auto px-6 lg:px-8`
     │
     └── COPYRIGHT BAR  flex items-center justify-between  pt-8
         ├── <p>  text-xs text-gray-600
-        │   └── "© 2026 SigmaTech. All rights reserved."
+        │   └── "© 2026 nexora. All rights reserved."
         └── <p>  text-xs text-gray-600
             └── "Built with Next.js & Tailwind CSS"
 ```

@@ -123,9 +123,9 @@ jobs:
           # Placeholders — build must not require real secrets to succeed.
           # If a secret is read at build time, wrap it in an optional check.
           RESEND_API_KEY:              ci-build-placeholder
-          RESEND_FROM_EMAIL:           no-reply@sigmatech.co.uk
-          RESEND_NOTIFY_EMAIL:         hello@sigmatech.co.uk
-          NEXT_PUBLIC_SITE_URL:        https://sigmatech.co.uk
+          RESEND_FROM_EMAIL:           no-reply@nexora.co.uk
+          RESEND_NOTIFY_EMAIL:         hello@nexora.co.uk
+          NEXT_PUBLIC_SITE_URL:        https://nexora.co.uk
           NEXT_PUBLIC_POSTHOG_KEY:     ci-build-placeholder
           NEXT_PUBLIC_POSTHOG_HOST:    https://eu.i.posthog.com
           CONTACT_RATE_LIMIT_MAX:      "3"

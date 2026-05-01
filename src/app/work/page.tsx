@@ -148,8 +148,8 @@ export default function WorkPage() {
         <Container>
           <SectionHeading
             overline="Our work"
-            title="Results we're proud of"
-            subtitle="Real projects, measurable outcomes. Every engagement is judged by the needle it moves, not the lines of code we ship."
+            title="Illustrative projects"
+            subtitle="These projects reflect the kind of work we do and the outcomes we aim for. Client names and details are illustrative."
             align="center"
             as="h1"
           />
@@ -172,6 +172,11 @@ export default function WorkPage() {
               Case studies coming soon.
             </p>
           )}
+
+          <p className="mt-12 text-center text-xs text-charcoal-600">
+            These are illustrative projects. Client names and specific figures are representative
+            of the kind of work we do, not named client relationships.
+          </p>
         </Container>
       </section>
     </main>

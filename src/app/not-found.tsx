@@ -100,7 +100,7 @@ export default function NotFound() {
               <div className="h-2.5 w-2.5 rounded-full bg-red-500/60"    aria-hidden="true" />
               <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/60" aria-hidden="true" />
               <div className="h-2.5 w-2.5 rounded-full bg-green-500/60"  aria-hidden="true" />
-              <span className="ml-2 text-[10px] text-charcoal-600">bash — sigmatech</span>
+              <span className="ml-2 text-[10px] text-charcoal-600">bash — nexora</span>
             </div>
 
             {/* Terminal output */}

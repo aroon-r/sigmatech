@@ -62,19 +62,20 @@ function ServiceCard({
     <m.article
       initial={reduced ? false : { opacity: 0, y: 32 }}
       whileInView={reduced ? {} : { opacity: 1, y: 0 }}
+      whileHover={reduced ? {} : { y: -4 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{
         duration: 0.5,
         delay:    index * 0.08,
         ease:     [0, 0, 0.2, 1],
       }}
-      className="group relative flex flex-col rounded-2xl p-6 transition-colors duration-300"
+      className="group relative flex flex-col rounded-2xl p-6 transition-[box-shadow,border-color] duration-300"
       style={{
-        background:           "rgba(255,255,255,0.03)",
+        background:           "rgba(255,255,255,0.025)",
         backdropFilter:       "blur(16px)",
         WebkitBackdropFilter: "blur(16px)",
-        border:               "1px solid rgba(255,255,255,0.06)",
-        boxShadow:            "0 4px 32px rgba(0,0,0,0.36)",
+        border:               "1px solid rgba(255,255,255,0.04)",
+        boxShadow:            "0 2px 16px rgba(0,0,0,0.22)",
       }}
     >
       {/* Default top-edge shimmer */}
@@ -97,7 +98,7 @@ function ServiceCard({
         className="pointer-events-none absolute inset-0 rounded-2xl opacity-0
                    transition-opacity duration-300 group-hover:opacity-100"
         style={{
-          boxShadow: "inset 0 0 0 1px rgba(10,132,255,0.22), 0 8px 48px rgba(10,132,255,0.08)",
+          boxShadow: "inset 0 0 0 1px rgba(10,132,255,0.28), 0 16px 48px rgba(0,0,0,0.32), 0 4px 20px rgba(10,132,255,0.10)",
         }}
       />
 
@@ -140,24 +141,23 @@ export default function Services() {
   const prefersReduced = useReducedMotion() ?? false;
 
   return (
-    <section aria-label="Our services" id="services" className="relative overflow-hidden py-24">
+    <section aria-label="Our services" id="services" className="relative overflow-hidden py-28">
 
-      {/* Ambient glow behind glass cards */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 -z-10"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 40% at 50% 0%, rgba(10,132,255,0.07) 0%, transparent 70%)",
-        }}
-      />
 
-      <Container>
-        <SectionHeading
-          overline="What we do"
-          title="A focused set of things we've chosen to be good at"
-          subtitle="We don't list services we can't deliver to the same standard we hold the rest of the work to."
-        />
+<Container>
+        <m.div
+          initial={prefersReduced ? false : { opacity: 0, y: 24 }}
+          whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55, ease: [0, 0, 0.2, 1] }}
+        >
+          <SectionHeading
+            overline="What we do"
+            title="A focused set of things we've chosen to be good at"
+            subtitle="We don't list services we can't deliver to the same standard we hold the rest of the work to."
+            align="left"
+          />
+        </m.div>
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, i) => (

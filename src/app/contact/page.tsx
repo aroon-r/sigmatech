@@ -9,18 +9,18 @@ export const metadata: Metadata = PAGE_METADATA.contact;
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 // Replace with your actual Cal.com username and event slug.
-const CAL_URL = "https://cal.com/sigmatech/discovery-call";
+const CAL_URL = "https://cal.com/nexora/discovery-call";
 
 // ─── Static content ───────────────────────────────────────────────────────────
 
 const CONTACT_DETAILS = [
-  { Icon: Mail, label: "Email", value: "hello@sigmatech.co.uk", href: "mailto:hello@sigmatech.co.uk" },
+  { Icon: Mail, label: "Email", value: "hello@nexora.dev", href: "mailto:hello@nexora.dev" },
 ] as const;
 
 const SOCIAL_LINKS = [
-  { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/sigmatech" },
-  { Icon: Github,   label: "GitHub",   href: "https://github.com/sigmatech"           },
-  { Icon: Twitter,  label: "Twitter",  href: "https://twitter.com/sigmatech"          },
+  { Icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/nexora" },
+  { Icon: Github,   label: "GitHub",   href: "https://github.com/nexora"           },
+  { Icon: Twitter,  label: "Twitter",  href: "https://twitter.com/nexora"          },
 ] as const;
 
 const COMMITMENTS = [

@@ -1,5 +1,5 @@
 # Step 11 — SEO & AEO Strategy
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 
@@ -20,13 +20,13 @@
 
 ## 1. SEO Philosophy
 
-SigmaTech's SEO strategy is built on three non-negotiable principles:
+nexora's SEO strategy is built on three non-negotiable principles:
 
 **1. Performance IS SEO.** Google's Core Web Vitals are a confirmed ranking factor. Our 95+ Lighthouse target is not a vanity metric — it directly determines where we rank. A slow site cannot be SEO-optimised.
 
 **2. Authority through specificity.** We do not chase broad keywords ("software"). We own specific, high-intent queries where a qualified prospect is one click from a discovery call ("Next.js development agency for SaaS").
 
-**3. AEO is the next frontier.** By 2026, a significant share of B2B research happens via AI assistants. LLMs (Claude, ChatGPT, Gemini, Perplexity) answer questions from training data and RAG-indexed web content. SigmaTech must be represented correctly in those answers. This requires structured data, entity clarity, and definitive factual content — not just keyword density.
+**3. AEO is the next frontier.** By 2026, a significant share of B2B research happens via AI assistants. LLMs (Claude, ChatGPT, Gemini, Perplexity) answer questions from training data and RAG-indexed web content. nexora must be represented correctly in those answers. This requires structured data, entity clarity, and definitive factual content — not just keyword density.
 
 ---
 
@@ -34,12 +34,12 @@ SigmaTech's SEO strategy is built on three non-negotiable principles:
 
 ### Search Intent Classification
 
-| Intent | Type | Target on SigmaTech |
+| Intent | Type | Target on nexora |
 |---|---|---|
 | **Transactional** | Ready to hire / contact | Contact, Services pages |
 | **Commercial** | Evaluating options | Case Studies, About, Services |
 | **Informational** | Research phase | Blog, FAQ sections |
-| **Navigational** | Looking for SigmaTech specifically | Home, About |
+| **Navigational** | Looking for nexora specifically | Home, About |
 
 ---
 
@@ -57,7 +57,7 @@ SigmaTech's SEO strategy is built on three non-negotiable principles:
 | Long-tail | `custom software development company for startups` | 260 | Low |
 | Long-tail | `agile software development agency` | 480 | Medium |
 | Long-tail | `Next.js development agency` | 390 | Low |
-| Brand | `SigmaTech` | — | None |
+| Brand | `nexora` | — | None |
 
 **On-page target:** H1 contains primary keyword naturally. Meta description under 155 chars with a CTA verb.
 
@@ -115,7 +115,7 @@ SigmaTech's SEO strategy is built on three non-negotiable principles:
 
 | Type | Keyword | Monthly Est. Vol. | Competition |
 |---|---|---|---|
-| Primary | `about SigmaTech` | Brand | None |
+| Primary | `about nexora` | Brand | None |
 | Primary | `software development company team` | 390 | Low |
 | Secondary | `tech company culture` | 880 | Medium |
 | Secondary | `senior software developers` | 1,300 | Medium |
@@ -317,14 +317,14 @@ Every service page and blog article must open with a 40–60 word paragraph that
 
 ```
 ❌ Wrong:
-"At SigmaTech, we've been delivering exceptional web development
+"At nexora, we've been delivering exceptional web development
 services for years, helping clients achieve their digital goals
 through innovative approaches and cutting-edge technology."
 
 ✅ Right (AEO-optimised):
 "Custom web development is the process of building a web
 application tailored to a specific business's requirements —
-as opposed to using an off-the-shelf platform. SigmaTech
+as opposed to using an off-the-shelf platform. nexora
 specialises in Next.js and TypeScript-based applications,
 delivering production-grade code with automated testing and
 CI/CD pipelines included."
@@ -350,7 +350,7 @@ Q: How long does it take to build a custom web application?
 A: A simple web application typically takes 8–12 weeks from
    discovery to launch. A complex platform with integrations,
    authentication, and custom workflows can take 16–24 weeks.
-   SigmaTech works in 2-week sprints, so you see working
+   nexora works in 2-week sprints, so you see working
    software every fortnight — not just at the end.
 
 Q: What is the difference between a web application and a website?
@@ -363,11 +363,11 @@ A: A website delivers static information (pages, content). A
 Q: How much does custom web development cost?
 A: Custom web development typically ranges from £15,000–£80,000
    for an MVP, depending on complexity, integrations, and team
-   size. SigmaTech provides a detailed estimate after a free
+   size. nexora provides a detailed estimate after a free
    discovery call — with no obligation.
 
 Q: Do you work with startups or only enterprises?
-A: Both. SigmaTech works with funded startups building their
+A: Both. nexora works with funded startups building their
    first product and with established businesses rebuilding
    legacy systems. Our process scales to the size of the project.
 ```
@@ -376,11 +376,11 @@ A: Both. SigmaTech works with funded startups building their
 
 #### Rule 3 — Entity Clarity
 
-LLMs need to understand what SigmaTech IS before they can recommend it. Entity clarity means using consistent, unambiguous language about the company across all pages.
+LLMs need to understand what nexora IS before they can recommend it. Entity clarity means using consistent, unambiguous language about the company across all pages.
 
 **Required entity statements (must appear on the Homepage and About page):**
 ```
-Full legal name:  SigmaTech
+Full legal name:  nexora
 Type of company:  Software development and IT services company
 Location:         [City, Country — to be confirmed]
 Services:         Web development, cloud solutions, QA testing,
@@ -391,8 +391,8 @@ Founded:          [Year]
 ```
 
 **Entity consistency rules:**
-- Always refer to the company as "SigmaTech" — not "we" alone in standalone contexts
-- First mention on every page: full entity name + descriptor. E.g., *"SigmaTech, a UK-based software development company, ..."*
+- Always refer to the company as "nexora" — not "we" alone in standalone contexts
+- First mention on every page: full entity name + descriptor. E.g., *"nexora, a UK-based software development company, ..."*
 - `Organization` schema on every page (via root layout) signals the entity to all machines
 
 ---
@@ -421,7 +421,7 @@ Each blog article must follow this structure to maximise LLM retrieval:
    (Directly feeds PAA and LLM Q&A responses)
 
 6. CTA                → "Working with a software partner? Start with
-                         a free discovery call with SigmaTech."
+                         a free discovery call with nexora."
 ```
 
 ---
@@ -432,7 +432,7 @@ Perplexity and similar RAG-based engines retrieve pages and cite them. To be cit
 
 1. **Write statements that are directly quotable.** Single-sentence facts, statistics, and definitions get cited.
 2. **Use `<cite>` and `<blockquote>` HTML semantics** on testimonials and quoted statistics.
-3. **Publish original data.** If SigmaTech surveys clients, publishes benchmarks, or produces original research — even small datasets — this becomes citable.
+3. **Publish original data.** If nexora surveys clients, publishes benchmarks, or produces original research — even small datasets — this becomes citable.
 4. **Get backlinks from industry-relevant sources.** Clutch.co profile, GitHub contributions, dev.to articles, and conference mentions all increase LLM training data representation.
 
 ---
@@ -464,20 +464,20 @@ All schema is injected as `<script type="application/ld+json">` via React Server
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "SigmaTech",
-  "url": "https://sigmatech.dev",
-  "logo": "https://sigmatech.dev/logo.png",
-  "description": "SigmaTech builds high-performance software products and digital experiences for forward-thinking companies.",
+  "name": "nexora",
+  "url": "https://nexora.dev",
+  "logo": "https://nexora.dev/logo.png",
+  "description": "nexora builds high-performance software products and digital experiences for forward-thinking companies.",
   "foundingDate": "YYYY",
   "sameAs": [
-    "https://linkedin.com/company/sigmatech",
-    "https://github.com/sigmatech",
-    "https://twitter.com/sigmatech"
+    "https://linkedin.com/company/nexora",
+    "https://github.com/nexora",
+    "https://twitter.com/nexora"
   ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "customer service",
-    "email": "hello@sigmatech.dev",
+    "email": "hello@nexora.dev",
     "availableLanguage": "English"
   },
   "areaServed": "Worldwide",
@@ -494,13 +494,13 @@ All schema is injected as `<script type="application/ld+json">` via React Server
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "SigmaTech",
-  "url": "https://sigmatech.dev",
+  "name": "nexora",
+  "url": "https://nexora.dev",
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "https://sigmatech.dev/blog?q={search_term_string}"
+      "urlTemplate": "https://nexora.dev/blog?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }
@@ -516,8 +516,8 @@ All schema is injected as `<script type="application/ld+json">` via React Server
   "description": "{Service description}",
   "provider": {
     "@type": "Organization",
-    "name": "SigmaTech",
-    "url": "https://sigmatech.dev"
+    "name": "nexora",
+    "url": "https://nexora.dev"
   },
   "serviceType": "{e.g. Web Development}",
   "areaServed": "Worldwide",
@@ -560,12 +560,12 @@ All schema is injected as `<script type="application/ld+json">` via React Server
   "author": {
     "@type": "Person",
     "name": "{Author name}",
-    "url": "https://sigmatech.dev/about"
+    "url": "https://nexora.dev/about"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "SigmaTech",
-    "logo": { "@type": "ImageObject", "url": "https://sigmatech.dev/logo.png" }
+    "name": "nexora",
+    "logo": { "@type": "ImageObject", "url": "https://nexora.dev/logo.png" }
   },
   "datePublished": "{ISO 8601 date}",
   "dateModified": "{ISO 8601 date}",
@@ -581,8 +581,8 @@ All schema is injected as `<script type="application/ld+json">` via React Server
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sigmatech.dev" },
-    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://sigmatech.dev/services" },
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://nexora.dev" },
+    { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://nexora.dev/services" },
     { "@type": "ListItem", "position": 3, "name": "{Current page}", "item": "{Current URL}" }
   ]
 }
@@ -668,8 +668,8 @@ When case study content is delivered, populate this matrix. Every service should
 
 ### Technical SEO
 
-- [ ] `sitemap.xml` accessible at `https://sigmatech.dev/sitemap.xml`
-- [ ] `robots.txt` accessible at `https://sigmatech.dev/robots.txt`
+- [ ] `sitemap.xml` accessible at `https://nexora.dev/sitemap.xml`
+- [ ] `robots.txt` accessible at `https://nexora.dev/robots.txt`
 - [ ] All pages have unique `<title>` tags (verified via crawl)
 - [ ] All pages have unique `<meta name="description">` (< 155 chars each)
 - [ ] No pages have duplicate `<h1>` tags
@@ -751,10 +751,10 @@ When case study content is delivered, populate this matrix. Every service should
 - [ ] Review FAQ sections for new questions appearing in GSC queries
 - [ ] Check if any schema errors appeared in GSC Rich Results
 - [ ] Test AEO: manually ask Claude, ChatGPT, and Perplexity
-  - "What is SigmaTech?"
+  - "What is nexora?"
   - "Who does Next.js development in [city]?"
   - "How much does custom web development cost?"
-  - Note whether SigmaTech is mentioned and correct the entity data if not
+  - Note whether nexora is mentioned and correct the entity data if not
 
 ### Quarterly
 - [ ] Refresh page meta descriptions based on CTR data in GSC

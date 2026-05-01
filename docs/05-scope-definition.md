@@ -1,5 +1,5 @@
 # Step 05 — Scope Definition
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 
@@ -40,7 +40,7 @@ No Phase 2 or 3 features will be discussed during MVP development. Scope creep i
 | How We Work | 3–4 step process — addresses PM buyer concerns |
 | Case Studies | 2–3 featured cards linking to full case study pages |
 | Testimonials | 3 rotating quotes with attribution |
-| Tech Stack | Logo grid of technologies SigmaTech uses |
+| Tech Stack | Logo grid of technologies nexora uses |
 | Final CTA | Full-width call-to-action band |
 | Footer | Links, social, legal, copyright |
 
@@ -91,17 +91,17 @@ No Phase 2 or 3 features will be discussed during MVP development. Scope creep i
 
 ## 4. Content Scope
 
-### In Scope (SigmaTech to Supply)
+### In Scope (nexora to Supply)
 - Company tagline and all body copy
 - Service descriptions (6 max)
 - 2–3 case studies with metrics
 - 3 client testimonials with name/role/company
 - Team member names, titles, and photos
-- Logo assets: SigmaTech logo + client logos
+- Logo assets: nexora logo + client logos
 - Tech stack logos
 
 ### Out of Scope
-- Copywriting / content creation (SigmaTech owns this)
+- Copywriting / content creation (nexora owns this)
 - Photography / custom illustration
 - Video production
 

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -37,21 +37,23 @@ export interface ButtonProps {
 
 const base =
   "relative inline-flex items-center justify-center gap-2 rounded-lg font-semibold " +
-  "select-none cursor-pointer transition-colors duration-150 " +
+  "select-none cursor-pointer transition-all duration-150 " +
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 " +
   "disabled:opacity-50 disabled:pointer-events-none";
 
 const variantStyles: Record<ButtonVariant, string> = {
   // Filled electric-500 — main CTA. Has shimmer sweep overlay.
   primary:
-    "overflow-hidden bg-electric-500 text-white shadow-sm " +
-    "hover:bg-electric-600 active:bg-electric-700 active:scale-[0.98] " +
+    "overflow-hidden bg-electric-500 text-white shadow-md " +
+    "hover:bg-electric-600 hover:shadow-[0_0_22px_rgba(10,132,255,0.30)] " +
+    "active:bg-electric-700 active:scale-[0.98] active:shadow-sm " +
     "focus-visible:outline-electric-500",
 
   // Subtle charcoal fill — secondary action sitting next to a primary.
   secondary:
-    "bg-charcoal-800 text-electric-400 border border-charcoal-700 " +
-    "hover:bg-charcoal-700 hover:border-charcoal-600 active:bg-charcoal-600 " +
+    "bg-charcoal-800/70 text-charcoal-300 border border-charcoal-700/80 " +
+    "hover:bg-charcoal-700 hover:border-charcoal-600 hover:text-charcoal-100 " +
+    "active:bg-charcoal-600 " +
     "focus-visible:outline-electric-500",
 
   // Electric border, no fill — less prominent CTA or paired with primary.
@@ -90,7 +92,14 @@ export default function Button({
   type       = "button",
   ...ariaProps
 }: ButtonProps) {
-  const cls = cn(base, variantStyles[variant], sizeStyles[size], className);
+  const prefersReduced = useReducedMotion() ?? false;
+  const cls = cn(
+    base,
+    variantStyles[variant],
+    sizeStyles[size],
+    variant === "primary" && "motion-safe:hover:scale-[1.02]",
+    className,
+  );
 
   // ── Shimmer sweep — primary only ──
   // Absolutely-positioned translucent gradient that travels left→right once
@@ -147,8 +156,9 @@ export default function Button({
       disabled={disabled || isLoading}
       className={cls}
       onClick={onClick}
+      whileHover={variant === "primary" && !prefersReduced ? { scale: 1.02 } : undefined}
       whileTap={{ scale: 0.97 }}
-      transition={{ duration: 0.1, ease: "easeOut" }}
+      transition={{ duration: 0.12, ease: "easeOut" }}
       aria-disabled={disabled || isLoading}
       {...ariaProps}
     >

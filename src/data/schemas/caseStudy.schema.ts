@@ -109,6 +109,8 @@ export interface CaseStudy extends Timestamps {
   sortOrder: number;
   /** Pin to homepage "Featured Work" section */
   isFeatured: boolean;
+  /** True when the project is illustrative rather than a named client engagement */
+  isIllustrative?: boolean;
 
   // ── SEO ───────────────────────────────────────────────────────────────────
   seo: SEOMetadata;

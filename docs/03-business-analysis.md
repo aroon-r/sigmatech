@@ -1,5 +1,5 @@
 # Step 03 — Business Analysis
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 
@@ -7,7 +7,7 @@
 
 ## 1. Business Context
 
-SigmaTech is a software development and IT services company operating in a competitive B2B market. The current website fails to reflect the company's modern capabilities, causing a trust and credibility gap when high-value prospects evaluate SigmaTech against polished competitors.
+nexora is a software development and IT services company operating in a competitive B2B market. The current website fails to reflect the company's modern capabilities, causing a trust and credibility gap when high-value prospects evaluate nexora against polished competitors.
 
 This revamp is not cosmetic — it is a lead generation and brand positioning asset.
 
@@ -40,7 +40,7 @@ This revamp is not cosmetic — it is a lead generation and brand positioning as
 - **Decision trigger:** A documented process that mirrors how they already work
 
 ### Tertiary — HR & Talent Acquisition Leads
-- **Goal:** Evaluate SigmaTech as a staffing or outsourcing partner
+- **Goal:** Evaluate nexora as a staffing or outsourcing partner
 - **Pain points:** Vetting technical talent, scaling teams quickly, compliance
 - **What they evaluate:** Team size, specialisations, client logos, culture signals
 - **Decision trigger:** Recognisable client logos + clear service descriptions
@@ -49,7 +49,7 @@ This revamp is not cosmetic — it is a lead generation and brand positioning as
 
 ## 4. Value Proposition
 
-> **"SigmaTech builds high-performance software products — engineered for reliability, built to scale."**
+> **"nexora builds high-performance software products — engineered for reliability, built to scale."**
 
 Supporting proof points:
 - Full-stack capability: web, mobile, cloud, testing
@@ -61,7 +61,7 @@ Supporting proof points:
 
 ## 5. Brand Positioning
 
-| Dimension | SigmaTech Position |
+| Dimension | nexora Position |
 |---|---|
 | Aesthetic | Minimalist, dark-mode first, technical |
 | Tone | Confident, precise, no marketing fluff |
@@ -99,14 +99,14 @@ Supporting proof points:
 | Tech stack | Next.js 14, Tailwind CSS, TypeScript — non-negotiable |
 | Budget | Not formally defined — MVP-first approach |
 | Timeline | ASAP — quality cannot be sacrificed for speed |
-| Owner | SigmaTech (builder = owner, no external client sign-off cycle) |
+| Owner | nexora (builder = owner, no external client sign-off cycle) |
 | Maintenance | Must be maintainable by internal team without heavy onboarding |
 
 ---
 
 ## 8. Assumptions
 
-1. SigmaTech will supply all content (copy, case studies, team photos) within 1 week of scope sign-off.
+1. nexora will supply all content (copy, case studies, team photos) within 1 week of scope sign-off.
 2. Domain, hosting (Vercel), and analytics tools (PostHog / Plausible) are already available or will be provisioned.
 3. No CMS is required for MVP — content is code-managed; CMS is Phase 2.
 4. Legal pages (Privacy Policy, Terms) are out of scope for MVP but placeholders will be included.

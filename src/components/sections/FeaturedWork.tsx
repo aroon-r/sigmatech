@@ -316,16 +316,22 @@ export default function FeaturedWork() {
   const [hero, ...rest]  = featured;
 
   return (
-    <section aria-label="Featured work" id="work" className="py-24">
+    <section aria-label="Featured work" id="work" className="py-28">
       <Container>
 
         {/* Section header — left-aligned with "View all" on the right */}
-        <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+        <m.div
+          className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
+          initial={prefersReduced ? false : { opacity: 0, y: 24 }}
+          whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55, ease: [0, 0, 0.2, 1] }}
+        >
           <SectionHeading
             align="left"
             overline="Our work"
-            title="Results we're proud of"
-            subtitle="Every engagement is measured by the outcome, not the output."
+            title="Illustrative projects"
+            subtitle="These projects reflect the kind of work we do. Client details are illustrative."
           />
           <div className="shrink-0">
             <Button
@@ -337,11 +343,11 @@ export default function FeaturedWork() {
               View all work
             </Button>
           </div>
-        </div>
+        </m.div>
 
         {/* Hero card — full width */}
         {hero && (
-          <div className="mt-12">
+          <div className="mt-14">
             <HeroCard cs={hero} reduced={prefersReduced} index={0} />
           </div>
         )}

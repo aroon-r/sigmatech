@@ -1,5 +1,5 @@
 # Step 12 — Technical Architecture
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 
@@ -20,7 +20,7 @@
 
 ## 1. Architecture Overview
 
-SigmaTech's website is a **statically-first, edge-delivered Next.js 14 application**. The architectural goal is maximum performance at zero infrastructure cost — no servers to manage, no cold starts, no per-request compute bills.
+nexora's website is a **statically-first, edge-delivered Next.js 14 application**. The architectural goal is maximum performance at zero infrastructure cost — no servers to manage, no cold starts, no per-request compute bills.
 
 ### Stack Summary
 
@@ -385,7 +385,7 @@ export async function POST(req: NextRequest) {
 
 `middleware.ts` runs at the **Vercel Edge Runtime** — before any page is served, on every request. It is a V8 isolate, not Node.js — no file system access, no native modules.
 
-**Middleware responsibilities for SigmaTech:**
+**Middleware responsibilities for nexora:**
 
 | Responsibility | Why here and not in `next.config.mjs` |
 |---|---|
@@ -403,7 +403,7 @@ Applied on every response via middleware:
 | `X-Frame-Options` | `DENY` | Prevents clickjacking — page cannot be embedded in an iframe |
 | `X-Content-Type-Options` | `nosniff` | Prevents MIME type sniffing attacks |
 | `Referrer-Policy` | `strict-origin-when-cross-origin` | Leaks minimal referrer info to third parties |
-| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` | Disables browser APIs SigmaTech doesn't use |
+| `Permissions-Policy` | `camera=(), microphone=(), geolocation=()` | Disables browser APIs nexora doesn't use |
 | `X-DNS-Prefetch-Control` | `on` | Allows DNS prefetch for performance |
 | `Strict-Transport-Security` | `max-age=63072000; includeSubDomains; preload` | HSTS — forces HTTPS for 2 years |
 | `Content-Security-Policy` | See below | Restricts what resources the page can load |
@@ -469,7 +469,7 @@ The contact form submits to a Next.js Route Handler — the only server-side com
 POST /api/contact
   ├── Input validation (Zod schema)
   ├── Rate limiting (IP-based, in-memory for MVP)
-  ├── Resend API call (send email to hello@sigmatech.dev)
+  ├── Resend API call (send email to hello@nexora.dev)
   ├── Resend API call (send confirmation to submitter)
   └── Return { success: true } or { error: string }
 
@@ -482,7 +482,7 @@ Max duration: 10 seconds
 ## 6. File System Map
 
 ```
-d:/Aroon/SigmaTech/
+d:/Aroon/nexora/
 │
 ├── src/
 │   ├── app/                              # Next.js App Router
@@ -793,7 +793,7 @@ flowchart TD
         FORM_SUB -->|POST /api/contact| ROUTE_HANDLER[Route Handler\nNode.js runtime]
         ROUTE_HANDLER -->|Zod validate| ZOD[Input\nValidation]
         ZOD -->|Send| RESEND_API[Resend API]
-        RESEND_API -->|Delivers| EMAIL_1[Email to SigmaTech]
+        RESEND_API -->|Delivers| EMAIL_1[Email to nexora]
         RESEND_API -->|Delivers| EMAIL_2[Confirmation to user]
     end
 

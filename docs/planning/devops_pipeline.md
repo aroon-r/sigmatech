@@ -38,7 +38,7 @@ GitHub Repository
 
 | Branch | Purpose | Deployment |
 |--------|---------|-----------|
-| `main` | Production-ready code | `https://sigmatech.co.uk` |
+| `main` | Production-ready code | `https://nexora.co.uk` |
 | `develop` | Integration branch for next release | Vercel preview URL |
 | `feature/*` | Individual feature work | Vercel preview URL per PR |
 | `fix/*` | Bug fixes | Vercel preview URL per PR |
@@ -135,7 +135,7 @@ vercel build                        ← builds locally in CI
 vercel deploy --prebuilt            ← uploads prebuilt output
     │
     ▼
-Preview URL (e.g. https://sigmatech-abc123.vercel.app)
+Preview URL (e.g. https://nexora-abc123.vercel.app)
     │
     ▼
 GitHub PR comment (updated, not spammed — bot checks for existing comment)
@@ -160,7 +160,7 @@ vercel build --prod
 vercel deploy --prebuilt --prod
     │
     ▼
-curl smoke test: GET https://sigmatech.co.uk → assert HTTP 200
+curl smoke test: GET https://nexora.co.uk → assert HTTP 200
     ← Fails the workflow (and triggers GitHub notification) if the homepage is down
 ```
 
@@ -188,9 +188,9 @@ The `deploy-production` job uses `environment: production`, which enables:
 | Variable | Local | Preview | Production | Notes |
 |----------|-------|---------|-----------|-------|
 | `RESEND_API_KEY` | Real key | Test key | Live key | Never `NEXT_PUBLIC_` — server-only |
-| `RESEND_FROM_EMAIL` | Same all tiers | `no-reply@sigmatech.co.uk` | Same | |
-| `RESEND_NOTIFY_EMAIL` | Your personal email | Your personal email | `hello@sigmatech.co.uk` | Preview sends to dev, not team inbox |
-| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Preview URL | `https://sigmatech.co.uk` | Used in canonical URLs and sitemap |
+| `RESEND_FROM_EMAIL` | Same all tiers | `no-reply@nexora.co.uk` | Same | |
+| `RESEND_NOTIFY_EMAIL` | Your personal email | Your personal email | `hello@nexora.co.uk` | Preview sends to dev, not team inbox |
+| `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Preview URL | `https://nexora.co.uk` | Used in canonical URLs and sitemap |
 | `NEXT_PUBLIC_POSTHOG_KEY` | Real or omit | Real | Real | PostHog is client-side — OK to expose |
 | `NEXT_PUBLIC_POSTHOG_HOST` | `https://eu.i.posthog.com` | Same | Same | EU data residency |
 | `CONTACT_RATE_LIMIT_MAX` | `10` (relaxed for dev) | `3` | `3` | |

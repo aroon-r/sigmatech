@@ -1,10 +1,7 @@
 import { defineConfig } from "vitest/config";
-import react from "@vitejs/plugin-react";
 import path from "node:path";
 
 export default defineConfig({
-  plugins: [react()],
-
   resolve: {
     // Mirror the @/ alias from tsconfig.json so imports work identically
     // in both the test runner and the Next.js compiler.
@@ -14,15 +11,15 @@ export default defineConfig({
   },
 
   test: {
-    // jsdom provides browser-like globals (document, window, fetch) for
-    // component and validation tests. E2E tests use Playwright instead.
-    environment: "jsdom",
-
-    // Loaded before every test file — sets up jest-dom matchers and cleanup.
-    setupFiles: ["./src/test/setup.ts"],
+    // Default to node. Switch to jsdom per-file with @vitest-environment jsdom
+    // when React component tests are introduced (requires jsdom + testing-library).
+    environment: "node",
 
     // Allow describe/it/expect without explicit imports (matches Jest DX).
     globals: true,
+
+    // setupFiles intentionally omitted — @testing-library packages are not
+    // installed. Add them back when React component tests are introduced.
 
     // ─── Coverage ────────────────────────────────────────────────────────
     coverage: {
@@ -44,8 +41,7 @@ export default defineConfig({
         "src/**/*.d.ts",
         "src/test/**",
         "src/**/__tests__/**",
-        // Route Handlers and Server Actions are covered by E2E (Playwright)
-        "src/app/api/**",
+        // Route Handlers and Server Actions are covered by the API test
         "src/app/actions/**",
         // Static data is covered by content integrity tests, not line coverage
         "src/data/content/**",
@@ -62,6 +58,6 @@ export default defineConfig({
     exclude: ["node_modules", ".next", "e2e/**"],
 
     // Friendly output: show each test name, not just a summary
-    reporter: "verbose",
+    reporters: ["verbose"],
   },
 });

@@ -146,10 +146,10 @@ export default function TermsPage() {
               <p>
                 Questions about these Terms?{" "}
                 <a
-                  href="mailto:hello@sigmatech.co.uk"
+                  href="mailto:hello@nexora.dev"
                   className="text-electric-400 hover:text-electric-300 transition-colors"
                 >
-                  hello@sigmatech.co.uk
+                  hello@nexora.dev
                 </a>
               </p>
             </Section>

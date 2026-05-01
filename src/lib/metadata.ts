@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const BASE_URL    = "https://nexora.co.uk";
+export const BASE_URL    = "https://nexora.dev";
 export const SITE_NAME   = "Nexora";
 const DEFAULT_OG_IMAGE   = "/og/default.png";
 

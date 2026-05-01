@@ -453,7 +453,7 @@ For seed and Series A companies that need technical leadership but aren't ready 
 
     seo: {
       title:       "Tech Consulting Services | Nexora",
-      description: "Architecture reviews, technical due diligence, and fractional CTO services for scaling engineering teams. Senior advisors with startup and enterprise experience.",
+      description: "Architecture reviews, technical due diligence, and fractional CTO services for engineering teams. Senior advisors with startup and enterprise experience.",
       keywords:    ["technical due diligence", "fractional CTO", "architecture review", "engineering consulting"],
     },
 

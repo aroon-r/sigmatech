@@ -410,7 +410,7 @@ import { test, expect } from "@playwright/test";
 
 const VALID_CONTACT = {
   fullName: "Playwright Test",
-  email:    "playwright@sigmatech-test.com",
+  email:    "playwright@nexora-test.com",
   message:  "This is an automated E2E test submission. Please disregard.",
 };
 

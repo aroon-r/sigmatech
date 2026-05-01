@@ -1,5 +1,5 @@
 # Step 04 — Competitor Analysis
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 
@@ -32,7 +32,7 @@ Competitors were evaluated across six dimensions:
 | Trust Signals | Very strong — Fortune 500 logos, global presence | 10/10 |
 | SEO | Excellent domain authority | 9/10 |
 
-**SigmaTech Opportunity:** Thoughtworks targets enterprises. SigmaTech can own the premium mid-market space with faster, more decisive messaging.
+**nexora Opportunity:** Thoughtworks targets enterprises. nexora can own the premium mid-market space with faster, more decisive messaging.
 
 ---
 
@@ -49,7 +49,7 @@ Competitors were evaluated across six dimensions:
 | Trust Signals | Extremely strong — NYSE-listed | 9/10 |
 | SEO | Strong — high authority | 8/10 |
 
-**SigmaTech Opportunity:** EPAM's site is slow and outdated. A fast, beautiful site immediately signals SigmaTech is more modern and agile.
+**nexora Opportunity:** EPAM's site is slow and outdated. A fast, beautiful site immediately signals nexora is more modern and agile.
 
 ---
 
@@ -66,7 +66,7 @@ Competitors were evaluated across six dimensions:
 | Trust Signals | Strong — recognisable client logos, vetting story | 9/10 |
 | SEO | Dominant for "hire developers" keywords | 9/10 |
 
-**SigmaTech Opportunity:** Toptal is marketplace-model, not agency. SigmaTech offers end-to-end ownership which Toptal cannot. This is a key differentiator.
+**nexora Opportunity:** Toptal is marketplace-model, not agency. nexora offers end-to-end ownership which Toptal cannot. This is a key differentiator.
 
 ---
 
@@ -83,7 +83,7 @@ Competitors were evaluated across six dimensions:
 | Trust Signals | Heavy social proof, Forbes logos | 8/10 |
 | SEO | Very aggressive content marketing | 8/10 |
 
-**SigmaTech Opportunity:** BairesDev competes on volume and price. SigmaTech should compete on quality and craftsmanship — a fundamentally different signal.
+**nexora Opportunity:** BairesDev competes on volume and price. nexora should compete on quality and craftsmanship — a fundamentally different signal.
 
 ---
 
@@ -100,7 +100,7 @@ Competitors were evaluated across six dimensions:
 | Trust Signals | Moderate — fewer enterprise logos | 6/10 |
 | SEO | Moderate | 6/10 |
 
-**SigmaTech Opportunity:** Designli is strong in process communication. SigmaTech should match this with an equally clear process section, but with stronger technical credibility signals.
+**nexora Opportunity:** Designli is strong in process communication. nexora should match this with an equally clear process section, but with stronger technical credibility signals.
 
 ---
 
@@ -110,7 +110,7 @@ Competitors were evaluated across six dimensions:
                     HIGH PERFORMANCE
                           ▲
                           │
-          SigmaTech       │        Toptal
+          nexora       │        Toptal
           (TARGET)        │
                           │
 BOUTIQUE ─────────────────┼───────────────── ENTERPRISE
@@ -122,13 +122,13 @@ BOUTIQUE ─────────────────┼─────�
                     LOW PERFORMANCE
 ```
 
-**SigmaTech's target position:** High performance + boutique/mid-market — the premium craftsmanship quadrant, currently underserved.
+**nexora's target position:** High performance + boutique/mid-market — the premium craftsmanship quadrant, currently underserved.
 
 ---
 
 ## 4. Feature Gap Analysis
 
-| Feature | Thoughtworks | Toptal | BairesDev | SigmaTech (Current) | SigmaTech (Target) |
+| Feature | Thoughtworks | Toptal | BairesDev | nexora (Current) | nexora (Target) |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Dark mode first | ✗ | ✗ | Partial | ✗ | ✅ |
 | Lighthouse ≥ 95 | ✗ | ✓ | ✗ | ✗ | ✅ |
@@ -144,7 +144,7 @@ BOUTIQUE ─────────────────┼─────�
 ## 5. Key Strategic Takeaways
 
 1. **Speed is the differentiator no one owns.** Most competitor sites are slow. A 95+ Lighthouse score is a credibility statement in itself.
-2. **Dark mode is a white space.** Zero major competitors lead with dark mode. This makes SigmaTech immediately visually distinctive.
+2. **Dark mode is a white space.** Zero major competitors lead with dark mode. This makes nexora immediately visually distinctive.
 3. **Process transparency wins PMs.** Competitors who explain their process clearly convert better with PM buyers.
 4. **Metrics-backed case studies are rare.** Most show pretty screenshots. Showing "We reduced load time by 60% and increased conversions by 22%" is far more persuasive.
 5. **Short CTAs win.** Every top-performing competitor uses a single, short, low-friction CTA above the fold.

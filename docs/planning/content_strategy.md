@@ -1,5 +1,5 @@
 # Step 10 — Content Planning & Strategy
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Content Owner:** Internal PM
 **Status:** Approved — Pending Client Sign-off
@@ -22,7 +22,7 @@
 
 ## 1. Content Mission Statement
 
-> **Every word on the SigmaTech website exists to do one thing: reduce the distance between a qualified prospect and a booked discovery call.**
+> **Every word on the nexora website exists to do one thing: reduce the distance between a qualified prospect and a booked discovery call.**
 
 Content is not decoration. It is the product of our marketing layer. It must earn attention, build trust, and remove friction — in that order, on every page.
 
@@ -34,11 +34,11 @@ Content is not decoration. It is the product of our marketing layer. It must ear
 
 Most software projects don't fail because of bad ideas. They fail because of bad execution — miscommunication, scope drift, technical debt, missed deadlines, and vendors who disappear after the invoice is paid.
 
-**SigmaTech's core promise:**
+**nexora's core promise:**
 
 > *"We bridge the gap between business ambition and engineering execution — so you get software that works, ships on time, and scales when it matters most."*
 
-This single idea cascades into every headline, sub-headline, and CTA on the site. Every page answers a variation of the same question: *"Can I trust SigmaTech to actually deliver?"*
+This single idea cascades into every headline, sub-headline, and CTA on the site. Every page answers a variation of the same question: *"Can I trust nexora to actually deliver?"*
 
 ---
 
@@ -60,7 +60,7 @@ Content guides each persona up a ladder of belief before they convert.
 
 ```
 Step 1  —  AWARENESS
-           "SigmaTech builds software for companies like mine."
+           "nexora builds software for companies like mine."
 
 Step 2  —  INTEREST
            "They seem to know what they're doing technically."
@@ -131,8 +131,8 @@ Each page has three non-negotiable learning outcomes. A visitor who reads only t
 
 | # | What the user must learn | How it's delivered |
 |---|---|---|
-| 1 | SigmaTech builds high-performance custom software for businesses that need a reliable technical partner | Hero headline + sub-headline (above fold) |
-| 2 | SigmaTech has a clear process, real clients, and proven outcomes | Services → Process → Case Studies → Testimonials (mid-page) |
+| 1 | nexora builds high-performance custom software for businesses that need a reliable technical partner | Hero headline + sub-headline (above fold) |
+| 2 | nexora has a clear process, real clients, and proven outcomes | Services → Process → Case Studies → Testimonials (mid-page) |
 | 3 | It is easy and low-risk to reach out and start a conversation | Final CTA Band + contact form friction-reduction copy |
 
 **Above-fold checklist (no scroll required):**
@@ -145,13 +145,13 @@ Each page has three non-negotiable learning outcomes. A visitor who reads only t
 
 ### Page 2 — Services `/services`
 
-**Page goal:** Help the visitor confirm that SigmaTech offers exactly the service they need, and understand what they will receive.
+**Page goal:** Help the visitor confirm that nexora offers exactly the service they need, and understand what they will receive.
 
 | # | What the user must learn | How it's delivered |
 |---|---|---|
-| 1 | SigmaTech covers the full software development lifecycle — web, cloud, QA, design, consulting, staffing | Services grid with icon + name + 1-line description |
+| 1 | nexora covers the full software development lifecycle — web, cloud, QA, design, consulting, staffing | Services grid with icon + name + 1-line description |
 | 2 | Each service has specific, concrete deliverables — not vague promises | Expanded card with deliverables checklist |
-| 3 | SigmaTech follows a structured process regardless of which service is engaged | Condensed process strip before the CTA |
+| 3 | nexora follows a structured process regardless of which service is engaged | Condensed process strip before the CTA |
 
 **Content rules for this page:**
 - Every service card must have a verb-led description: *"We build..."*, *"We deliver..."*, *"We design..."*
@@ -162,12 +162,12 @@ Each page has three non-negotiable learning outcomes. A visitor who reads only t
 
 ### Page 3 — Case Studies `/work` + `/work/[slug]`
 
-**Page goal:** Remove the final credibility objection. Show that SigmaTech has done this before and achieved measurable results.
+**Page goal:** Remove the final credibility objection. Show that nexora has done this before and achieved measurable results.
 
 | # | What the user must learn | How it's delivered |
 |---|---|---|
-| 1 | SigmaTech has worked on projects with a similar industry, scale, or technical challenge to mine | Industry tags on each card, filter by category |
-| 2 | SigmaTech delivers measurable outcomes, not just shipped code | Metric callout on every card (e.g., "↑ 60% reduction in load time") |
+| 1 | nexora has worked on projects with a similar industry, scale, or technical challenge to mine | Industry tags on each card, filter by category |
+| 2 | nexora delivers measurable outcomes, not just shipped code | Metric callout on every card (e.g., "↑ 60% reduction in load time") |
 | 3 | The team is professional — their approach to a problem is well-documented and thoughtful | Full case study page: challenge → approach → result |
 
 **Case study page structure (required for every entry):**
@@ -176,16 +176,16 @@ Each page has three non-negotiable learning outcomes. A visitor who reads only t
 Section 1 — Overview
   Client:    {Company name or anonymised "[Fortune 500 Retailer]"}
   Industry:  {Sector}
-  Services:  {Which SigmaTech services were used}
+  Services:  {Which nexora services were used}
   Timeline:  {Duration}
 
 Section 2 — The Challenge
-  What problem did the client have before SigmaTech?
+  What problem did the client have before nexora?
   What was failing, slow, or missing?
   What was the business cost of inaction?
 
 Section 3 — Our Approach
-  How did SigmaTech diagnose the problem?
+  How did nexora diagnose the problem?
   What was the technical strategy?
   What process was followed?
 
@@ -207,13 +207,13 @@ Section 5 — Testimonial
 
 ### Page 4 — About `/about`
 
-**Page goal:** Humanise SigmaTech. Make the company feel real, trustworthy, and worth working with as human beings — not just as a vendor.
+**Page goal:** Humanise nexora. Make the company feel real, trustworthy, and worth working with as human beings — not just as a vendor.
 
 | # | What the user must learn | How it's delivered |
 |---|---|---|
-| 1 | SigmaTech was founded with a clear mission — not just to make money, but to raise the bar on how software gets built | Company story section (origin, mission, why it exists) |
-| 2 | The people behind SigmaTech are senior, experienced professionals — not anonymous offshore contractors | Team section: real names, real titles, real photos, LinkedIn links |
-| 3 | SigmaTech has a distinct set of values that shapes how they work — and those values protect the client | Values section: 3–4 concrete values with a 1-sentence explanation each |
+| 1 | nexora was founded with a clear mission — not just to make money, but to raise the bar on how software gets built | Company story section (origin, mission, why it exists) |
+| 2 | The people behind nexora are senior, experienced professionals — not anonymous offshore contractors | Team section: real names, real titles, real photos, LinkedIn links |
+| 3 | nexora has a distinct set of values that shapes how they work — and those values protect the client | Values section: 3–4 concrete values with a 1-sentence explanation each |
 
 **Values framework (draft — to be confirmed):**
 
@@ -234,13 +234,13 @@ Section 5 — Testimonial
 
 ### Page 5 — Blog `/blog` + `/blog/[slug]`
 
-**Page goal:** Establish SigmaTech as a knowledgeable, opinionated voice in the software industry — worth bookmarking and returning to.
+**Page goal:** Establish nexora as a knowledgeable, opinionated voice in the software industry — worth bookmarking and returning to.
 
 | # | What the user must learn | How it's delivered |
 |---|---|---|
-| 1 | SigmaTech engineers think deeply about the problems their clients face — not just how to code a solution | Article topics that address real business + technical dilemmas |
-| 2 | SigmaTech stays current — they write about tools and practices that are relevant today, not five years ago | Recency of articles, references to current tools (Next.js 14, AI, LLMs, etc.) |
-| 3 | SigmaTech is worth following — their writing is useful, not promotional | Articles that give actionable takeaways, not veiled sales pitches |
+| 1 | nexora engineers think deeply about the problems their clients face — not just how to code a solution | Article topics that address real business + technical dilemmas |
+| 2 | nexora stays current — they write about tools and practices that are relevant today, not five years ago | Recency of articles, references to current tools (Next.js 14, AI, LLMs, etc.) |
+| 3 | nexora is worth following — their writing is useful, not promotional | Articles that give actionable takeaways, not veiled sales pitches |
 
 **Content pillars for blog (4 rotating topics):**
 
@@ -249,13 +249,13 @@ Section 5 — Testimonial
 | **Engineering Craft** | Deep dives into technical approaches | "Why we migrated from REST to tRPC — and when you shouldn't" |
 | **Product Thinking** | The business side of software decisions | "How to write a technical spec your dev team will actually follow" |
 | **Case Study Expanded** | Longer-form breakdown of client work | "How we cut an e-commerce checkout load time by 60% in 3 sprints" |
-| **Industry Commentary** | SigmaTech's view on tech trends | "The real cost of technical debt — and how to quantify it for your CEO" |
+| **Industry Commentary** | nexora's view on tech trends | "The real cost of technical debt — and how to quantify it for your CEO" |
 
 **Blog article rules:**
 - Minimum length: 800 words — enough to be substantive
 - Maximum length: 2,500 words — beyond this, split into a series
 - Every article needs: a clear thesis in the intro, at least one concrete example, and an actionable takeaway in the conclusion
-- No listicle titles (e.g., "10 reasons why...") — SigmaTech articles have an argument, not a count
+- No listicle titles (e.g., "10 reasons why...") — nexora articles have an argument, not a count
 
 **Launch requirement:** Minimum **3 published articles** before go-live. An empty blog signals a dead company.
 
@@ -268,8 +268,8 @@ Section 5 — Testimonial
 | # | What the user must learn | How it's delivered |
 |---|---|---|
 | 1 | Reaching out is easy — it takes less than 60 seconds and requires no commitment | Form with 4 fields max, above-the-fold, no account creation |
-| 2 | What happens next — SigmaTech responds within 1 business day and no one will be aggressively sold to | Response promise + brief "what to expect" copy next to the form |
-| 3 | There are multiple ways to reach SigmaTech — email, LinkedIn, and form | Contact details column alongside the form |
+| 2 | What happens next — nexora responds within 1 business day and no one will be aggressively sold to | Response promise + brief "what to expect" copy next to the form |
+| 3 | There are multiple ways to reach nexora — email, LinkedIn, and form | Contact details column alongside the form |
 
 **Form fields (exactly 4 — this is a hard rule from Scope Definition):**
 
@@ -306,7 +306,7 @@ No hard sell. No commitment required.
 |---|---|---|
 | 1 | This page doesn't exist — and that's not their fault | Clear, calm headline — no technical jargon ("404 error") |
 | 2 | Here are the most useful places to go from here | 3–4 quick navigation links to the most visited pages |
-| 3 | SigmaTech has character — even error pages reflect the brand | Light-touch brand voice, no corporate stiffness |
+| 3 | nexora has character — even error pages reflect the brand | Light-touch brand voice, no corporate stiffness |
 
 **404 copy template:**
 ```
@@ -344,7 +344,7 @@ SECTION          PURPOSE                     TRUST PILLAR        EXIT RISK
 
 #### Section 1 — Hero
 
-**Content goal:** Pass the 3-second test. A visitor must understand who SigmaTech is and what they do within 3 seconds of arrival — without scrolling.
+**Content goal:** Pass the 3-second test. A visitor must understand who nexora is and what they do within 3 seconds of arrival — without scrolling.
 
 ```
 BADGE (above headline):
@@ -357,7 +357,7 @@ HEADLINE (H1 — 8 words max):
   ↳ Accent word "scales with you" gets the gradient treatment
 
 SUB-HEADLINE (2 sentences max, < 30 words):
-  "SigmaTech delivers high-performance web applications, APIs, and digital
+  "nexora delivers high-performance web applications, APIs, and digital
    products — engineered for reliability and built to grow with your business."
   ↳ Names outputs (web apps, APIs), names the benefit (reliability, growth)
   ↳ No adjectives that don't carry weight ("innovative", "cutting-edge")
@@ -388,7 +388,7 @@ SOCIAL PROOF STRIP (below CTAs):
 
 #### Section 2 — Social Proof Strip
 
-**Content goal:** Before the visitor invests time reading about services, show them that companies like theirs already trust SigmaTech.
+**Content goal:** Before the visitor invests time reading about services, show them that companies like theirs already trust nexora.
 
 ```
 PLACEMENT: Immediately below hero fold — no gap
@@ -400,13 +400,13 @@ LABEL: "Trusted by teams at" — text-xs uppercase tracking-widest muted
 **Content rules:**
 - Recognisable logos beat names. Prioritise clients with strong brand recognition.
 - If a client logo cannot be used (NDA), substitute with industry descriptor: *"Leading UK FinTech"*
-- Do not include logos of companies SigmaTech no longer works with unless the relationship ended positively
+- Do not include logos of companies nexora no longer works with unless the relationship ended positively
 
 ---
 
 #### Section 3 — Services Strip
 
-**Content goal:** In 15 seconds, answer the question: "Does SigmaTech do what I need?"
+**Content goal:** In 15 seconds, answer the question: "Does nexora do what I need?"
 
 ```
 HEADLINE: "What we do"
@@ -435,7 +435,7 @@ BOTTOM LINK: "Explore all services →" → /services
 
 #### Section 4 — Process (How We Work)
 
-**Content goal:** Answer the Product Manager's primary question: *"Will SigmaTech be organised and easy to work with?"*
+**Content goal:** Answer the Product Manager's primary question: *"Will nexora be organised and easy to work with?"*
 
 ```
 HEADLINE: "How we work"
@@ -487,7 +487,7 @@ HEADER CTA: "View all case studies →" → /work (right-aligned, desktop only)
 
 #### Section 6 — Testimonials
 
-**Content goal:** Provide peer-level social proof. Let past clients vouch for SigmaTech in their own words.
+**Content goal:** Provide peer-level social proof. Let past clients vouch for nexora in their own words.
 
 ```
 HEADLINE: "Don't take our word for it."
@@ -501,13 +501,13 @@ HEADLINE: "Don't take our word for it."
   └── Avatar photo (headshot, min 200×200px)
 
   Ideal quote structure:
-  "Before SigmaTech, [specific problem we had]. They [specific thing they did].
+  "Before nexora, [specific problem we had]. They [specific thing they did].
    The result was [specific outcome]. What impressed me most was [process/people insight].
    I'd [recommend/work with them again] without hesitation."
 ```
 
 **Anti-patterns to avoid in testimonials:**
-- ❌ "SigmaTech was great to work with. Highly recommend." → Too vague, signals fake
+- ❌ "nexora was great to work with. Highly recommend." → Too vague, signals fake
 - ❌ Anonymous: "— CTO, UK SaaS Company" → Name required for credibility
 - ❌ Edited to remove negatives → Authentic quotes mention a challenge overcome
 
@@ -546,7 +546,7 @@ STYLE:    bg-electric-600 — high contrast, full-width, zero distractions
 **Rules:**
 - No navigation links in this section
 - No secondary CTA — one choice only
-- No body copy beyond the sub-headline — do not explain what SigmaTech does again here
+- No body copy beyond the sub-headline — do not explain what nexora does again here
 
 ---
 
@@ -638,7 +638,7 @@ synergy, leverage (as a verb), circle back, move the needle (except in this doc)
 |---|---|
 | Link text | Always descriptive. *"Read the case study"* not *"Click here"* |
 | Button labels | Action-first. *"Send message"* not *"Message send"* |
-| Image alt text | Describe what is shown, not the file name. *"SigmaTech team at a whiteboard session"* |
+| Image alt text | Describe what is shown, not the file name. *"nexora team at a whiteboard session"* |
 | Decorative images | `alt=""` — empty string tells screen readers to skip |
 | Error messages | Explain what went wrong AND how to fix it. *"Email is required. Please enter your email address."* |
 | Icon-only buttons | Must have `aria-label`. *`aria-label="Open navigation menu"`* |
@@ -654,7 +654,7 @@ synergy, leverage (as a verb), circle back, move the needle (except in this doc)
 3. **Lead with the benefit, follow with the feature.** Not: *"We use Next.js App Router."* Instead: *"Pages load instantly — we use Next.js App Router."*
 4. **Every metric must be specific.** Not: *"improved performance."* Require: *"reduced load time from 3.2s to 900ms."*
 5. **Every testimonial needs a full name.** Anonymous quotes have zero credibility.
-6. **No stock photography for people.** If it's a face, it must be a real SigmaTech person or client (with permission).
+6. **No stock photography for people.** If it's a face, it must be a real nexora person or client (with permission).
 7. **Write for the worst-case reading condition.** Mobile screen, bright sunlight, distracted user, 6 seconds of patience.
 8. **Never use "solutions" as a standalone noun.** Say what the solution is.
 9. **No lorem ipsum past wireframe stage.** Placeholder copy must be real draft copy by the time any section goes to design review.
@@ -681,12 +681,12 @@ synergy, leverage (as a verb), circle back, move the needle (except in this doc)
 
 | Page | Meta Description (150 chars max) |
 |---|---|
-| Home | SigmaTech builds high-performance web applications, APIs, and digital products. Custom software engineered for reliability. |
-| Services | Explore SigmaTech's full-cycle software services: web development, cloud, QA, design, consulting, and staff augmentation. |
-| Work | SigmaTech case studies — real projects, real outcomes, real metrics. See how we build software that moves the needle. |
-| About | Meet the SigmaTech team — senior engineers and delivery specialists committed to craft, transparency, and measurable results. |
-| Blog | Engineering insights, product thinking, and software craft from the SigmaTech team. |
-| Contact | Start a project with SigmaTech. Fill in our 60-second form and we'll be in touch within one business day. |
+| Home | nexora builds high-performance web applications, APIs, and digital products. Custom software engineered for reliability. |
+| Services | Explore nexora's full-cycle software services: web development, cloud, QA, design, consulting, and staff augmentation. |
+| Work | nexora case studies — real projects, real outcomes, real metrics. See how we build software that moves the needle. |
+| About | Meet the nexora team — senior engineers and delivery specialists committed to craft, transparency, and measurable results. |
+| Blog | Engineering insights, product thinking, and software craft from the nexora team. |
+| Contact | Start a project with nexora. Fill in our 60-second form and we'll be in touch within one business day. |
 
 ---
 
@@ -694,12 +694,12 @@ synergy, leverage (as a verb), circle back, move the needle (except in this doc)
 
 | Page | OG Title |
 |---|---|
-| Home | SigmaTech — We build software that scales with you |
-| Services | SigmaTech Services — Full-cycle software development |
-| Work | SigmaTech Work — Case studies with measurable outcomes |
-| About | About SigmaTech — Senior engineers, proven process |
-| Blog | SigmaTech Blog — Engineering insights and product thinking |
-| Contact | Start a project with SigmaTech |
+| Home | nexora — We build software that scales with you |
+| Services | nexora Services — Full-cycle software development |
+| Work | nexora Work — Case studies with measurable outcomes |
+| About | About nexora — Senior engineers, proven process |
+| Blog | nexora Blog — Engineering insights and product thinking |
+| Contact | Start a project with nexora |
 
 ---
 
@@ -710,7 +710,7 @@ synergy, leverage (as a verb), circle back, move the needle (except in this doc)
 > `[ View our case studies → ]`
 
 **Network error message:**
-> *"Something went wrong on our end — your message wasn't sent. Please try again, or email us directly at hello@sigmatech.dev."*
+> *"Something went wrong on our end — your message wasn't sent. Please try again, or email us directly at hello@nexora.dev."*
 
 **Validation error (inline, per field):**
 > `Email — "Please enter a valid email address (e.g. you@company.com)."`
@@ -739,7 +739,7 @@ The following content must be delivered by the **Content Owner (Internal PM)** b
 | Client logos (for social proof strip) | Homepage, Footer | SVG preferred, PNG accepted | ⬜ Pending |
 | Tech stack logos × 10 | Homepage, Services | SVG preferred | ⬜ Pending |
 | 3 blog articles (ready to publish) | Blog | Markdown or Google Doc | ⬜ Pending |
-| SigmaTech logo (primary + mark) | Navbar, Footer, OG | SVG + PNG | ⬜ Pending |
+| nexora logo (primary + mark) | Navbar, Footer, OG | SVG + PNG | ⬜ Pending |
 | Contact email address | Contact page, Footer | Plain text | ⬜ Pending |
 | Social media handles (LinkedIn, GitHub, Twitter) | Footer, About | URLs | ⬜ Pending |
 | Privacy Policy text | /privacy | Plain text or HTML | ⬜ Pending |

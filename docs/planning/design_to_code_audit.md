@@ -322,7 +322,7 @@ All three content types — Services, Case Studies, Blog — pass the Expert/Hum
 | TTFB (Time to First Byte) | < 600ms | — | — |
 | FCP (First Contentful Paint) | < 1.8s | — | — |
 
-**Measured at:** Vercel Production (`https://sigmatech.co.uk`) using PageSpeed Insights and Vercel Analytics.
+**Measured at:** Vercel Production (`https://nexora.co.uk`) using PageSpeed Insights and Vercel Analytics.
 
 ---
 

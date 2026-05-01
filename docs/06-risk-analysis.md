@@ -1,5 +1,5 @@
 # Step 06 — Risk Analysis
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 
@@ -119,7 +119,7 @@ Each risk is scored on two axes:
 ---
 
 #### S1 — Content Delivery Delay (Critical Path Risk)
-**Description:** SigmaTech must supply all copy, case studies, team photos, and logos. Late content delivery is the most common cause of website project delays.
+**Description:** nexora must supply all copy, case studies, team photos, and logos. Late content delivery is the most common cause of website project delays.
 
 | Likelihood | Impact | Priority |
 |---|---|---|
@@ -128,8 +128,8 @@ Each risk is scored on two axes:
 **Mitigation:**
 - Content deadline: **5 business days after scope sign-off** — written into scope document
 - Development proceeds with placeholder content; real content is swapped in via a content integration sprint
-- Provide a structured Content Template document so SigmaTech knows exactly what is needed and in what format
-- Assign a named content owner on the SigmaTech side
+- Provide a structured Content Template document so nexora knows exactly what is needed and in what format
+- Assign a named content owner on the nexora side
 
 **Contingency:** If content is > 5 days late, launch date shifts 1:1 with the delay. No exceptions.
 

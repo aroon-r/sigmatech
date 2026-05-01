@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { useForm }         from "react-hook-form";
 import { ArrowRight, CheckCircle2, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { submitQuickContact, type QuickFormState } from "@/app/actions/quick-contact";
+import type { ContactApiResponse } from "@/lib/validations";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type Fields = { name: string; email: string; message: string };
+type Fields = { name: string; email: string; message: string; privacyConsent: boolean };
 
 // ─── Field components ─────────────────────────────────────────────────────────
 
@@ -49,8 +49,8 @@ const inputBorder = {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function QuickContactForm() {
-  const [state, setState] = useState<QuickFormState | null>(null);
-const [pending, setPending] = useState(false);
+  const [state, setState] = useState<ContactApiResponse | null>(null);
+  const [pending, setPending] = useState(false);
 
   const { register, formState: { errors }, reset } = useForm<Fields>({ mode: "onBlur" });
   const formRef = useRef<HTMLFormElement>(null);
@@ -59,21 +59,40 @@ const [pending, setPending] = useState(false);
   useEffect(() => {
     if (state?.success) reset();
   }, [state?.success, reset]);
-const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setPending(true);
 
-  try {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setPending(true);
+
     const formData = new FormData(e.currentTarget);
-    const result = await submitQuickContact(formData);
-    setState(result);
-  } catch (err) {
-    console.error(err);
-    setState({ success: false, error: "Something went wrong" });
-  } finally {
-    setPending(false);
-  }
-};
+    const name    = (formData.get("name")    as string ?? "").trim();
+    const email   = (formData.get("email")   as string ?? "").trim();
+    const message = (formData.get("message") as string ?? "").trim();
+    const privacyConsent = formData.get("privacyConsent") === "on";
+
+    try {
+      const res = await fetch("/api/contact", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName:     name,
+          email,
+          message,
+          services:     ["consulting"],
+          budgetRange:  "not_specified",
+          privacyConsent,
+          website:      "", // honeypot — always empty
+        }),
+      });
+      const result: ContactApiResponse = await res.json();
+      setState(result);
+    } catch {
+      setState({ success: false, error: "Network error. Please try again." });
+    } finally {
+      setPending(false);
+    }
+  };
+
   // ── Success state ──
   if (state?.success) {
     return (
@@ -89,6 +108,9 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     );
   }
 
+  const apiFieldErrors = state && !state.success ? state.fieldErrors : undefined;
+  const apiServerError = state && !state.success && !state.fieldErrors ? state.error : undefined;
+
   return (
     <form ref={formRef} onSubmit={handleSubmit} noValidate>
       {/* Honeypot — hidden from real users */}
@@ -103,47 +125,75 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
       <div className="flex flex-col gap-5">
         {/* Name */}
-        <Field label="Full name" required error={state?.fieldErrors?.name?.[0]}>
+        <Field label="Full name" required error={apiFieldErrors?.fullName?.[0]}>
           <input
             {...register("name", { required: true, minLength: 2 })}
             name="name"
             type="text"
             autoComplete="name"
             placeholder="Jane Smith"
-            className={cn(inputBase, errors.name || state?.fieldErrors?.name ? inputBorder.error : inputBorder.default)}
+            className={cn(inputBase, errors.name || apiFieldErrors?.fullName ? inputBorder.error : inputBorder.default)}
           />
         </Field>
 
         {/* Email */}
-        <Field label="Work email" required error={state?.fieldErrors?.email?.[0]}>
+        <Field label="Work email" required error={apiFieldErrors?.email?.[0]}>
           <input
             {...register("email", { required: true, pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ })}
             name="email"
             type="email"
             autoComplete="email"
             placeholder="jane@company.com"
-            className={cn(inputBase, errors.email || state?.fieldErrors?.email ? inputBorder.error : inputBorder.default)}
+            className={cn(inputBase, errors.email || apiFieldErrors?.email ? inputBorder.error : inputBorder.default)}
           />
         </Field>
 
         {/* Message */}
-        <Field label="What are you building?" required error={state?.fieldErrors?.message?.[0]}>
+        <Field label="What are you building?" required error={apiFieldErrors?.message?.[0]}>
           <textarea
-            {...register("message", { required: true, minLength: 10 })}
+            {...register("message", { required: true, minLength: 20 })}
             name="message"
             rows={4}
             placeholder="Give us a brief overview — what's the project, what's the timeline, what's the problem you're solving?"
             className={cn(
               inputBase, "resize-none",
-              errors.message || state?.fieldErrors?.message ? inputBorder.error : inputBorder.default,
+              errors.message || apiFieldErrors?.message ? inputBorder.error : inputBorder.default,
             )}
           />
         </Field>
 
+        {/* Privacy consent */}
+        <div className="flex flex-col gap-1.5">
+          <label className="flex cursor-pointer items-start gap-3">
+            <input
+              {...register("privacyConsent", { required: true })}
+              name="privacyConsent"
+              type="checkbox"
+              className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-electric-500"
+            />
+            <span className="text-sm text-charcoal-400">
+              I agree to Nexora&apos;s{" "}
+              <a
+                href="/privacy"
+                className="text-electric-400 underline underline-offset-2 hover:text-electric-300"
+              >
+                privacy policy
+              </a>
+              .{" "}
+              <span className="text-red-400" aria-hidden="true">*</span>
+            </span>
+          </label>
+          {apiFieldErrors?.privacyConsent && (
+            <p className="text-xs text-red-400" role="alert">
+              {apiFieldErrors.privacyConsent[0]}
+            </p>
+          )}
+        </div>
+
         {/* Server-level error */}
-        {state?.error && !state?.fieldErrors && (
+        {apiServerError && (
           <p className="rounded-xl border border-red-500/20 bg-red-500/5 px-4 py-3 text-sm text-red-400" role="alert">
-            {state.error}
+            {apiServerError}
           </p>
         )}
 

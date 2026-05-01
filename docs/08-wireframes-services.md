@@ -1,5 +1,5 @@
 # Step 08 — Wireframe Spec: Services Page
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Route:** `/services` + `/services/[slug]`
 **Status:** Approved — Pending Client Sign-off
@@ -324,7 +324,7 @@ Reuse `<PageHero>` — pass service name and description as props
 
 ### Section D2 — Overview Split
 **Layout:** 2-column — copy left (60%), visual right (40%)
-**Purpose:** Expand on what the service is, who it's for, why SigmaTech
+**Purpose:** Expand on what the service is, who it's for, why nexora
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐

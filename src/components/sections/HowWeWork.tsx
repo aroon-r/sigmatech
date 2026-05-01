@@ -31,13 +31,21 @@ export default function HowWeWork() {
   const prefersReduced = useReducedMotion() ?? false;
 
   return (
-    <section aria-label="How we work" id="how-we-work" className="border-t border-charcoal-800 py-24">
+    <section aria-label="How we work" id="how-we-work" className="pt-24 pb-32">
       <Container>
-        <SectionHeading
-          overline="How we work"
-          title="A process that reduces surprises"
-          subtitle="We don't manage clients. We do the work, keep you informed, and hand over something your team can maintain without us."
-        />
+        <m.div
+          initial={prefersReduced ? false : { opacity: 0, y: 24 }}
+          whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.55, ease: [0, 0, 0.2, 1] }}
+        >
+          <SectionHeading
+            overline="How we work"
+            title="A process that reduces surprises"
+            subtitle="We don't manage clients. We do the work, keep you informed, and hand over something your team can maintain without us."
+            align="left"
+          />
+        </m.div>
 
         <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2">
           {STEPS.map((step, i) => (
@@ -48,12 +56,7 @@ export default function HowWeWork() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.09, ease: [0, 0, 0.2, 1] }}
               className="relative overflow-hidden rounded-2xl p-6"
-              style={{
-                background:           "rgba(255,255,255,0.025)",
-                backdropFilter:       "blur(16px)",
-                WebkitBackdropFilter: "blur(16px)",
-                border:               "1px solid rgba(255,255,255,0.06)",
-              }}
+              style={{ background: "rgba(255,255,255,0.018)" }}
             >
               {/* Decorative large step number */}
               <p
@@ -77,7 +80,7 @@ export default function HowWeWork() {
           ))}
         </div>
 
-        <p className="mt-10 text-sm leading-relaxed text-charcoal-600">
+        <p className="mt-12 text-sm leading-relaxed text-charcoal-600">
           We don&apos;t take fixed-price engagements for requirements that are still being
           discovered. If the scope isn&apos;t clear enough to write down, a paid discovery
           sprint is the right starting point — not a build contract.

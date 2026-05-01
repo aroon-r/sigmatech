@@ -51,7 +51,7 @@ All cross-references use **slug strings** (not foreign-key IDs). This keeps stat
 
 ### 1. Service
 
-**Purpose:** Represents a SigmaTech service offering. Drives the `/services` listing and every `/services/[slug]` detail page.
+**Purpose:** Represents a nexora service offering. Drives the `/services` listing and every `/services/[slug]` detail page.
 
 **Key design decisions:**
 - `ServiceSlug` is a discriminated union — adding a new service requires updating the union type AND `generateStaticParams()`. This intentional coupling prevents orphaned pages.
@@ -93,7 +93,7 @@ All cross-references use **slug strings** (not foreign-key IDs). This keeps stat
 **Purpose:** Drives `/blog`, `/blog/[slug]`, and `/blog/category/[category]`.
 
 **Key design decisions:**
-- `Author` is a standalone interface (not embedded) because SigmaTech has a fixed set of authors — they will be deduplicated in a separate `src/data/authors.ts` file and referenced by ID in blog posts.
+- `Author` is a standalone interface (not embedded) because nexora has a fixed set of authors — they will be deduplicated in a separate `src/data/authors.ts` file and referenced by ID in blog posts.
 - `BlogCategory` is backed by the `BlogCategorySlug` enum — same pattern as `ServiceSlug`. Adding a category requires updating the enum and adding a route.
 - `readingTimeMinutes` is explicitly stored (not computed at render time) — avoids per-request computation and keeps it consistent between the listing card and the detail page header.
 - `tableOfContents?: TocEntry[]` is pre-computed at content authoring time — not derived from raw Markdown at render time — keeping RSCs simple and avoiding a Markdown parser dependency on the server.
@@ -127,7 +127,7 @@ ContactFormInput  ──────► Zod validate                  ──► 
 - `ContactFormInput` is the Zod-validated DTO — the only thing that ever crosses the network.
 - `ContactSubmission` adds all server-stamped fields. The client never sees `ipHash`, `honeypotValue`, or `internalNotes` — enforced by `ContactSubmissionPublic` projection type.
 - `privacyConsent: z.literal(true)` in the Zod schema means the boolean can only ever be `true` when validation passes — the form cannot be submitted with a false consent value even if the JS is manipulated.
-- `LeadStatus` enum models the full sales lifecycle so SigmaTech can track conversion rate by stage without a separate CRM in Phase 1.
+- `LeadStatus` enum models the full sales lifecycle so nexora can track conversion rate by stage without a separate CRM in Phase 1.
 - `isSpam: boolean` uses server-side heuristics (honeypot, rate limiting, content analysis) — not client-side bot detection — preventing bypass by disabling JS.
 
 ---
@@ -179,5 +179,5 @@ The following files will be populated in Step 14 (Content Population):
 | `src/data/services.ts` | `Service[]` | 6 entries (one per `ServiceSlug`) |
 | `src/data/caseStudies.ts` | `CaseStudy[]` | 3–5 entries |
 | `src/data/blog.ts` | `BlogPost[]` | 2–3 seed posts |
-| `src/data/authors.ts` | `Author[]` | 2–3 SigmaTech team members |
+| `src/data/authors.ts` | `Author[]` | 2–3 nexora team members |
 | `src/data/team.ts` | `TeamMember[]` | ~6 entries for the /about page |

@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { m, useReducedMotion } from "framer-motion";
 import { Linkedin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { TEAM, type TeamMember, type AvatarVariant } from "@/data/content/team";
@@ -13,11 +16,18 @@ const AVATAR: Record<AvatarVariant, string> = {
   amber:  "bg-amber-500/15 text-amber-400",
 };
 
-function TeamCard({ member }: { member: TeamMember }) {
+function TeamCard({ member, index, reduced }: { member: TeamMember; index: number; reduced: boolean }) {
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-2xl border border-charcoal-800 bg-charcoal-900/40 p-7 transition-[border-color,box-shadow] duration-300 hover:border-charcoal-700 hover:shadow-md-dark focus-within:border-electric-500/40">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-36 opacity-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(10,132,255,0.08),transparent)] transition-opacity duration-700 group-hover:opacity-100" />
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 bg-[linear-gradient(90deg,transparent,rgba(10,132,255,0.50),transparent)] transition-opacity duration-300 group-hover:opacity-100" />
+    <m.article
+      className="group relative flex flex-col overflow-hidden rounded-2xl border border-charcoal-800 bg-charcoal-900/40 p-7 transition-[border-color,box-shadow,transform] duration-300 hover:border-charcoal-700 hover:shadow-lg-dark focus-within:border-electric-500/40"
+      initial={reduced ? false : { opacity: 0, y: 24 }}
+      whileInView={reduced ? {} : { opacity: 1, y: 0 }}
+      whileHover={reduced ? {} : { y: -2 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay: index * 0.07, ease: [0, 0, 0.2, 1] }}
+    >
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-36 opacity-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(10,132,255,0.05),transparent)] transition-opacity duration-700 group-hover:opacity-100" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-px opacity-0 bg-[linear-gradient(90deg,transparent,rgba(10,132,255,0.30),transparent)] transition-opacity duration-300 group-hover:opacity-100" />
 
       <div className="flex items-center gap-4">
         {member.avatarUrl ? (
@@ -61,15 +71,17 @@ function TeamCard({ member }: { member: TeamMember }) {
           </span>
         ))}
       </div>
-    </article>
+    </m.article>
   );
 }
 
 export default function TeamGrid() {
+  const prefersReduced = useReducedMotion() ?? false;
+
   return (
     <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {TEAM.map((member) => (
-        <TeamCard key={member.name} member={member} />
+      {TEAM.map((member, i) => (
+        <TeamCard key={member.name} member={member} index={i} reduced={prefersReduced} />
       ))}
     </div>
   );

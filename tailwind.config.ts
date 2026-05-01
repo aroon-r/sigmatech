@@ -81,9 +81,9 @@ const config: Config = {
         "md-dark":        "0 4px 12px rgba(0,0,0,0.40)",
         "lg-dark":        "0 8px 32px rgba(0,0,0,0.50)",
         "glass":          "0 4px 32px rgba(0,0,0,0.40)",
-        "electric-sm":    "0 0 16px rgba(10,132,255,0.25)",
-        "electric-md":    "0 0 28px rgba(10,132,255,0.40)",
-        "electric-lg":    "0 0 48px rgba(10,132,255,0.55)",
+        "electric-sm":    "0 0 14px rgba(10,132,255,0.20)",
+        "electric-md":    "0 0 24px rgba(10,132,255,0.28)",
+        "electric-lg":    "0 0 40px rgba(10,132,255,0.40)",
         "electric-inset": "inset 0 0 0 1px rgba(10,132,255,0.30)",
       },
 
@@ -117,8 +117,8 @@ const config: Config = {
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
         glowPulse: {
-          "0%, 100%": { boxShadow: "0 0 16px rgba(10,132,255,0.25)" },
-          "50%":      { boxShadow: "0 0 36px rgba(10,132,255,0.55)" },
+          "0%, 100%": { boxShadow: "0 0 14px rgba(10,132,255,0.20)" },
+          "50%":      { boxShadow: "0 0 28px rgba(10,132,255,0.40)" },
         },
         shimmer: {
           "0%":        { transform: "translateX(-100%) skewX(-15deg)" },

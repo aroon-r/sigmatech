@@ -301,13 +301,13 @@ All must be set in `.env.local` for development and in Vercel project settings f
 Server Action / Route Handler
     │
     ├── POST https://api.resend.com/emails  ← Team notification
-    │     From:    no-reply@sigmatech.co.uk
-    │     To:      hello@sigmatech.co.uk
+    │     From:    no-reply@nexora.co.uk
+    │     To:      hello@nexora.co.uk
     │     Subject: New enquiry from {fullName} — {services.join(", ")}
     │     Body:    React Email template (src/emails/TeamNotification.tsx)
     │
     └── POST https://api.resend.com/emails  ← Submitter confirmation
-          From:    hello@sigmatech.co.uk
+          From:    hello@nexora.co.uk
           To:      {submitter email}
           Subject: We've received your enquiry, {firstName}
           Body:    React Email template (src/emails/ContactConfirmation.tsx)
@@ -389,8 +389,8 @@ Server Actions return `ContactApiResponse` from `src/lib/validations.ts` — sam
 ```bash
 # .env.local (never committed)
 RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
-RESEND_FROM_EMAIL=no-reply@sigmatech.co.uk
-RESEND_NOTIFY_EMAIL=hello@sigmatech.co.uk
+RESEND_FROM_EMAIL=no-reply@nexora.co.uk
+RESEND_NOTIFY_EMAIL=hello@nexora.co.uk
 NEXT_PUBLIC_POSTHOG_KEY=phc_xxxxxxxxxxxxxxxxxxxx
 NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
@@ -403,5 +403,5 @@ RESEND_FROM_EMAIL=
 RESEND_NOTIFY_EMAIL=
 NEXT_PUBLIC_POSTHOG_KEY=
 NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
-NEXT_PUBLIC_SITE_URL=https://sigmatech.co.uk
+NEXT_PUBLIC_SITE_URL=https://nexora.co.uk
 ```

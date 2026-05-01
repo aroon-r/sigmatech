@@ -1,5 +1,5 @@
 # Step 09 — UI/UX Design System
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Status:** Approved — Pending Client Sign-off
 

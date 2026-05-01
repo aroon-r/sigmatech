@@ -41,28 +41,13 @@ function HeroBackground() {
       <div
         className="absolute left-1/2 -top-48 h-[700px] w-[700px] -translate-x-1/2 rounded-full"
         style={{
-          background: "radial-gradient(circle, rgba(10,132,255,0.20) 0%, rgba(10,132,255,0.05) 50%, transparent 72%)",
+          background: "radial-gradient(circle, rgba(10,132,255,0.09) 0%, rgba(10,132,255,0.03) 50%, transparent 72%)",
           filter: "blur(32px)",
         }}
       />
 
-      <div
-        className="absolute -bottom-48 -left-24 h-[500px] w-[500px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(48,145,255,0.12) 0%, transparent 70%)",
-          filter: "blur(32px)",
-        }}
-      />
 
-      <div
-        className="absolute -top-12 -right-16 h-[380px] w-[380px] rounded-full"
-        style={{
-          background: "radial-gradient(circle, rgba(0,95,191,0.14) 0%, transparent 70%)",
-          filter: "blur(32px)",
-        }}
-      />
-
-      <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-charcoal-950 to-transparent" />
+<div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-charcoal-950 to-transparent" />
     </div>
   );
 }
@@ -81,11 +66,11 @@ function FloatingProcessCard({ Icon, metric, label, color, position }: ProcessCa
       <div
         className="w-52 rounded-2xl px-4 py-3.5"
         style={{
-          background:           "rgba(255,255,255,0.04)",
-          backdropFilter:       "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
-          border:               "1px solid rgba(255,255,255,0.07)",
-          boxShadow:            "0 8px 32px rgba(0,0,0,0.40), inset 0 1px 0 rgba(255,255,255,0.06)",
+          background:           "rgba(255,255,255,0.025)",
+          backdropFilter:       "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          border:               "1px solid rgba(255,255,255,0.04)",
+          boxShadow:            "0 4px 16px rgba(0,0,0,0.28)",
         }}
       >
         <div
@@ -105,7 +90,7 @@ function FloatingProcessCard({ Icon, metric, label, color, position }: ProcessCa
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-24 text-center lg:px-8">
+    <section className="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-32 text-center lg:px-8">
 
       <HeroBackground />
 
@@ -114,7 +99,7 @@ export default function Hero() {
         <FloatingProcessCard key={card.metric} {...card} />
       ))}
 
-      <div className="relative z-10 flex flex-col items-center">
+      <div className="relative z-10 flex flex-col items-start text-left">
 
         <h1 className="mt-6 max-w-4xl font-display text-5xl font-bold tracking-tight text-charcoal-50">
           The engineers who scope it are the engineers who build it.
@@ -126,9 +111,9 @@ export default function Hero() {
           decisions, not just a handover call.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center justify-start gap-4">
           <Button href="/contact">Send a brief</Button>
-          <Button variant="secondary" href="#how-we-work">See how we work</Button>
+          <Button variant="outline" href="#how-we-work">See how we work</Button>
         </div>
 
       </div>

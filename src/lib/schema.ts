@@ -41,22 +41,22 @@ export function orgSchema() {
     areaServed:    "Worldwide",
     priceRange:    "££",
     sameAs: [
-      "https://linkedin.com/company/sigmatech",
-      "https://github.com/sigmatech",
-      "https://twitter.com/sigmatech",
+      "https://linkedin.com/company/nexora",
+      "https://github.com/nexora",
+      "https://twitter.com/nexora",
     ],
     contactPoint: [
       {
         "@type":           "ContactPoint",
         contactType:       "customer service",
-        email:             "hello@sigmatech.co.uk",
+        email:             "hello@nexora.dev",
         availableLanguage: "English",
         areaServed:        "Worldwide",
       },
       {
         "@type":           "ContactPoint",
         contactType:       "sales",
-        email:             "hello@sigmatech.co.uk",
+        email:             "hello@nexora.dev",
         availableLanguage: "English",
         areaServed:        "Worldwide",
       },
@@ -306,7 +306,7 @@ export function contactPageSchema() {
     mainEntity: {
       "@type":           "ContactPoint",
       contactType:       "customer service",
-      email:             "hello@sigmatech.co.uk",
+      email:             "hello@nexora.dev",
       availableLanguage: "English",
     },
   };

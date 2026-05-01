@@ -88,14 +88,6 @@ Page load time dropped from 4.2 seconds to 890 milliseconds — a 79% reduction.
       },
     ],
 
-    testimonial: {
-      quote:
-        "Nexora delivered exactly what they promised, on time, with zero data downtime. The rebuild went from internal joke to internal pride in twelve weeks. Our analysts stopped complaining and started asking for new features — which tells you everything.",
-      authorName:    "Richard Holloway",
-      authorTitle:   "CTO",
-      authorCompany: "Meridian Capital",
-    },
-
     faqs: [
       {
         question: "Why did you choose Next.js over a pure React SPA?",
@@ -135,9 +127,10 @@ Page load time dropped from 4.2 seconds to 890 milliseconds — a 79% reduction.
 
     relatedCaseStudySlugs: ["ecommerce-platform-migration"],
 
-    status:     "published",
-    sortOrder:  1,
-    isFeatured: true,
+    status:          "published",
+    sortOrder:       1,
+    isFeatured:      true,
+    isIllustrative:  true,
 
     seo: {
       title:       "Fintech Dashboard Rebuild | Nexora Case Study",
@@ -238,14 +231,6 @@ LCP on mobile dropped from 5.1 seconds to 1.2 seconds — well inside Google's "
       },
     ],
 
-    testimonial: {
-      quote:
-        "The conversion jump in the first month was enough to pay for the entire project. But the thing I value most is the test suite — for the first time in five years, I can approve a deployment on a Friday afternoon without sweating.",
-      authorName:    "Sophia Clarke",
-      authorTitle:   "CEO",
-      authorCompany: "Luminary Goods",
-    },
-
     faqs: [
       {
         question: "Why go headless instead of a new Shopify theme?",
@@ -285,9 +270,10 @@ LCP on mobile dropped from 5.1 seconds to 1.2 seconds — well inside Google's "
 
     relatedCaseStudySlugs: ["fintech-dashboard-rebuild", "saas-devops-overhaul"],
 
-    status:     "published",
-    sortOrder:  2,
-    isFeatured: true,
+    status:          "published",
+    sortOrder:       2,
+    isFeatured:      true,
+    isIllustrative:  true,
 
     seo: {
       title:       "E-commerce Platform Migration | Nexora Case Study",
@@ -387,14 +373,6 @@ NovaTech went from one deployment per month to daily deployments within three we
       },
     ],
 
-    testimonial: {
-      quote:
-        "Before Nexora, a deployment was a two-hour ordeal that kept me up at night. Now it's a GitHub merge. I genuinely can't overstate how much that has changed the culture of the engineering team — people ship things they were previously too scared to touch.",
-      authorName:    "Marcus Webb",
-      authorTitle:   "Co-founder & CTO",
-      authorCompany: "NovaTech Labs",
-    },
-
     faqs: [
       {
         question: "Why Terraform over AWS CDK or Pulumi?",
@@ -429,9 +407,10 @@ NovaTech went from one deployment per month to daily deployments within three we
 
     relatedCaseStudySlugs: ["fintech-dashboard-rebuild"],
 
-    status:     "published",
-    sortOrder:  3,
-    isFeatured: true,
+    status:          "published",
+    sortOrder:       3,
+    isFeatured:      true,
+    isIllustrative:  true,
 
     seo: {
       title:       "SaaS DevOps Overhaul | Nexora Case Study",

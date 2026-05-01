@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState } from "react";
 import { useForm, Controller, type Resolver } from "react-hook-form";
 import { AnimatePresence, motion } from "framer-motion";
 import { AlertCircle, CheckCircle2, Send } from "lucide-react";
@@ -16,7 +16,6 @@ import {
   type ServiceSlug,
 } from "@/data/schemas/shared";
 import { PROJECT_TIMELINE_LABELS } from "@/data/schemas/contact.schema";
-import { submitContactForm } from "@/app/actions/contact";
 import Button from "@/components/ui/Button";
 
 // ─── Zod v4 resolver ─────────────────────────────────────────────────────────
@@ -95,7 +94,7 @@ function SuccessState({ submissionId }: { submissionId: string }) {
 // ─── Component ────────────────────────────────────────────────────────────────
 
 export default function ContactForm() {
-  const [isPending, startTransition] = useTransition();
+  const [isPending, setIsPending] = useState(false);
   const [serverResponse, setServerResponse] = useState<ContactApiResponse | null>(null);
 
   const {
@@ -123,24 +122,21 @@ export default function ContactForm() {
     setValue("services", next, { shouldValidate: true, shouldDirty: true });
   }
 
-  const onSubmit = handleSubmit((data) => {
-    const fd = new FormData();
-    fd.set("fullName",   data.fullName);
-    fd.set("email",      data.email);
-    if (data.company) fd.set("company", data.company);
-    if (data.phone)   fd.set("phone",   data.phone);
-    data.services.forEach((s) => fd.append("services", s));
-    fd.set("budgetRange", data.budgetRange);
-    fd.set("message",     data.message);
-    if (data.timeline)       fd.set("timeline",       data.timeline);
-    if (data.marketingOptIn) fd.set("marketingOptIn", "on");
-    fd.set("privacyConsent", "on");
-    fd.set("website", ""); // honeypot — always empty on genuine submissions
-
-    startTransition(async () => {
-      const result = await submitContactForm(null, fd);
+  const onSubmit = handleSubmit(async (data) => {
+    setIsPending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method:  "POST",
+        headers: { "Content-Type": "application/json" },
+        body:    JSON.stringify({ ...data, website: "" }),
+      });
+      const result: ContactApiResponse = await res.json();
       setServerResponse(result);
-    });
+    } catch {
+      setServerResponse({ success: false, error: "Network error. Please try again." });
+    } finally {
+      setIsPending(false);
+    }
   });
 
   if (serverResponse?.success) {

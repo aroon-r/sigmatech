@@ -61,10 +61,10 @@ export default function PrivacyPage() {
                 information collected through this website. We are registered in England and
                 Wales. You can contact us regarding data matters at{" "}
                 <a
-                  href="mailto:hello@sigmatech.co.uk"
+                  href="mailto:hello@nexora.dev"
                   className="text-electric-400 hover:text-electric-300 transition-colors"
                 >
-                  hello@sigmatech.co.uk
+                  hello@nexora.dev
                 </a>
                 .
               </p>
@@ -117,10 +117,10 @@ export default function PrivacyPage() {
               <p>
                 To exercise any of these rights, email us at{" "}
                 <a
-                  href="mailto:hello@sigmatech.co.uk"
+                  href="mailto:hello@nexora.dev"
                   className="text-electric-400 hover:text-electric-300 transition-colors"
                 >
-                  hello@sigmatech.co.uk
+                  hello@nexora.dev
                 </a>
                 . We will respond within 30 days.
               </p>
@@ -147,10 +147,10 @@ export default function PrivacyPage() {
               <p>
                 For any privacy-related questions, contact us at{" "}
                 <a
-                  href="mailto:hello@sigmatech.co.uk"
+                  href="mailto:hello@nexora.dev"
                   className="text-electric-400 hover:text-electric-300 transition-colors"
                 >
-                  hello@sigmatech.co.uk
+                  hello@nexora.dev
                 </a>
                 . You also have the right to lodge a complaint with the UK Information
                 Commissioner&apos;s Office (ICO) at{" "}

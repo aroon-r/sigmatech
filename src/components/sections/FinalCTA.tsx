@@ -15,9 +15,8 @@ const TRUST_POINTS = [
 ] as const;
 
 // ─── Background ───────────────────────────────────────────────────────────────
-// Isolated so the animated blobs are the only reason this file is "use client".
 
-function CTABackground({ reduced }: { reduced: boolean }) {
+function CTABackground() {
   return (
     <>
       {/* Dot grid texture */}
@@ -26,40 +25,25 @@ function CTABackground({ reduced }: { reduced: boolean }) {
         className="pointer-events-none absolute inset-0 bg-grid-texture opacity-[0.18]"
       />
 
-      {/* Top-edge prismatic highlight */}
+      {/* Top-edge hairline */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 top-0 h-px"
         style={{
           background:
-            "linear-gradient(to right, transparent, rgba(255,255,255,0.14) 25%, rgba(10,132,255,0.70) 50%, rgba(255,255,255,0.14) 75%, transparent)",
+            "linear-gradient(to right, transparent, rgba(255,255,255,0.08) 25%, rgba(10,132,255,0.25) 50%, rgba(255,255,255,0.08) 75%, transparent)",
         }}
       />
 
-      {/* Primary blob — large breathing glow, top-centre */}
-      <motion.div
+      {/* Static top-centre glow — single light source, no animation */}
+      <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 -top-48 h-[560px] w-[560px] -translate-x-1/2 rounded-full"
         style={{
           background:
-            "radial-gradient(circle, rgba(10,132,255,0.60) 0%, rgba(10,132,255,0.10) 55%, transparent 75%)",
+            "radial-gradient(circle, rgba(10,132,255,0.18) 0%, rgba(10,132,255,0.04) 55%, transparent 75%)",
           filter: "blur(72px)",
         }}
-        animate={reduced ? {} : { scale: [1, 1.16, 1], opacity: [0.65, 1, 0.65] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-      />
-
-      {/* Secondary blob — bottom-right accent */}
-      <motion.div
-        aria-hidden="true"
-        className="pointer-events-none absolute -bottom-36 -right-20 h-[320px] w-[320px] rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(48,145,255,0.40) 0%, transparent 70%)",
-          filter: "blur(56px)",
-        }}
-        animate={reduced ? {} : { x: [0, -28, 0], opacity: [0.45, 0.75, 0.45] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       />
 
       {/* Bottom fade — blends card into page background */}
@@ -81,7 +65,7 @@ export default function FinalCTA() {
   const prefersReduced = useReducedMotion() ?? false;
 
   return (
-    <section aria-label="Start a project with Nexora" id="cta" className="py-24">
+    <section aria-label="Start a project with Nexora" id="cta" className="py-28">
       <Container>
 
         {/* Card entrance — slides up once on scroll-into-view */}
@@ -99,13 +83,12 @@ export default function FinalCTA() {
               // Three-layer gradient: electric radial glow from above +
               // softer secondary from below-right + deep-navy base.
               background: [
-                "radial-gradient(ellipse 110% 75% at 50% -15%, rgba(10,132,255,0.52) 0%, transparent 58%)",
-                "radial-gradient(ellipse 55% 45% at 85% 110%, rgba(48,145,255,0.24) 0%, transparent 55%)",
+                "radial-gradient(ellipse 110% 75% at 50% -15%, rgba(10,132,255,0.16) 0%, transparent 58%)",
                 "#000B1E",
               ].join(", "),
             }}
           >
-            <CTABackground reduced={prefersReduced} />
+            <CTABackground />
 
             {/* Content — delayed entrance after the card has started appearing */}
             <motion.div

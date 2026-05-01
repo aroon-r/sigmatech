@@ -1,5 +1,5 @@
 # Step 07 — Sitemap & User Flows
-**Project:** SigmaTech Website Revamp
+**Project:** nexora Website Revamp
 **Date:** 2026-04-25
 **Content Owner:** Internal PM (approved 2026-04-25)
 **Status:** Approved — Pending Client Sign-off
@@ -11,7 +11,7 @@
 ### A1. Full Site Sitemap
 
 ```
-sigmatech.com/
+nexora.com/
 │
 ├── / ................................................ Home
 │   ├── #hero ......................................... Hero Section
@@ -34,7 +34,7 @@ sigmatech.com/
 │   ├── /work/[slug] .................................. Individual Case Study
 │   └── /work/[slug] .................................. Individual Case Study
 │
-├── /about ............................................ About SigmaTech
+├── /about ............................................ About nexora
 │   ├── #story ........................................ Company Story
 │   ├── #values ....................................... Values & Culture
 │   └── #team ......................................... Team Grid
@@ -76,12 +76,12 @@ sigmatech.com/
 
 #### Primary Navigation (Desktop — Persistent)
 ```
-[ SigmaTech Logo ]    Services    Work    About    Blog    [ Get in touch → ]
+[ nexora Logo ]    Services    Work    About    Blog    [ Get in touch → ]
 ```
 
 #### Primary Navigation (Mobile — Hamburger Drawer)
 ```
-SigmaTech Logo  [ ☰ ]
+nexora Logo  [ ☰ ]
 ─────────────────────
 Services
 Work
@@ -93,7 +93,7 @@ Blog
 
 #### Footer Navigation
 ```
-Column 1: SigmaTech     Column 2: Services      Column 3: Company      Column 4: Connect
+Column 1: nexora     Column 2: Services      Column 3: Company      Column 4: Connect
 ─────────────────────   ─────────────────────   ────────────────────   ─────────────────
 Logo + tagline          Web Development         About                  LinkedIn
 Short description       Cloud & DevOps          Blog                   GitHub
@@ -102,7 +102,7 @@ Short description       Cloud & DevOps          Blog                   GitHub
                         Consulting              Terms of Service
                         Staff Augmentation
 
-© 2026 SigmaTech. All rights reserved.
+© 2026 nexora. All rights reserved.
 ```
 
 ---
@@ -115,7 +115,7 @@ Three primary user personas identified in Business Analysis. Each has a distinct
 
 ### Flow 1 — The CEO / CTO (Primary Conversion Target)
 
-**Goal:** Evaluate SigmaTech as a long-term development partner for a significant project.
+**Goal:** Evaluate nexora as a long-term development partner for a significant project.
 **Entry point:** Google search ("custom software development company") or LinkedIn referral
 **Session behaviour:** Deliberate, reads carefully, scrolls the full page, looks for proof
 
@@ -173,7 +173,7 @@ Three primary user personas identified in Business Analysis. Each has a distinct
                                ▼
 ┌─────────────────────────────────────────────────────────────────────┐
 │  TECH STACK                                                         │
-│  • Confirms SigmaTech uses modern tools (Next.js, AWS, etc.)        │
+│  • Confirms nexora uses modern tools (Next.js, AWS, etc.)        │
 │  • This matters — CEO doesn't want a PHP shop                       │
 │  ✅ Technical credibility confirmed                                 │
 └──────────────────────────────┬──────────────────────────────────────┘
@@ -238,7 +238,7 @@ Three primary user personas identified in Business Analysis. Each has a distinct
 
 ### Flow 3 — The HR / Talent Lead
 
-**Goal:** Evaluate SigmaTech for staff augmentation or outsourcing.
+**Goal:** Evaluate nexora for staff augmentation or outsourcing.
 **Entry point:** LinkedIn search, job board, or Google ("staff augmentation services")
 **Session behaviour:** Goes directly to About and Services; skims team section
 
@@ -334,7 +334,7 @@ CONTACT PAGE  ─── [Final conversion gate]
 | Staff Aug | `/services/staff-augmentation` | "staff augmentation services" |
 | Work | `/work` | "software development portfolio" |
 | Case Study | `/work/[descriptive-slug]` | project/client keywords |
-| About | `/about` | "about SigmaTech" |
+| About | `/about` | "about nexora" |
 | Blog | `/blog` | "software development blog" |
 | Article | `/blog/[descriptive-slug]` | article-specific keywords |
 | Contact | `/contact` | "contact software development company" |
