@@ -7,6 +7,7 @@ import { Menu, X, Zap } from "lucide-react";
 import { m, AnimatePresence, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Button from "@/components/ui/Button";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
@@ -67,8 +68,8 @@ export default function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-[background-color,border-color,box-shadow] duration-300",
         scrolled
-          ? // Glassmorphism: semi-transparent dark surface + heavy blur
-            "border-b border-charcoal-700/40 bg-charcoal-950/80 backdrop-blur-xl shadow-lg shadow-black/10"
+          ? // Glassmorphism: semi-transparent surface + heavy blur
+            "border-b border-charcoal-700/40 light:border-charcoal-200/60 bg-charcoal-950/80 light:bg-white/80 backdrop-blur-xl shadow-lg shadow-black/10 light:shadow-black/5"
           : "bg-transparent"
       )}
     >
@@ -87,7 +88,7 @@ export default function Navbar() {
             className="h-5 w-5 text-electric-500 transition-transform duration-150 group-hover:scale-110"
             aria-hidden="true"
           />
-          <span className="font-display text-lg font-semibold tracking-tight text-charcoal-50 group-focus-visible:text-electric-400">
+          <span className="font-display text-lg font-semibold tracking-tight text-charcoal-50 light:text-charcoal-950 group-focus-visible:text-electric-400">
             Nexora
           </span>
         </Link>
@@ -105,8 +106,8 @@ export default function Navbar() {
                     "relative text-sm font-medium transition-colors duration-150",
                     "focus-visible:outline-none focus-visible:text-electric-400",
                     active
-                      ? "text-electric-400"
-                      : "text-charcoal-400 hover:text-charcoal-50"
+                      ? "text-electric-400 light:text-electric-600"
+                      : "text-charcoal-400 hover:text-charcoal-50 light:text-charcoal-500 light:hover:text-charcoal-900"
                   )}
                 >
                   {label}
@@ -133,12 +134,16 @@ export default function Navbar() {
             </Button>
           </div>
 
+          {/* Theme toggle */}
+          <ThemeToggle />
+
           {/* Mobile hamburger */}
           <button
             type="button"
             className={cn(
               "flex h-9 w-9 items-center justify-center rounded-lg transition-colors md:hidden",
               "text-charcoal-400 hover:bg-charcoal-800 hover:text-charcoal-50",
+              "light:text-charcoal-600 light:hover:bg-charcoal-100 light:hover:text-charcoal-900",
               "focus-visible:outline focus-visible:outline-2 focus-visible:outline-electric-500"
             )}
             onClick={() => setIsOpen((o) => !o)}
@@ -166,7 +171,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: drawerDuration, ease: "easeInOut" }}
-            className="overflow-hidden border-t border-charcoal-800 bg-charcoal-950 md:hidden"
+            className="overflow-hidden border-t border-charcoal-800 light:border-charcoal-200 bg-charcoal-950 light:bg-white md:hidden"
           >
             <div className="px-6 pb-6 pt-2">
               <ul className="flex flex-col gap-0.5" role="list">
@@ -181,8 +186,8 @@ export default function Navbar() {
                         className={cn(
                           "flex items-center gap-2 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                           active
-                            ? "bg-charcoal-800 text-charcoal-50"
-                            : "text-charcoal-300 hover:bg-charcoal-800 hover:text-charcoal-50"
+                            ? "bg-charcoal-800 light:bg-charcoal-100 text-charcoal-50 light:text-charcoal-900"
+                            : "text-charcoal-300 hover:bg-charcoal-800 hover:text-charcoal-50 light:text-charcoal-600 light:hover:bg-charcoal-100 light:hover:text-charcoal-900"
                         )}
                       >
                         {/* Active dot in mobile menu */}
@@ -200,7 +205,7 @@ export default function Navbar() {
               </ul>
 
               {/* Mobile CTA */}
-              <div className="mt-4 border-t border-charcoal-800 pt-4">
+              <div className="mt-4 border-t border-charcoal-800 light:border-charcoal-200 pt-4">
                 <Button
                   href="/contact"
                   className="w-full justify-center"

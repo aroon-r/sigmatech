@@ -115,7 +115,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="dark"
       suppressHydrationWarning
     >
       <body
@@ -126,6 +125,20 @@ export default function RootLayout({
           font-sans antialiased
         `}
       >
+        {/*
+          Anti-flash script — runs synchronously before first paint.
+          Reads localStorage ("theme") and falls back to prefers-color-scheme.
+          Adds either "dark" or "light" to <html> before any CSS is applied,
+          preventing a visible flash on page load.
+          suppressHydrationWarning on <html> silences the class mismatch
+          between SSR (no class) and the client-corrected value.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var t=localStorage.getItem('theme');var m=window.matchMedia('(prefers-color-scheme:dark)').matches;var r=t==='light'?'light':t==='dark'?'dark':m?'dark':'light';document.documentElement.classList.add(r);})();`,
+          }}
+        />
+
         {/* Global structured data — present on every page */}
         <JsonLd schema={orgSchema()} />
         <JsonLd schema={websiteSchema()} />

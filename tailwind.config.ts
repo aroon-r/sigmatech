@@ -160,8 +160,10 @@ const config: Config = {
   },
 
   plugins: [
-    // ─── Custom utilities ──────────────────────────────────────────────────
-    plugin(({ addUtilities }) => {
+    // ─── Custom utilities + variants ──────────────────────────────────────
+    plugin(({ addUtilities, addVariant }) => {
+      // Enables light: prefix (e.g. light:bg-white) when .light is on <html>
+      addVariant("light", ".light &");
       addUtilities({
         // Text gradient — electric blue, hero use only
         ".text-gradient": {
