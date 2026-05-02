@@ -13,7 +13,7 @@ const PROCESS_CARDS = [
     metric:   "Scoped first",
     label:    "In writing, before code starts",
     color:    "#22C55E",
-    position: "left-[4%] top-[22%]",
+    position: "left-4 top-[22%]",
   },
   {
     Icon:     GitBranch,
@@ -62,7 +62,7 @@ interface ProcessCardProps {
 
 function FloatingProcessCard({ Icon, metric, label, color, position }: ProcessCardProps) {
   return (
-    <div className={`absolute hidden xl:block ${position}`}>
+    <div className={`absolute hidden xl:block z-10 ${position}`}>
       <div
         className="w-52 rounded-2xl px-4 py-3.5"
         style={{
@@ -99,7 +99,7 @@ export default function Hero() {
         <FloatingProcessCard key={card.metric} {...card} />
       ))}
 
-      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-start gap-8 text-left">
+      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-start gap-8 text-left">
 
         <h1 className="max-w-4xl font-display text-5xl font-bold leading-tight tracking-tight text-charcoal-50">
           The engineers who scope it are the engineers who build it.
