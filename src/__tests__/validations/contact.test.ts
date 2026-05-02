@@ -34,7 +34,7 @@ describe("contactFormSchema", () => {
   describe("valid submissions", () => {
     it("accepts a fully-populated form", () => {
       const result = parse({
-        company:        "Acme Ltd",
+        company:        "Acme Corp",
         jobTitle:       "CTO",
         phone:          "+447700900123",
         timeline:       "1_to_3_months",

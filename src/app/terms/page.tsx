@@ -65,21 +65,21 @@ export default function TermsPage() {
             <Section title="2. Services">
               <p>
                 Nexora provides software development, consulting, and related services. The
-                exact scope, deliverables, timelines, and pricing will be defined separately
-                for each engagement.
+                exact scope, deliverables, timelines, and pricing are defined per engagement.
               </p>
             </Section>
 
             <Section title="3. Intellectual property">
               <p>
-                All content on this website, including text, design, graphics, and code, is
-                owned by or licensed to Nexora.
+                Content on this website, including text, design, graphics, and code, is
+                created by or used by Nexora.
               </p>
               <p>Unless otherwise agreed in writing:</p>
               <ul className="ml-4 list-disc space-y-1 text-charcoal-300">
-                <li>Client-delivered work becomes the client&apos;s property upon full payment</li>
-                <li>Nexora retains ownership of pre-existing tools, frameworks, and methodologies</li>
+                <li>Work delivered to clients becomes the client&apos;s property upon full payment</li>
+                <li>Nexora may reuse general knowledge, tools, and non-client-specific components</li>
               </ul>
+              <p>You may not copy or reuse website content without permission.</p>
             </Section>
 
             <Section title="4. Confidentiality">
@@ -91,36 +91,34 @@ export default function TermsPage() {
 
             <Section title="5. Payments">
               <p>
-                Payment terms are defined per project. Invoices must be paid within the
-                agreed timeframe.
+                Payment terms are defined per project and must be followed as agreed.
               </p>
             </Section>
 
             <Section title="6. Limitation of liability">
               <p>
-                To the maximum extent permitted, Nexora is not liable for indirect,
-                incidental, or consequential damages arising from use of the website or
-                services.
+                To the maximum extent permitted, Nexora is not liable for indirect or
+                consequential damages related to use of the website or services.
               </p>
             </Section>
 
             <Section title="7. Changes to these terms">
               <p>
-                We may update these Terms from time to time. Continued use of the website
-                means you accept the updated Terms.
+                We may update these Terms at any time. Continued use of the website indicates
+                acceptance.
               </p>
             </Section>
 
-            <Section title="8. Governing framework">
+            <Section title="8. General framework">
               <p>
-                These Terms are governed by generally applicable laws. No specific
-                jurisdiction is claimed.
+                These Terms are written to be generally applicable. No specific governing
+                framework or territory is claimed.
               </p>
             </Section>
 
             <Section title="9. Contact">
               <p>
-                For questions about these Terms:{" "}
+                For questions:{" "}
                 <a
                   href="mailto:hello@nexora.dev"
                   className="text-electric-400 hover:text-electric-300 transition-colors"

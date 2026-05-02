@@ -221,7 +221,7 @@ export default function ContactForm() {
               id="company"
               type="text"
               autoComplete="organization"
-              placeholder="Acme Ltd"
+              placeholder="Acme Corp"
               className="input"
               {...register("company")}
             />
