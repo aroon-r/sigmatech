@@ -99,7 +99,7 @@ export default function Hero() {
         <FloatingProcessCard key={card.metric} {...card} />
       ))}
 
-      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-start gap-8 text-left">
+      <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-start gap-8 text-left lg:ml-8 xl:ml-12">
 
         <h1 className="max-w-4xl font-display text-5xl font-bold leading-tight tracking-tight text-charcoal-50">
           The engineers who scope it are the engineers who build it.
