@@ -47,7 +47,7 @@ function HeroBackground() {
       />
 
 
-<div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-charcoal-950 to-transparent" />
+<div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[var(--bg)] to-transparent" />
     </div>
   );
 }
@@ -63,24 +63,15 @@ interface ProcessCardProps {
 function FloatingProcessCard({ Icon, metric, label, color, position }: ProcessCardProps) {
   return (
     <div className={`absolute hidden xl:block z-10 pointer-events-none cursor-default select-none ${position}`}>
-      <div
-        className="w-52 rounded-2xl px-4 py-3.5"
-        style={{
-          background:           "rgba(255,255,255,0.025)",
-          backdropFilter:       "blur(12px)",
-          WebkitBackdropFilter: "blur(12px)",
-          border:               "1px solid rgba(255,255,255,0.04)",
-          boxShadow:            "0 4px 16px rgba(0,0,0,0.28)",
-        }}
-      >
+      <div className="hero-card">
         <div
           className="mb-2 flex h-7 w-7 items-center justify-center rounded-lg"
           style={{ background: `${color}22` }}
         >
           <Icon className="h-3.5 w-3.5" style={{ color }} aria-hidden="true" />
         </div>
-        <p className="text-xl font-bold tracking-tight text-charcoal-50">{metric}</p>
-        <p className="mt-0.5 text-xs leading-snug text-charcoal-400">{label}</p>
+        <p className="text-xl font-bold tracking-tight text-[var(--text)]">{metric}</p>
+        <p className="mt-0.5 text-xs leading-snug text-[var(--muted)]">{label}</p>
       </div>
     </div>
   );
@@ -101,11 +92,11 @@ export default function Hero() {
 
       <div className="relative z-20 mx-auto flex w-full max-w-4xl flex-col items-start gap-8 text-left xl:pl-14">
 
-        <h1 className="max-w-4xl font-display text-5xl font-bold leading-tight tracking-tight text-charcoal-50">
+        <h1 className="max-w-4xl font-display text-5xl font-bold leading-tight tracking-tight text-[var(--text)]">
           The engineers who scope it are the engineers who build it.
         </h1>
 
-        <p className="max-w-2xl text-lg leading-8 text-charcoal-300">
+        <p className="max-w-2xl text-lg leading-8 text-[var(--color-text-secondary)]">
           We stay small deliberately. Every project starts with a written scope, deploys to a staging
           environment early — before the architecture is too committed to change course — and ends with documented
           decisions, not just a handover call.

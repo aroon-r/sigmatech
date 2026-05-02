@@ -32,6 +32,27 @@
 
     --shadow-glass: 0 4px 32px rgba(0, 0, 0, 0.40);
     --shadow-electric: 0 0 24px rgba(10, 132, 255, 0.28);
+
+    /* ── Simple aliases (consumed by components via var(--bg) etc.) ─────── */
+    --bg:     #0D0E16;
+    --text:   #F5F6FA;
+    --muted:  #717A8E;
+    --card:   #1B1E2D;
+    --border: #252A3A;
+
+    /* ── Glass surface — switches so rgba cards look right on both themes ── */
+    --glass-surface:       rgba(255, 255, 255, 0.025);
+    --glass-surface-hover: rgba(255, 255, 255, 0.045);
+    --glass-border:        rgba(255, 255, 255, 0.06);
+
+    /* ── Ghost button hover ─────────────────────────────────────────────── */
+    --ghost-hover-bg: rgba(37, 42, 58, 0.60);
+
+    /* ── Background texture line colour ────────────────────────────────── */
+    --grid-line: rgba(255, 255, 255, 0.03);
+
+    /* ── Hero gradient — white start on dark, near-black on light ───────── */
+    --gradient-hero-start: #FFFFFF;
   }
 
   /* Light mode overrides */
@@ -53,6 +74,27 @@
 
     --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.08);
     --shadow-electric: 0 0 16px rgba(10, 132, 255, 0.15);
+
+    /* ── Simple aliases ─────────────────────────────────────────────────── */
+    --bg:     #FFFFFF;
+    --text:   #0D0E16;
+    --muted:  #6B7280;
+    --card:   #F5F6FA;
+    --border: #CDD1DB;
+
+    /* ── Glass surface ──────────────────────────────────────────────────── */
+    --glass-surface:       rgba(0, 0, 0, 0.04);
+    --glass-surface-hover: rgba(0, 0, 0, 0.07);
+    --glass-border:        rgba(0, 0, 0, 0.09);
+
+    /* ── Ghost button hover ─────────────────────────────────────────────── */
+    --ghost-hover-bg: rgba(0, 0, 0, 0.06);
+
+    /* ── Background texture line colour ────────────────────────────────── */
+    --grid-line: rgba(0, 0, 0, 0.05);
+
+    /* ── Hero gradient ──────────────────────────────────────────────────── */
+    --gradient-hero-start: #0D0E16;
   }
 
   /* ── Global resets ──────────────────────────────────────────────────────── */
@@ -66,8 +108,8 @@
   }
 
   body {
-    background-color: var(--color-bg);
-    color: var(--color-text-primary);
+    background-color: var(--bg);
+    color: var(--text);
     @apply font-sans;
   }
 
@@ -90,11 +132,21 @@
     color: #F5F6FA;
   }
 
+  /* Selection — light mode override */
+  .light ::selection {
+    background-color: rgba(10, 132, 255, 0.18);
+    color: #0D0E16;
+  }
+
   /* Scrollbar — webkit */
   ::-webkit-scrollbar        { width: 6px; height: 6px; }
   ::-webkit-scrollbar-track  { background: #0D0E16; }
   ::-webkit-scrollbar-thumb  { background: #363D52; border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: #4B5265; }
+
+  .light ::-webkit-scrollbar-track       { background: #F5F6FA; }
+  .light ::-webkit-scrollbar-thumb       { background: #CDD1DB; border-radius: 3px; }
+  .light ::-webkit-scrollbar-thumb:hover { background: #A0A8B8; }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -199,11 +251,11 @@
     background-color: transparent;
   }
   .btn-ghost:hover {
-    background-color: rgba(37, 42, 58, 0.60); /* charcoal-700/60 */
+    background-color: var(--ghost-hover-bg);
     color: var(--color-text-primary);
   }
   .btn-ghost:active {
-    background-color: #252A3A; /* charcoal-700 */
+    background-color: var(--ghost-hover-bg);
   }
   .btn-ghost:focus-visible {
     outline: 2px solid var(--color-border-strong);
@@ -229,20 +281,39 @@
   /* Glass card — use only over gradient/blob backgrounds */
   .card-glass {
     @apply rounded-2xl p-6 transition-all duration-300;
-    background-color: rgba(255, 255, 255, 0.045);
+    background-color: var(--glass-surface);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
     box-shadow: var(--shadow-glass);
   }
   .card-glass-hover {
     @apply card-glass;
   }
   .card-glass-hover:hover {
-    background-color: rgba(255, 255, 255, 0.045);
+    background-color: var(--glass-surface-hover);
     border-color: rgba(10, 132, 255, 0.22);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.40), 0 2px 16px rgba(10, 132, 255, 0.07);
     transform: translateY(-2px);
+  }
+
+  /* Generic page-section card — replaces inline rgba() styles in page files */
+  .surface-card {
+    @apply rounded-2xl p-6;
+    background-color: var(--glass-surface);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+  }
+
+  /* Hero floating card */
+  .hero-card {
+    @apply w-52 rounded-2xl px-4 py-3.5;
+    background-color: var(--glass-surface);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
   }
 
   /* ─────────────────────────────────────────────────────────────────────────
@@ -356,9 +427,9 @@
     color: transparent;
   }
 
-  /* Hero headline gradient — white → electric blue, reads bright-to-brand on dark bg */
+  /* Hero headline gradient — switches start colour per theme */
   .text-gradient-hero {
-    background: linear-gradient(120deg, #FFFFFF 0%, #65AEFF 45%, #0A84FF 100%);
+    background: linear-gradient(120deg, var(--gradient-hero-start) 0%, #65AEFF 45%, #0A84FF 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -378,8 +449,8 @@
   /* Background grid texture */
   .bg-grid-texture {
     background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px);
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(to right, var(--grid-line) 1px, transparent 1px);
     background-size: 32px 32px;
   }
 

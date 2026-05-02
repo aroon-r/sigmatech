@@ -78,20 +78,23 @@ export default function Navbar() {
         className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
         aria-label="Primary navigation"
       >
-        {/* Logo */}
-        <Link
-          href="/"
-          className="group flex items-center gap-2 focus-visible:outline-none"
-          aria-label="Nexora — home"
-        >
-          <Zap
-            className="h-5 w-5 text-electric-500 transition-transform duration-150 group-hover:scale-110"
-            aria-hidden="true"
-          />
-          <span className="font-display text-lg font-semibold tracking-tight text-charcoal-50 light:text-charcoal-950 group-focus-visible:text-electric-400">
-            Nexora
-          </span>
-        </Link>
+        {/* Logo + theme toggle */}
+        <div className="flex items-center gap-3">
+          <Link
+            href="/"
+            className="group flex items-center gap-2 focus-visible:outline-none"
+            aria-label="Nexora — home"
+          >
+            <Zap
+              className="h-5 w-5 text-electric-500 transition-transform duration-150 group-hover:scale-110"
+              aria-hidden="true"
+            />
+            <span className="font-display text-lg font-semibold tracking-tight text-charcoal-50 light:text-charcoal-950 group-focus-visible:text-electric-400">
+              Nexora
+            </span>
+          </Link>
+          <ThemeToggle />
+        </div>
 
         {/* Desktop nav links */}
         <ul className="hidden items-center gap-8 md:flex" role="list">
@@ -133,9 +136,6 @@ export default function Navbar() {
               Send a brief
             </Button>
           </div>
-
-          {/* Theme toggle */}
-          <ThemeToggle />
 
           {/* Mobile hamburger */}
           <button
