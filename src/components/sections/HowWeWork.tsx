@@ -70,7 +70,7 @@ export default function HowWeWork() {
               <p className="text-xs font-semibold uppercase tracking-widest text-electric-400">
                 {step.number}
               </p>
-              <h3 className="mt-2 font-display text-lg font-bold text-charcoal-50">
+              <h3 className="mt-2 font-display text-lg font-bold">
                 {step.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-charcoal-400">

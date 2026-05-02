@@ -36,7 +36,7 @@ function MetricCard({ metric }: { metric: Metric }) {
         {/* After */}
         <div>
           <p className="mb-1 text-[10px] uppercase tracking-wider text-electric-500">After</p>
-          <p className="font-display text-3xl font-bold tracking-tight text-charcoal-50">
+          <p className="font-display text-3xl font-bold tracking-tight text-[var(--color-text-primary)]">
             {metric.after}
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function MetricsGrid({ metrics }: MetricsGridProps) {
       <Container>
         <div className="mb-10">
           <p className="section-label mb-3">The impact</p>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-charcoal-50 sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Results that move the needle
           </h2>
           <p className="mt-4 max-w-xl text-charcoal-400">

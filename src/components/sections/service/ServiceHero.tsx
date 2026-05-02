@@ -107,7 +107,7 @@ export default function ServiceHero({ service, children }: ServiceHeroProps) {
             </div>
 
             {/* Heading */}
-            <h1 className="font-display text-4xl font-bold tracking-tight text-charcoal-50 sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               {service.name}
             </h1>
 
@@ -134,7 +134,7 @@ export default function ServiceHero({ service, children }: ServiceHeroProps) {
                     border:               "1px solid rgba(255,255,255,0.07)",
                   }}
                 >
-                  <p className="font-display text-2xl font-bold text-charcoal-50">
+                  <p className="font-display text-2xl font-bold text-[var(--color-text-primary)]">
                     {stat.value}
                   </p>
                   <p className="mt-0.5 text-xs text-charcoal-500">{stat.label}</p>

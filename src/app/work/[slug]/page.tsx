@@ -112,7 +112,7 @@ function CaseStudyHero({
             </div>
 
             {/* Title */}
-            <h1 className="max-w-3xl font-display text-4xl font-bold tracking-tight text-charcoal-50 sm:text-5xl lg:text-6xl">
+            <h1 className="max-w-3xl font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               {study.title}
             </h1>
 
@@ -177,7 +177,7 @@ function CaseStudyBody({ study }: { study: CaseStudy }) {
                 return (
                   <h2
                     key={i}
-                    className="mb-4 mt-10 font-display text-xl font-bold tracking-tight text-charcoal-50 first:mt-0"
+                    className="mb-4 mt-10 font-display text-xl font-bold tracking-tight first:mt-0"
                   >
                     {block.slice(3)}
                   </h2>
@@ -325,7 +325,7 @@ function CaseStudyTestimonial({ testimonial }: { testimonial: Testimonial }) {
           />
 
           <figure className="relative max-w-3xl">
-            <blockquote className="font-display text-xl leading-9 text-charcoal-100 sm:text-2xl sm:leading-10">
+            <blockquote className="font-display text-xl leading-9 text-[var(--color-text-primary)] sm:text-2xl sm:leading-10">
               &ldquo;{testimonial.quote}&rdquo;
             </blockquote>
 

@@ -108,7 +108,7 @@ function ServiceCard({
       </div>
 
       {/* Copy */}
-      <h3 className="relative font-display text-lg font-semibold text-charcoal-50">
+      <h3 className="relative font-display text-lg font-semibold">
         {name}
       </h3>
       <p className="relative mt-1 text-xs font-semibold uppercase tracking-wide text-electric-400">

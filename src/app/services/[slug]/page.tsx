@@ -74,7 +74,7 @@ function ServiceOverview({ service }: { service: Service }) {
                 return (
                   <h2
                     key={i}
-                    className="mb-4 mt-10 font-display text-xl font-bold tracking-tight text-charcoal-50 first:mt-0"
+                    className="mb-4 mt-10 font-display text-xl font-bold tracking-tight first:mt-0"
                   >
                     {block.slice(3)}
                   </h2>
@@ -136,7 +136,7 @@ function DeliverableCard({ deliverable }: { deliverable: Deliverable }) {
         <CheckCircle2 className="h-4 w-4 text-electric-400" aria-hidden="true" />
       </div>
       <div>
-        <p className="font-semibold text-charcoal-50">{deliverable.title}</p>
+        <p className="font-semibold text-[var(--color-text-primary)]">{deliverable.title}</p>
         {deliverable.detail && (
           <p className="mt-1 text-sm leading-relaxed text-charcoal-500">
             {deliverable.detail}
@@ -161,7 +161,7 @@ function ServiceDeliverables({ deliverables }: { deliverables: Deliverable[] }) 
       <Container>
         <div className="mb-2">
           <p className="section-label mb-3">What you get</p>
-          <h2 className="font-display text-3xl font-bold tracking-tight text-charcoal-50 sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
             Everything included
           </h2>
           <p className="mt-4 max-w-xl text-charcoal-400">
@@ -220,7 +220,7 @@ function ProcessStepItem({
       {/* Content */}
       <div className={isLast ? "pb-0" : "pb-10"}>
         <div className="flex flex-wrap items-center gap-3">
-          <h3 className="font-semibold text-charcoal-50">{step.title}</h3>
+          <h3 className="font-semibold">{step.title}</h3>
           <span
             className="rounded-full border px-2.5 py-0.5 text-xs font-medium text-charcoal-500"
             style={{ borderColor: "var(--color-border)" }}
@@ -253,7 +253,7 @@ function ServiceProcess({ steps }: { steps: ProcessStep[] }) {
           {/* Heading + intro */}
           <div>
             <p className="section-label mb-3">How we work</p>
-            <h2 className="font-display text-3xl font-bold tracking-tight text-charcoal-50 sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">
               Our delivery process
             </h2>
             <p className="mt-4 leading-8 text-charcoal-400">

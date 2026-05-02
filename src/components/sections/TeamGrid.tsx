@@ -45,7 +45,7 @@ function TeamCard({ member, index, reduced }: { member: TeamMember; index: numbe
         )}
 
         <div className="min-w-0 flex-1">
-          <p className="font-display text-[15px] font-semibold leading-snug tracking-tight text-charcoal-50">{member.name}</p>
+          <p className="font-display text-[15px] font-semibold leading-snug tracking-tight text-[var(--color-text-primary)]">{member.name}</p>
           <p className="mt-0.5 text-xs text-charcoal-500">{member.role}</p>
         </div>
 

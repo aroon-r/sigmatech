@@ -80,7 +80,7 @@ function CaseStudyCard({ cs, priority = false }: { cs: CaseStudy; priority?: boo
             <div className="flex items-start gap-6 border-b border-white/5 pb-4">
               {cs.metrics.slice(0, 2).map((m) => (
                 <div key={m.label} className="flex flex-col gap-0.5">
-                  <span className="text-xl font-bold leading-none text-charcoal-50">
+                  <span className="text-xl font-bold leading-none text-[var(--color-text-primary)]">
                     {heroMetric(m.improvement)}
                   </span>
                   <span className="text-xs text-charcoal-400">
@@ -92,8 +92,8 @@ function CaseStudyCard({ cs, priority = false }: { cs: CaseStudy; priority?: boo
 
             {/* Title + client */}
             <div className="flex-1">
-              <h3 className="font-display text-lg font-bold leading-snug text-charcoal-50
-                             transition-colors group-hover:text-electric-200">
+              <h3 className="font-display text-lg font-bold leading-snug transition-colors
+                             group-hover:text-electric-200">
                 {cs.title}
               </h3>
               <p className="mt-1 text-sm text-charcoal-400">{cs.tagline}</p>

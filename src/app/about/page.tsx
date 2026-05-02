@@ -82,7 +82,7 @@ export default function AboutPage() {
         <Container>
           <div className="relative mx-auto max-w-3xl">
             <p className="section-label mb-4">About Nexora</p>
-            <h1 className="font-display text-4xl font-bold tracking-tight text-charcoal-50 sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               We build software that{" "}
               <span className="text-gradient-hero">earns trust</span>
             </h1>
@@ -120,7 +120,7 @@ export default function AboutPage() {
                   >
                     <Icon className="h-5 w-5 text-electric-400" aria-hidden="true" />
                   </div>
-                  <p className="font-display text-3xl font-bold text-charcoal-50">{metric}</p>
+                  <p className="font-display text-3xl font-bold text-[var(--color-text-primary)]">{metric}</p>
                   <p className="text-sm text-charcoal-400">{label}</p>
                 </div>
               ))}
@@ -155,7 +155,7 @@ export default function AboutPage() {
                       className="mt-0.5 h-5 w-5 shrink-0 text-electric-400"
                       aria-hidden="true"
                     />
-                    <h3 className="font-display text-lg font-semibold text-charcoal-50">{title}</h3>
+                    <h3 className="font-display text-lg font-semibold">{title}</h3>
                   </div>
                   <p className="text-sm leading-relaxed text-charcoal-400">{body}</p>
                 </div>
@@ -197,7 +197,7 @@ export default function AboutPage() {
                   <p className="text-xs font-semibold uppercase tracking-widest text-electric-400">
                     {step}
                   </p>
-                  <h3 className="mt-2 font-display text-xl font-bold text-charcoal-50">{title}</h3>
+                  <h3 className="mt-2 font-display text-xl font-bold">{title}</h3>
                   <p className="mt-1 text-xs font-medium text-charcoal-500">{duration}</p>
                   <p className="mt-4 text-sm leading-relaxed text-charcoal-400">{body}</p>
                 </div>
@@ -239,7 +239,7 @@ export default function AboutPage() {
                 border:               "1px solid rgba(10,132,255,0.18)",
               }}
             >
-              <h2 className="font-display text-3xl font-bold text-charcoal-50 sm:text-4xl">
+              <h2 className="font-display text-3xl font-bold sm:text-4xl">
                 Ready to work with us?
               </h2>
               <p className="mx-auto mt-4 max-w-md text-charcoal-300">

@@ -162,7 +162,7 @@ function HeroCard({ cs, reduced, index }: CardProps) {
           {/* Project info + CTA */}
           <div className="relative flex items-end justify-between gap-4">
             <div className="min-w-0">
-              <h3 className="font-display text-xl font-bold leading-tight text-charcoal-50 sm:text-2xl">
+              <h3 className="font-display text-xl font-bold leading-tight sm:text-2xl">
                 {cs.title}
               </h3>
               <p className="mt-1 truncate text-sm text-charcoal-400">

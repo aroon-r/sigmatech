@@ -49,7 +49,7 @@ export default function ContactPage() {
           {/* ── Header ── */}
           <div className="relative mb-16 text-center">
             <p className="section-label mb-3">Get in touch</p>
-            <h1 className="font-display text-4xl font-bold tracking-tight text-charcoal-50 sm:text-5xl">
+            <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">
               Start your project
             </h1>
             <p className="mx-auto mt-4 max-w-xl text-lg text-charcoal-400">
@@ -67,7 +67,7 @@ export default function ContactPage() {
               <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-charcoal-500">
                 Option A
               </p>
-              <h2 className="mb-1 font-display text-xl font-bold text-charcoal-50">
+              <h2 className="mb-1 font-display text-xl font-bold">
                 Send a message
               </h2>
               <p className="mb-8 text-sm text-charcoal-400">
@@ -84,7 +84,7 @@ export default function ContactPage() {
               <p className="mb-1 text-xs font-semibold uppercase tracking-widest text-charcoal-500">
                 Option B
               </p>
-              <h2 className="mb-1 font-display text-xl font-bold text-charcoal-50">
+              <h2 className="mb-1 font-display text-xl font-bold">
                 Book a free call
               </h2>
               <p className="mb-8 text-sm text-charcoal-400">
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <p className="font-display text-lg font-semibold text-charcoal-50">
+                  <p className="font-display text-lg font-semibold text-[var(--color-text-primary)]">
                     30-min Discovery Call
                   </p>
                   <p className="mt-2 text-sm text-charcoal-400">

@@ -89,7 +89,7 @@ const mdComponents: Components = {
     return (
       <h2
         id={slugify(text)}
-        className="mb-4 mt-10 font-display text-2xl font-bold tracking-tight text-charcoal-50 first:mt-0"
+        className="mb-4 mt-10 font-display text-2xl font-bold tracking-tight first:mt-0"
       >
         {children}
       </h2>
@@ -100,7 +100,7 @@ const mdComponents: Components = {
     return (
       <h3
         id={slugify(text)}
-        className="mb-3 mt-8 text-lg font-semibold text-charcoal-50"
+        className="mb-3 mt-8 text-lg font-semibold"
       >
         {children}
       </h3>
@@ -250,7 +250,7 @@ function ArticleHero({
         </div>
 
         {/* Title */}
-        <h1 className="max-w-3xl font-display text-3xl font-bold tracking-tight text-charcoal-50 sm:text-4xl lg:text-5xl">
+        <h1 className="max-w-3xl font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
           {post.title}
         </h1>
 
