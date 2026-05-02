@@ -62,7 +62,7 @@ interface ProcessCardProps {
 
 function FloatingProcessCard({ Icon, metric, label, color, position }: ProcessCardProps) {
   return (
-    <div className={`absolute hidden xl:block z-10 ${position}`}>
+    <div className={`absolute hidden xl:block z-10 pointer-events-none cursor-default select-none ${position}`}>
       <div
         className="w-52 rounded-2xl px-4 py-3.5"
         style={{
