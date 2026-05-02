@@ -215,7 +215,7 @@ export default function AboutPage() {
               overline="The studio"
               title="Small team, senior delivery"
             />
-            <p className="mt-8 max-w-[75ch] text-lg leading-relaxed text-charcoal-300">
+            <p className="mt-8 max-w-[75ch] mx-auto text-center text-lg leading-relaxed text-charcoal-300">
               Nexora is a small engineering studio. Every project is scoped, built, and
               handed over by the same people — there is no handoff between a sales team
               and a delivery team. The focus is on well-engineered software with clear
