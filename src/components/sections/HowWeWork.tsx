@@ -31,7 +31,7 @@ export default function HowWeWork() {
   const prefersReduced = useReducedMotion() ?? false;
 
   return (
-    <section aria-label="How we work" id="how-we-work" className="pt-24 pb-32">
+    <section aria-label="How we work" id="how-we-work" className="pt-20 pb-20">
       <Container>
         <m.div
           initial={prefersReduced ? false : { opacity: 0, y: 24 }}

@@ -1,5 +1,6 @@
 import { PAGE_METADATA } from "@/lib/metadata";
 import Hero from "@/components/sections/Hero";
+import Container from "@/components/ui/Container";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 
@@ -23,7 +24,9 @@ export default function HomePage() {
       <Suspense fallback={null}>
         <Services />
         <HowWeWork />
-        <TrustSection statement="The engineers you brief are the ones who build. We write down what we're committing to before development starts, and document every decision that matters on handover." />
+        <Container>
+          <TrustSection statement="The engineers you brief are the ones who build. We write down what we're committing to before development starts, and document every decision that matters on handover." />
+        </Container>
         <FinalCTA />
       </Suspense>
     </>

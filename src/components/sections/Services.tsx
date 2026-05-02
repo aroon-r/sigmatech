@@ -141,10 +141,8 @@ export default function Services() {
   const prefersReduced = useReducedMotion() ?? false;
 
   return (
-    <section aria-label="Our services" id="services" className="relative overflow-hidden py-28">
-
-
-<Container>
+    <section aria-label="Our services" id="services" className="relative overflow-hidden py-20">
+      <Container>
         <m.div
           initial={prefersReduced ? false : { opacity: 0, y: 24 }}
           whileInView={prefersReduced ? {} : { opacity: 1, y: 0 }}

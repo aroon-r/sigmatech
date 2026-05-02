@@ -90,7 +90,7 @@ function FloatingProcessCard({ Icon, metric, label, color, position }: ProcessCa
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-32 text-center lg:px-8">
+    <section className="relative isolate flex flex-col justify-start items-center overflow-hidden px-6 pt-24 pb-20 text-center lg:px-8">
 
       <HeroBackground />
 

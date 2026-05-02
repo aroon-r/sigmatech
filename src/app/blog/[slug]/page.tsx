@@ -261,15 +261,6 @@ function ArticleHero({
 
         {/* Author + date row */}
         <div className="mt-6 flex flex-wrap items-center gap-4">
-          {post.author.avatarUrl && (
-            <Image
-              src={post.author.avatarUrl}
-              alt={post.author.name}
-              width={40}
-              height={40}
-              className="rounded-full object-cover ring-2 ring-charcoal-700"
-            />
-          )}
           <div>
             <p className="font-medium text-charcoal-100">{post.author.name}</p>
             <p className="text-xs text-charcoal-500">{post.author.designation}</p>
