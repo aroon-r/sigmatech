@@ -53,48 +53,58 @@
 
     /* ── Hero gradient — white start on dark, near-black on light ───────── */
     --gradient-hero-start: #FFFFFF;
+
+    /* ── Card elevation shadow (none on dark — depth via bg contrast) ───── */
+    --card-shadow: none;
   }
 
   /* Light mode overrides */
   .light {
-    --color-bg:            #FFFFFF;
-    --color-surface:       #F5F6FA; /* charcoal-50  */
-    --color-elevated:      #FFFFFF;
-    --color-border:        #CDD1DB; /* charcoal-200 */
-    --color-border-strong: #A0A8B8; /* charcoal-300 */
+    /* Page background: neutral-50 so white cards pop above it */
+    --color-bg:            #F9FAFB; /* neutral-50  */
+    --color-surface:       #FFFFFF; /* white panel  */
+    --color-elevated:      #FFFFFF; /* white card   */
+    --color-border:        #E5E7EB; /* neutral-200  */
+    --color-border-strong: #D1D5DB; /* neutral-300  */
 
-    --color-text-primary:   #0D0E16; /* charcoal-950 */
-    --color-text-secondary: #4B5265; /* charcoal-500 */
-    --color-text-muted:     #717A8E; /* charcoal-400 */
+    /* Higher-contrast text — readable without being harsh */
+    --color-text-primary:   #111827; /* neutral-900 — headings  (16.7:1 ✅ AAA) */
+    --color-text-secondary: #374151; /* neutral-700 — body text  (9.7:1 ✅ AAA) */
+    --color-text-muted:     #6B7280; /* neutral-500 — labels     (4.6:1 ✅ AA)  */
 
-    --color-accent:        #006FE6; /* electric-600 — 4.5:1 on white ✅ AA */
+    /* Primary blue unchanged in light; hover slightly deeper */
+    --color-accent:        #006FE6; /* electric-600 — 4.5:1 ✅ AA */
     --color-accent-hover:  #0059BF; /* electric-700 */
     --color-accent-subtle: #EBF5FF; /* electric-50  */
     --color-accent-text:   #006FE6; /* electric-600 */
 
-    --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.08);
-    --shadow-electric: 0 0 16px rgba(10, 132, 255, 0.15);
+    /* More visible electric glow on white backgrounds */
+    --shadow-glass:    0 1px 4px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.06);
+    --shadow-electric: 0 4px 14px rgba(0, 111, 230, 0.30);
 
     /* ── Simple aliases ─────────────────────────────────────────────────── */
-    --bg:     #FFFFFF;
-    --text:   #0D0E16;
+    --bg:     #F9FAFB;
+    --text:   #111827;
     --muted:  #6B7280;
-    --card:   #F5F6FA;
-    --border: #CDD1DB;
+    --card:   #FFFFFF;
+    --border: #E5E7EB;
 
-    /* ── Glass surface ──────────────────────────────────────────────────── */
-    --glass-surface:       rgba(0, 0, 0, 0.04);
-    --glass-surface-hover: rgba(0, 0, 0, 0.07);
-    --glass-border:        rgba(0, 0, 0, 0.09);
+    /* ── Glass surface — opaque white on light for clean cards ─────────── */
+    --glass-surface:       #FFFFFF;
+    --glass-surface-hover: #F9FAFB;
+    --glass-border:        #E5E7EB;
 
     /* ── Ghost button hover ─────────────────────────────────────────────── */
     --ghost-hover-bg: rgba(0, 0, 0, 0.06);
 
-    /* ── Background texture line colour ────────────────────────────────── */
+    /* ── Background texture ─────────────────────────────────────────────── */
     --grid-line: rgba(0, 0, 0, 0.05);
 
     /* ── Hero gradient ──────────────────────────────────────────────────── */
-    --gradient-hero-start: #0D0E16;
+    --gradient-hero-start: #111827;
+
+    /* ── Card shadow — soft elevation lift on white-over-neutral-50 ─────── */
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 2px 8px rgba(0, 0, 0, 0.05);
   }
 
   /* ── Global resets ──────────────────────────────────────────────────────── */
@@ -271,6 +281,7 @@
     @apply rounded-2xl p-6 transition-all duration-300;
     background-color: var(--color-elevated);
     border: 1px solid var(--color-border);
+    box-shadow: var(--card-shadow);
   }
   .card-solid:hover {
     border-color: rgba(10, 132, 255, 0.35);
@@ -285,7 +296,7 @@
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
-    box-shadow: var(--shadow-glass);
+    box-shadow: var(--shadow-glass), var(--card-shadow);
   }
   .card-glass-hover {
     @apply card-glass;
@@ -304,6 +315,7 @@
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--glass-border);
+    box-shadow: var(--card-shadow);
   }
 
   /* Hero floating card */
