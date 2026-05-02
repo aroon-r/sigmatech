@@ -126,7 +126,7 @@ describe("contactFormSchema", () => {
     });
 
     it("accepts a valid email with subdomains", () => {
-      expect(parse({ email: "user@mail.example.co.uk" }).success).toBe(true);
+      expect(parse({ email: "user@mail.example.com.au" }).success).toBe(true);
     });
   });
 
@@ -223,7 +223,7 @@ describe("contactFormSchema", () => {
   // ── phone (optional) ─────────────────────────────────────────────────────────
 
   describe("phone (optional)", () => {
-    it("accepts a valid E.164 UK number", () => {
+    it("accepts a valid E.164 international number", () => {
       expect(parse({ phone: "+447700900123" }).success).toBe(true);
     });
 
@@ -256,7 +256,7 @@ describe("contactFormSchema", () => {
     });
 
     it("accepts company and jobTitle within length limits", () => {
-      expect(parse({ company: "Nexora Ltd", jobTitle: "Head of Engineering" }).success).toBe(true);
+      expect(parse({ company: "Acme Corp", jobTitle: "Head of Engineering" }).success).toBe(true);
     });
 
     it("accepts both fields as undefined", () => {

@@ -392,7 +392,7 @@ Founded:          [Year]
 
 **Entity consistency rules:**
 - Always refer to the company as "nexora" — not "we" alone in standalone contexts
-- First mention on every page: full entity name + descriptor. E.g., *"nexora, a UK-based software development company, ..."*
+- First mention on every page: full entity name + descriptor. E.g., *"nexora, a software development company, ..."*
 - `Organization` schema on every page (via root layout) signals the entity to all machines
 
 ---

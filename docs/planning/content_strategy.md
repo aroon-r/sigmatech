@@ -399,7 +399,7 @@ LABEL: "Trusted by teams at" — text-xs uppercase tracking-widest muted
 
 **Content rules:**
 - Recognisable logos beat names. Prioritise clients with strong brand recognition.
-- If a client logo cannot be used (NDA), substitute with industry descriptor: *"Leading UK FinTech"*
+- If a client logo cannot be used (NDA), substitute with industry descriptor: *"Leading FinTech"*
 - Do not include logos of companies nexora no longer works with unless the relationship ended positively
 
 ---
@@ -508,7 +508,7 @@ HEADLINE: "Don't take our word for it."
 
 **Anti-patterns to avoid in testimonials:**
 - ❌ "nexora was great to work with. Highly recommend." → Too vague, signals fake
-- ❌ Anonymous: "— CTO, UK SaaS Company" → Name required for credibility
+- ❌ Anonymous: "— CTO, SaaS Company" → Name required for credibility
 - ❌ Edited to remove negatives → Authentic quotes mention a challenge overcome
 
 ---

@@ -133,7 +133,7 @@ export default function Footer() {
         {/* ── Copyright bar ── */}
         <div className="flex flex-col gap-2 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-charcoal-600">
-            © {year} Nexora Ltd. All rights reserved.
+            © {year} Nexora. All rights reserved.
           </p>
         </div>
       </Container>

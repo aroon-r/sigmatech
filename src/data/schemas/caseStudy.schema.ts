@@ -132,7 +132,7 @@ export interface CaseStudyClient {
   logoAlt?: string;
   /** Client website URL — shown as an outbound link on the detail page */
   websiteUrl?: string;
-  /** Client's country for geo-display — e.g. "United Kingdom" */
+  /** Client's country or region for geo-display — e.g. "Global", "Europe" */
   country?: string;
 }
 

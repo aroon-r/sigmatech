@@ -196,13 +196,13 @@ async function sendEmails(
 
   return Promise.allSettled([
     resend.emails.send({
-      from:    process.env.RESEND_FROM_EMAIL   ?? "no-reply@nexora.co.uk",
-      to:      process.env.RESEND_NOTIFY_EMAIL ?? "hello@nexora.co.uk",
+      from:    process.env.RESEND_FROM_EMAIL   ?? "no-reply@nexora.dev",
+      to:      process.env.RESEND_NOTIFY_EMAIL ?? "hello@nexora.dev",
       subject: `New enquiry from ${data.fullName} — ${data.services.join(", ")}`,
       text:    body,
     }),
     resend.emails.send({
-      from:    `Nexora <${process.env.RESEND_FROM_EMAIL ?? "hello@nexora.co.uk"}>`,
+      from:    `Nexora <${process.env.RESEND_FROM_EMAIL ?? "hello@nexora.dev"}>`,
       to:      data.email,
       subject: `We've received your enquiry, ${firstName}`,
       text: [

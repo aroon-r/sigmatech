@@ -42,7 +42,7 @@ export interface ContactFormInput {
 
   // ── Consent ───────────────────────────────────────────────────────────────
   /**
-   * GDPR-compliant opt-in checkbox.
+   * Privacy consent opt-in checkbox.
    * Must be `true` to submit — enforced by Zod `.literal(true)`.
    */
   privacyConsent: boolean;

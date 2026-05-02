@@ -55,96 +55,72 @@ export default function TermsPage() {
               border:     "1px solid rgba(255,255,255,0.06)",
             }}
           >
-            <Section title="Acceptance of terms">
+            <Section title="1. Acceptance of terms">
               <p>
-                By accessing this website or engaging Nexora Ltd ("Nexora", "we", "us")
-                for services, you agree to be bound by these Terms of Service and all applicable
-                laws. If you do not agree, please do not use this website or our services.
+                By accessing this website or engaging our services, you agree to these Terms.
+                If you do not agree, do not use this website.
               </p>
             </Section>
 
-            <Section title="Services">
+            <Section title="2. Services">
               <p>
-                Nexora provides software development, cloud infrastructure, QA testing,
-                UI/UX design, technology consulting, and staff augmentation services. The
-                specific scope, deliverables, timeline, and fees for each engagement are set
-                out in a separate Statement of Work ("SOW") or project agreement signed by
-                both parties.
-              </p>
-              <p>
-                These Terms apply to use of this website. Separate contractual terms govern
-                client engagements and take precedence over these Terms for those matters.
+                Nexora provides software development, consulting, and related services. The
+                exact scope, deliverables, timelines, and pricing will be defined separately
+                for each engagement.
               </p>
             </Section>
 
-            <Section title="Intellectual property">
+            <Section title="3. Intellectual property">
               <p>
-                All content on this website — including text, graphics, logos, and code — is
-                owned by or licensed to Nexora and is protected by UK copyright law.
+                All content on this website, including text, design, graphics, and code, is
+                owned by or licensed to Nexora.
               </p>
+              <p>Unless otherwise agreed in writing:</p>
+              <ul className="ml-4 list-disc space-y-1 text-charcoal-300">
+                <li>Client-delivered work becomes the client&apos;s property upon full payment</li>
+                <li>Nexora retains ownership of pre-existing tools, frameworks, and methodologies</li>
+              </ul>
+            </Section>
+
+            <Section title="4. Confidentiality">
               <p>
-                Unless otherwise agreed in writing, client-commissioned work products are owned
-                by the client upon receipt of full payment. Nexora retains ownership of
-                pre-existing tools, libraries, frameworks, and methodologies used during delivery.
+                Both parties agree to keep confidential information secure and use it only
+                for the purpose of the engagement.
               </p>
             </Section>
 
-            <Section title="Confidentiality">
+            <Section title="5. Payments">
               <p>
-                Each party agrees to keep the other's confidential information secure and to
-                use it only for the purpose of the engagement. This obligation survives
-                termination of any project agreement for a period of three years.
+                Payment terms are defined per project. Invoices must be paid within the
+                agreed timeframe.
               </p>
             </Section>
 
-            <Section title="Payment">
+            <Section title="6. Limitation of liability">
               <p>
-                Fees and payment schedules are agreed in each SOW. Invoices are due within
-                30 days of the invoice date unless otherwise specified. Late payments may
-                attract interest at 8% above the Bank of England base rate under the Late
-                Payment of Commercial Debts (Interest) Act 1998.
+                To the maximum extent permitted, Nexora is not liable for indirect,
+                incidental, or consequential damages arising from use of the website or
+                services.
               </p>
             </Section>
 
-            <Section title="Limitation of liability">
+            <Section title="7. Changes to these terms">
               <p>
-                To the fullest extent permitted by law, Nexora's total liability for any
-                claim arising from or relating to our services will not exceed the fees paid
-                by you in the three months preceding the event giving rise to the claim.
-              </p>
-              <p>
-                We are not liable for indirect, consequential, incidental, or punitive damages,
-                including loss of profits, data, or business opportunity.
+                We may update these Terms from time to time. Continued use of the website
+                means you accept the updated Terms.
               </p>
             </Section>
 
-            <Section title="Disclaimer of warranties">
+            <Section title="8. Governing framework">
               <p>
-                This website and its content are provided "as is" without warranties of any
-                kind, express or implied. We make no representation that the site will be
-                uninterrupted, error-free, or free of viruses.
+                These Terms are governed by generally applicable laws. No specific
+                jurisdiction is claimed.
               </p>
             </Section>
 
-            <Section title="Governing law">
+            <Section title="9. Contact">
               <p>
-                These Terms are governed by the laws of England and Wales. Any disputes arising
-                under or in connection with these Terms shall be subject to the exclusive
-                jurisdiction of the courts of England and Wales.
-              </p>
-            </Section>
-
-            <Section title="Changes to these terms">
-              <p>
-                We may revise these Terms at any time by updating this page. Continued use of
-                the website after changes are posted constitutes your acceptance of the revised
-                Terms.
-              </p>
-            </Section>
-
-            <Section title="Contact">
-              <p>
-                Questions about these Terms?{" "}
+                For questions about these Terms:{" "}
                 <a
                   href="mailto:hello@nexora.dev"
                   className="text-electric-400 hover:text-electric-300 transition-colors"

@@ -41,7 +41,7 @@ Page load time dropped from 4.2 seconds to 890 milliseconds — a 79% reduction.
       description: "London-based investment management firm with £2.4B in assets under management",
       logoUrl:     "/images/clients/meridian-capital.svg",
       logoAlt:     "Meridian Capital logo",
-      country:     "United Kingdom",
+      country:     "Global",
     },
 
     projectStartDate: "2025-01",
@@ -156,7 +156,7 @@ Page load time dropped from 4.2 seconds to 890 milliseconds — a 79% reduction.
 
     body: `## The context
 
-Luminary Goods is a direct-to-consumer lifestyle brand selling premium homeware across the UK and EU, with an annual GMV of £4.2M. They had operated on a customised Shopify theme since 2021. By 2024, the theme had accumulated 40+ installed apps, a custom checkout script that Shopify could no longer support post-Checkout Extensibility, and an LCP of 5.1 seconds on mobile — placing them in the bottom quartile of their category on Google's Core Web Vitals report.
+Luminary Goods is a direct-to-consumer lifestyle brand selling premium homeware internationally, with an annual GMV of £4.2M. They had operated on a customised Shopify theme since 2021. By 2024, the theme had accumulated 40+ installed apps, a custom checkout script that Shopify could no longer support post-Checkout Extensibility, and an LCP of 5.1 seconds on mobile — placing them in the bottom quartile of their category on Google's Core Web Vitals report.
 
 The business impact was measurable: a 1.8% conversion rate against a category average of 3.2%. Their internal analysis estimated that reaching the category average was worth approximately £180,000 per year in incremental revenue. The decision to invest in a platform rebuild was made at board level within two weeks of the analysis.
 
@@ -180,11 +180,11 @@ LCP on mobile dropped from 5.1 seconds to 1.2 seconds — well inside Google's "
 
     client: {
       name:        "Luminary Goods",
-      description: "Direct-to-consumer lifestyle brand selling premium homeware across the UK and EU",
+      description: "Direct-to-consumer lifestyle brand selling premium homeware internationally",
       logoUrl:     "/images/clients/luminary-goods.svg",
       logoAlt:     "Luminary Goods logo",
-      websiteUrl:  "https://luminarygoods.co.uk",
-      country:     "United Kingdom",
+      websiteUrl:  "https://luminarygoods.com",
+      country:     "Global",
     },
 
     projectStartDate: "2024-09",
@@ -326,7 +326,7 @@ NovaTech went from one deployment per month to daily deployments within three we
     client: {
       name:        "NovaTech Labs",
       description: "B2B SaaS company providing workflow automation for 340 enterprise logistics clients",
-      country:     "United Kingdom",
+      country:     "Global",
     },
 
     projectStartDate: "2024-11",

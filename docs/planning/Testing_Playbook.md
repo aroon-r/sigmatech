@@ -112,7 +112,7 @@ The contact form Zod schema has **42 test cases** across 9 describe blocks:
 | `budgetRange` | Unknown value, all 7 canonical values |
 | `message` | Min/max length, exact boundary values (20 and 2000 chars) |
 | `privacyConsent` | `false`, missing, string `"true"`, number `1` |
-| `phone (optional)` | E.164 UK, E.164 US, empty string, undefined, no country code |
+| `phone (optional)` | E.164 international, E.164 US, empty string, undefined, no country code |
 | `error structure` | Multi-field failure shape, human-readable string arrays |
 
 **Run:**
